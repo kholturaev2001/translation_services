@@ -1,0 +1,27 @@
+nav .to_hover,
+nav .to_hover:after,
+nav .to_hover:before {
+  transition: width 0.5s, color 0.5s;
+}
+nav .to_hover:hover {
+  color: #c4c0c0;
+}
+
+nav.stroke .to_hover {
+  position: relative;
+}
+nav.stroke .to_hover:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: "";
+  color: transparent;
+  background: #ef6f2e;
+  height: 2px;
+}
+nav.stroke .to_hover:hover:after {
+  width: 100%;
+}
