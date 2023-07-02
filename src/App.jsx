@@ -1,21 +1,16 @@
 import { Route, Routes } from "react-router";
+import Main from "./pages/Main/Main";
+import About from "./pages/About/About";
 
 function App() {
   return (
-    <>
+    <div>
+      
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div >
-              <h1 className="text-2xl font-bold text-red-500 underline">
-                Hello world!
-              </h1>
-            </div>
-          }
-        />
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
