@@ -1,5 +1,4 @@
 import Carousel from "../../components/Carousel/Carousel"
-import Slider from "../../components/Slider/Slider"
 
 const Main = () => {
   return (

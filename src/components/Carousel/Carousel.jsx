@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import "./Carousel.css";
 
-import img1 from "../Slider/images/image 1.jpg";
-import img2 from "../Slider/images/image 2.jpg";
-import img3 from "../Slider/images/image 3.jpg";
-import img4 from "../Slider/images/image 4.jpg";
+import img1 from "../../assets/images/image 1.jpg";
+import img2 from "../../assets/images/image 2.jpg";
+import img3 from "../../assets/images/image 3.jpg";
+import img4 from "../../assets/images/image 4.jpg";
 
 import ChavronLeft from "../../assets/icons/ChavronLeft";
 import ChavronRight from "../../assets/icons/ChavronRight";
@@ -51,37 +51,53 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel_container">
-      <div className="carousel">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Carousel Image ${index}`}
-            className={`carousel-image ${
-              index === currentImageIndex ? "active" : ""
-            }`}
-          />
-        ))}
-        <div className="left_right">
-          <button onClick={handlePrevClick}>
-            <ChavronLeft />
-          </button>
-          <button onClick={handleNextClick}>
-            <ChavronRight />
-          </button>
-        </div>
+    <div className="w-[700px] h-[400px] overflow-hidden relative m-auto ">
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Carousel Image ${index}`}
+          className={`w-full h-full object-cover absolute opacity-0 transition-opacity duration-1000 ease-in-out  ${
+            index === currentImageIndex ? "opacity-100" : ""
+          }`}
+        />
+      ))}
+      <div className="absolute top-1/2 w-full flex justify-between  left_right px-3">
+        <button
+          className="flex justify-center items-center rounded-full w-[35px] h-[35px] bg-[#f1f1f1]"
+          onClick={handlePrevClick}
+        >
+          <ChavronLeft />
+        </button>
+        <button
+          className="flex justify-center items-center rounded-full w-[35px] h-[35px] bg-[#f1f1f1]"
+          onClick={handleNextClick}
+        >
+          <ChavronRight />
+        </button>
       </div>
-      <div className="buttons">
-        {images.map((_, id) => (
-          <button
-            key={id}
-            style={{ background: currentImageIndex === id ? "red" : "" }}
-            onClick={() => handleButtonSelect(id)}
-          >
-            {id + 1}
-          </button>
-        ))}
+      <div className="absolute bottom-5 bg-[#3a3330] w-full flex justify-center items-center gap-6 ">
+        {images.map((_, id) => {
+          if (currentImageIndex === id) {
+            return (
+              <button
+                key={id}
+                className="w-[15px] h-[15px] bg-white rounded-full transition-bg duration-300 ease-in-out "
+                onClick={() => handleButtonSelect(id)}
+              ></button>
+            );
+          } else {
+            return (
+              <button
+                className="p-[5px] text-white font-bold bg-transparent "
+                key={id}
+                onClick={() => handleButtonSelect(id)}
+              >
+                {id + 1}
+              </button>
+            );
+          }
+        })}
       </div>
     </div>
   );
