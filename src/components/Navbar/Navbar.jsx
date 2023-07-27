@@ -23,8 +23,8 @@ const navs = [
 
 const Navbar = () => {
   return (
-    <>
-      <div className="flex w-screen justify-between items-center h-14 bg-navbar-color bg-opacity-80 text-white px-4">
+    <div className="bg-red-300 w-screen">
+      <div className="container flex justify-between bg-red-400 items-center h-14 px-4">
         <p>LOGO</p>
         <nav className="stroke flex gap-7 font-medium">
           {navs.map((nav, id) => (
@@ -48,7 +48,7 @@ const Navbar = () => {
           <p>+79224583465</p>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

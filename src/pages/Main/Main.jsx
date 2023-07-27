@@ -1,12 +1,12 @@
-import Carousel from "../../components/Carousel/Carousel"
+import Carousel from "../../components/Carousel/Carousel";
+import "./Main.css";
 
 const Main = () => {
   return (
-    <div>
-        <h2>Main</h2>
+    <div className="">
         <Carousel />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

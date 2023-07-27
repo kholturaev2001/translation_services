@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="font-family-Akzidenz-Ext font-helvetica font-arial font-sans">
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
