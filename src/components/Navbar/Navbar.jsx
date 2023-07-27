@@ -8,7 +8,7 @@ const navs = [
     url: "/",
   },
   {
-    title: "О Компании",
+    title: "O Компании",
     url: "/about",
   },
   {
