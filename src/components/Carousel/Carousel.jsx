@@ -5,6 +5,7 @@ import img2 from "../../assets/images/bg_2.png";
 import img3 from "../../assets/images/bg_3.png";
 import img4 from "../../assets/images/bg_4.png";
 import img5 from "../../assets/images/bg_5.png";
+import ScrollDown from "../ScrollDown/ScrollDown";
 
 const data = [
   {
@@ -73,6 +74,9 @@ const Carousel = () => {
                 </button>
                 <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
               </div>
+            </div>
+            <div className="relative bottom-[-70px]">
+              <ScrollDown />
             </div>
           </div>
         </div>
