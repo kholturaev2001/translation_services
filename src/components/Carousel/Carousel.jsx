@@ -32,10 +32,6 @@ const data = [
 const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  console.log(
-    "🚀 ~ file: Carousel.jsx:40 ~ Carousel ~ currentImageIndex:",
-    currentImageIndex
-  );
   const intervalRef = useRef();
 
   useEffect(() => {
@@ -49,7 +45,7 @@ const Carousel = () => {
   const startInterval = () => {
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 2000);
+    }, 6000);
   };
 
   return (
@@ -66,12 +62,18 @@ const Carousel = () => {
             alt={`Carousel Image ${index}`}
             className={`w-full h-full object-cover absolute`}
           />
-          <div className="container">
-            <h1 className="text-[#24201F] absolute z-10 top-[40%] text-[48px] w-[500px] font-medium">
-              {el.title}
-            </h1>
-            <button>Бесплатная консультация</button>
-            <div className="shadow rounded-full absolute top-[25%] text-[48px] w-[700px] h-[400px] -ml-[100px]"></div>
+          <div className="container left-0 right-0 m-auto absolute">
+            <div className="relative h-screen flex items-center">
+              <div className="relative h-[400px] flex flex-col justify-center items-center w-[700px] gap-2">
+                <h1 className="text-[#24201F]  text-[48px] w-[500px] font-medium z-10">
+                  {el.title}
+                </h1>
+                <button className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 ">
+                  Бесплатная консультация
+                </button>
+                <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
+              </div>
+            </div>
           </div>
         </div>
       ))}

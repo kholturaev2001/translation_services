@@ -3,9 +3,6 @@ nav .to_hover:after,
 nav .to_hover:before {
   transition: width 0.5s, color 0.5s;
 }
-nav .to_hover:hover {
-  color: #c4c0c0;
-}
 
 nav.stroke .to_hover {
   position: relative;
@@ -20,7 +17,7 @@ nav.stroke .to_hover:after {
   content: "";
   color: transparent;
   background: #ef6f2e;
-  height: 2px;
+  height: 1px;
 }
 nav.stroke .to_hover:hover:after {
   width: 100%;

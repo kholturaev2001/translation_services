@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import LocationIcon from "./../../assets/icons/LocationIcon";
 import "./navbar.css";
+import Logo from "../../assets/icons/Logo";
 
 const navs = [
   {
@@ -23,9 +24,9 @@ const navs = [
 
 const Navbar = () => {
   return (
-    <div className="bg-red-300 w-screen">
-      <div className="container flex justify-between bg-red-400 items-center h-14 px-4">
-        <p>LOGO</p>
+    <div className="w-screen backdrop-blur-[10px] bg-[#FFFFFF80]">
+      <div className="container flex gap-14 items-center h-[100px] px-4 ">
+        <Logo />
         <nav className="stroke flex gap-7 font-medium">
           {navs.map((nav, id) => (
             <NavLink
@@ -34,19 +35,13 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive
                   ? "border-b-2 border-b-[#ef6f2e] py-1 px-1"
-                  : "to_hover py-1 px-1"
+                  : "to_hover py-1 px-1 text-[#5f6f79]"
               }
             >
               {nav.title}
             </NavLink>
           ))}
         </nav>
-        <section className="flex items-center justify-center gap-3">
-          <button>
-            <LocationIcon />
-          </button>
-          <p>+79224583465</p>
-        </section>
       </div>
     </div>
   );

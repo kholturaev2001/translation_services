@@ -16,7 +16,7 @@
 }
 
 .shadow {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   opacity: 0.5;
   -webkit-filter: blur(30px);
 }
