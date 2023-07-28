@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import LocationIcon from "./../../assets/icons/LocationIcon";
 import "./navbar.css";
 import Logo from "../../assets/icons/Logo";
 
@@ -24,7 +23,7 @@ const navs = [
 
 const Navbar = () => {
   return (
-    <div className="w-screen backdrop-blur-[10px] bg-[#FFFFFF80]">
+    <div className="w-full overflow-hidden backdrop-blur-[10px] bg-[#FFFFFF80]">
       <div className="container flex gap-14 items-center h-[100px] px-4 ">
         <Logo />
         <nav className="stroke flex gap-7 font-medium">
