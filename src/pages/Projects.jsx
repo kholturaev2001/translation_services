@@ -102,7 +102,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col gap-10 mt-[100px] container">
-        <h2 className="text-[30px] font-semibold">Наши Услуги</h2>
+        <h2 className="text-[30px] font-semibold">Наши Проекты</h2>
         {serviceContent}
       </div>
       <Footer />
