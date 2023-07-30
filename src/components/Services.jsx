@@ -4,6 +4,7 @@ import img1 from "../assets/images/service1.png";
 import img2 from "../assets/images/service2.png";
 import img3 from "../assets/images/service3.png";
 import Card from "./Card/Card";
+import BackBtn from "./BackBtn";
 
 const data = [
   {
@@ -58,10 +59,6 @@ const data = [
 
 const Services = () => {
   const [currentService, setCurrentService] = useState("all");
-  console.log(
-    "🚀 ~ file: Services.jsx:61 ~ Services ~ currentService:",
-    currentService
-  );
 
   function handleSelectService(el) {
     setCurrentService(el);
@@ -82,13 +79,13 @@ const Services = () => {
       </div>
     ) : (
       <div className="flex flex-col gap-12">
-        <button
-          className="w-[300px] border-2 border-[#EF6F2E] duration-500 ease-in-out text-base font-medium text-center py-3 hover:bg-[#EF6F2E] hover:text-white rounded-lg"
-          onClick={() => setCurrentService("all")}
-        >
+        <BackBtn onClick={() => setCurrentService("all")}>
           Назад ко всем услугам
-        </button>
-        <div className="flex gap gap-[70px] w-full">
+        </BackBtn>
+        <div className="flex flex-col">
+            <Services />
+        </div>
+        <div className="flex gap-[70px] w-full">
           <div className="w-[60%] flex flex-col">
             <p className="text-[35px] font-semibold my-4">
               {currentService.title}
@@ -103,7 +100,6 @@ const Services = () => {
   return (
     <div className="flex flex-col gap-10 mt-[100px]">
       <h2 className="text-[30px] font-semibold">Наши Услуги</h2>
-
       {serviceContent}
     </div>
   );

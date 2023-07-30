@@ -21,7 +21,7 @@ import house7 from "../assets/images/bg_3.png";
 
 const houses = [house1, house2, house3, house4, house5, house6, house7];
 
-export default function Carousel() {
+export default function Carousel({data = houses}) {
   return (
     <div className="max-w-[900px] mx-auto mb-4 mt-8 ">
       <p className="text-center text-2xl font-medium py-3">Наши Работы</p>

@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/icons/Logo";
+import TelegramIcon from "./../assets/icons/TelegramIcon";
+import WhatsAppIcon from "./../assets/icons/WhatsAppIcon";
+import InstagramIcon from "./../assets/icons/InstagramIcon";
 
 const Footer = () => {
   const navs = [
@@ -24,25 +27,50 @@ const Footer = () => {
   return (
     <div className="mt-16  bg-[#24201F]">
       <div className="container flex flex-col ">
-        <div className="container h-[240px] flex gap-14 items-center px-4 ">
-          <Logo color="#fff" />
-          <nav className="stroke flex gap-7 font-medium text-white">
-            {navs.map((nav, id) => (
-              <NavLink
-                key={id}
-                to={nav.url}
-                className={({ isActive }) =>
-                  isActive
-                    ? "border-b-2 border-b-[#ef6f2e] py-1 px-1"
-                    : "to_hover py-1 px-1 text-[#5f6f79]"
-                }
-              >
-                {nav.title}
-              </NavLink>
-            ))}
-          </nav>
+        <div className="container h-[240px] flex items-center justify-between px-4 ">
+          <div className="flex gap-14 items-center">
+            <Logo color="#fff" />
+            <nav className="stroke flex gap-7 font-medium text-white">
+              {navs.map((nav, id) => (
+                <NavLink
+                  key={id}
+                  to={nav.url}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "border-b-2 border-b-[#ef6f2e] py-1 px-1"
+                      : "to_hover py-1 px-1 text-[#5f6f79]"
+                  }
+                >
+                  {nav.title}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+          <div className="flex gap-3">
+            <a
+              href="https://t.me/+41794997040"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TelegramIcon />
+            </a>
+            <a
+              href="https://wa.me/+41794997040"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <WhatsAppIcon />
+            </a>
+            <a
+              href="http://instagram.com/_u/{USERNAME}/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+          </div>
         </div>
-        <div className="h-[100px] flex items-center text-[#CBD5E1]">
+        <div className="h-[100px] flex items-center text-[#CBD5E1] border-t border-[#FFFFFF33]">
           © Copyright 2022, All Rights Reserved by Pro.Build
         </div>
       </div>
