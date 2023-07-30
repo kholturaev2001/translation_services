@@ -8,6 +8,7 @@ import img5 from "../../assets/images/bg_5.png";
 import ScrollDown from "../../components/ScrollDown/ScrollDown";
 import PhoneIcon from "../../assets/icons/PhoneIcon";
 import EmailIcon from "../../assets/icons/EmailIcon";
+import Carousel from "../../components/Carousel/Carousel";
 
 const data = [
   {
@@ -52,60 +53,66 @@ const Main = () => {
   };
 
   return (
-    <div className="w-full h-screen overflow-hidden absolute top-0 -z-10  ">
-      {data.map((el, index) => (
-        <div
-          key={index}
-          className={`flex flex-col opacity-0 transition-opacity duration-[3000ms] ease-in-out  ${
-            index === currentImageIndex ? "opacity-100" : ""
-          }`}
-        >
-          <img
-            src={el.image}
-            alt={`Main Image ${index}`}
-            className={`w-full h-full object-cover absolute`}
-          />
-          <div className="container left-0 right-0 m-auto absolute">
-            <div className="relative h-screen flex items-center">
-              <div className="relative h-[400px] flex flex-col justify-center items-center w-[700px] gap-2">
-                <h1 className="text-[#24201F]  text-[48px] w-[500px] font-medium z-10">
-                  {el.title}
-                </h1>
-                <button className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 ">
-                  Бесплатная консультация
-                </button>
-                <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
-              </div>
-              <div className="items-center flex w-full h-full justify-end">
-                <div className="gap-[200px] flex-col items-center flex">
-                  <a
-                    href="mailto:addres@probuild.com"
-                    className="flex p-1 gap-4 font-medium -rotate-90"
-                  >
-                    <div className="rotate-90">
-                      <EmailIcon />
-                    </div>
-                    <p>addres@probuild.com</p>
-                  </a>
-                  <a
-                    href="tel:+79224583465"
-                    className="flex p-1 gap-4 font-medium -rotate-90"
-                  >
-                    <div className="rotate-90">
-                      <PhoneIcon />
-                    </div>
-                    <p>+79224583465</p>
-                  </a>
+    <>
+      <div className="w-full h-screen overflow-hidden absolute top-0 -z-10  ">
+        {data.map((el, index) => (
+          <div
+            key={index}
+            className={`flex flex-col opacity-0 transition-opacity duration-[3000ms] ease-in-out  ${
+              index === currentImageIndex ? "opacity-100" : ""
+            }`}
+          >
+            <img
+              src={el.image}
+              alt={`Main Image ${index}`}
+              className={`w-full h-full object-cover absolute`}
+            />
+            <div className="container left-0 right-0 m-auto absolute">
+              <div className="relative h-screen flex items-center">
+                <div className="relative h-[400px] flex flex-col justify-center items-center w-[700px] gap-2">
+                  <h1 className="text-[#24201F]  text-[48px] w-[500px] font-medium z-10 text-center">
+                    {el.title}
+                  </h1>
+                  <button className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 ">
+                    Бесплатная консультация
+                  </button>
+                  <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
+                </div>
+                <div className="items-center flex w-full h-full justify-end">
+                  <div className="gap-[200px] flex-col items-center flex">
+                    <a
+                      href="mailto:addres@probuild.com"
+                      className="flex p-1 gap-4 font-medium -rotate-90"
+                    >
+                      <div className="rotate-90">
+                        <EmailIcon />
+                      </div>
+                      <p>addres@probuild.com</p>
+                    </a>
+                    <a
+                      href="tel:+79224583465"
+                      className="flex p-1 gap-4 font-medium -rotate-90"
+                    >
+                      <div className="rotate-90">
+                        <PhoneIcon />
+                      </div>
+                      <p>+79224583465</p>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="relative bottom-[-70px]">
-              <ScrollDown />
+              <div className="relative bottom-[-70px]">
+                <ScrollDown />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <div className="container mt-[100vh] flex flex-col align-center">
+        <p className="text-center text-2xl font-medium">Наши Работы</p>
+        <Carousel />
+      </div>
+    </>
   );
 };
 

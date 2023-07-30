@@ -24,8 +24,7 @@ const Footer = () => {
 
   return (
     <div
-      className="mt-auto  bg-[#24201F] absolute top-0 left-0 right-0"
-      style={{ marginTop: "100vh" }}
+      className="mt-16  bg-[#24201F] "
     >
       <div className="container flex flex-col ">
         <div className="container h-[240px] flex gap-14 items-center px-4 ">

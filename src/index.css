@@ -12,7 +12,8 @@
 
 .container {
   width: 1280px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .shadow {
