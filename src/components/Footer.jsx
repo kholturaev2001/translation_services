@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/icons/Logo";
-import Navbar from "../Navbar/Navbar";
+import Logo from "../assets/icons/Logo";
 
 const Footer = () => {
   const navs = [
@@ -23,9 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <div
-      className="mt-16  bg-[#24201F] "
-    >
+    <div className="mt-16  bg-[#24201F]">
       <div className="container flex flex-col ">
         <div className="container h-[240px] flex gap-14 items-center px-4 ">
           <Logo color="#fff" />

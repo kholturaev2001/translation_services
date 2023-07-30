@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
-import Main from "./pages/Main/Main";
-import About from "./pages/About/About";
+import Main from "./pages/Main";
+import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
-import Projects from "./pages/Projects/Projects";
-import Contacts from "./pages/Contacts/Contacts";
-import Footer from "./components/Footer/Footer";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-      <div className="relative">
+      {/* <div className="relative">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }
