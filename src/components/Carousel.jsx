@@ -39,7 +39,7 @@ export default function Carousel({data = houses}) {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
-        {houses.map((el, id) => (
+        {data.map((el, id) => (
           <SwiperSlide key={id}>
             <img className="h-[400px] object-cover" src={el} alt="" />
           </SwiperSlide>

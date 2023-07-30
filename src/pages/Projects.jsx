@@ -16,7 +16,7 @@ import Carousel from "../components/Carousel";
 
 const data = [
   {
-    swiperImages: [house1, house2, house3, house4, house5, house6, house7],
+    swiperImages: [house1, house2, house3, house5, house6, house7], // ADD AT LEAST 3 IMAGES
     title: "Название проекта 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
@@ -34,7 +34,16 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
   },
   {
-    swiperImages: [house5, house6, house7, house1, house2, house3, house4, house8],
+    swiperImages: [
+      house5,
+      house6,
+      house7,
+      house1,
+      house2,
+      house3,
+      house4,
+      house8,
+    ],
     title: "Название проекта 4",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
