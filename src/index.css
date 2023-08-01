@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .container {
@@ -20,4 +19,41 @@
   background: rgba(255, 255, 255, 0.9);
   opacity: 0.5;
   -webkit-filter: blur(30px);
+}
+
+.ant-picker-input > input::placeholder,
+.ant-picker-suffix,
+.css-dev-only-do-not-override-1w4v3hc,
+.css-dev-only-do-not-override-1w4v3hc::placeholder,
+.ant-input-data-count {
+  background-color: transparent;
+  color: rgb(209 213 219) !important;
+  font-size: 16px;
+}
+
+.css-dev-only-do-not-override-1w4v3hc {
+  border: 1px solid #ef6f2e;
+}
+
+.ant-picker-input > input,
+.ant-input {
+  color: white !important;
+  font-size: 16px;
+}
+
+.ant-btn-primary {
+  color: #24201f !important;
+  font-weight: 500;
+  border: 2px solid #ef6f2e;
+  transition: all 0.4s ease-in-out;
+}
+
+.ant-btn-primary:hover {
+  background: #ef6f2e !important;
+  color: white !important;
+}
+
+.ant-btn.ant-btn-sm {
+  height: inherit;
+  padding: 0px 18px;
 }

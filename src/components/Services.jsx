@@ -82,9 +82,6 @@ const Services = () => {
         <BackBtn onClick={() => setCurrentService("all")}>
           Назад ко всем услугам
         </BackBtn>
-        <div className="flex flex-col">
-            <Services />
-        </div>
         <div className="flex gap-[70px] w-full">
           <div className="w-[60%] flex flex-col">
             <p className="text-[35px] font-semibold my-4">

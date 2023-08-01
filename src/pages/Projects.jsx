@@ -96,7 +96,7 @@ const Projects = () => {
     ) : (
       <div className="flex flex-col gap-12">
         <BackBtn onClick={() => setCurrentProject("all")}>
-          Назад ко всем услугам
+          Назад ко всем проектам
         </BackBtn>
         <div className="flex flex-col">
           <Carousel data={currentProject.swiperImages} />
@@ -110,7 +110,7 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-10 mt-[100px] container">
+      <div className="flex flex-col gap-10 mt-[50px] container">
         <h2 className="text-[30px] font-semibold">Наши Проекты</h2>
         {serviceContent}
       </div>
