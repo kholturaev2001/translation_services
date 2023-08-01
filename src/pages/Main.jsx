@@ -11,6 +11,8 @@ import EmailIcon from "../assets/icons/EmailIcon";
 import Carousel from "../components/Carousel";
 import Advantages from "../components/Advantages/Advantages";
 import Footer from "../components/Footer";
+import { Modal } from "antd";
+import Consultation from "../components/Consultation/Consultation";
 
 const data = [
   {
@@ -37,6 +39,7 @@ const data = [
 
 const Main = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const intervalRef = useRef();
 
@@ -52,6 +55,18 @@ const Main = () => {
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
     }, 6000);
+  };
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -75,7 +90,10 @@ const Main = () => {
                   <h1 className="text-[#24201F]  text-[48px] w-[500px] font-medium z-10 text-center">
                     {el.title}
                   </h1>
-                  <button className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 ">
+                  <button
+                    onClick={showModal}
+                    className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 "
+                  >
                     Бесплатная консультация
                   </button>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
@@ -117,6 +135,16 @@ const Main = () => {
         </div>
         <Footer />
       </div>
+
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        className="w-[80vw] max-w-[1440px]"
+      >
+        <Consultation /> 
+      </Modal>
     </>
   );
 };

@@ -31,7 +31,13 @@
   font-size: 16px;
 }
 
-.css-dev-only-do-not-override-1w4v3hc {
+.ant-input-data-count {
+  bottom: -30px !important;
+}
+
+.ant-input-affix-wrapper,
+.ant-picker,
+.ant-input {
   border: 1px solid #ef6f2e;
 }
 
@@ -46,9 +52,11 @@
   font-weight: 500;
   border: 2px solid #ef6f2e;
   transition: all 0.4s ease-in-out;
+  display: flex;
 }
 
-.ant-btn-primary:hover {
+.ant-btn-primary:hover,
+.ant-picker-now-btn:hover {
   background: #ef6f2e !important;
   color: white !important;
 }
@@ -56,4 +64,39 @@
 .ant-btn.ant-btn-sm {
   height: inherit;
   padding: 0px 18px;
+}
+
+.ant-picker-now > a {
+  border-radius: 5px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #24201f !important;
+  padding: 0 10px;
+  color: white;
+}
+
+.ant-picker-now-btn {
+  border: 2px solid #ef6f2e;
+  transition: all 0.4s ease-in-out;
+  background-color: transparent;
+}
+
+.ant-picker-ranges {
+  align-items: center;
+}
+
+
+/* Ant Modal */
+
+.ant-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+
+.ant-modal-wrap > div{
+  width: 80vw !important;
+  max-width: 1440px;
 }
