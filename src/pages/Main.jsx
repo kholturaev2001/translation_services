@@ -54,7 +54,7 @@ const Main = () => {
   const startInterval = () => {
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 6000);
+    }, 60000000);
   };
 
   const showModal = () => {
@@ -98,7 +98,7 @@ const Main = () => {
                   </button>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
                 </div>
-                <div className="items-center flex md:w-full md:h-full justify-end">
+                <div className="items-center flex md:w-full md:h-full justify-end w-[40vw]">
                   <div className="gap-[200px] flex-col items-center flex md:text-md text-sm">
                     <a
                       href="mailto:addres@probuild.com"
@@ -129,9 +129,8 @@ const Main = () => {
         ))}
       </div>
 
-
       {/* THIS PART IS COMMENTED IN ORDER TO MAKE A RESPOSIVE DESIGN */}
-      
+
       {/* <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px]">
         <div className="container flex flex-col gap-10">
           <Carousel />
