@@ -84,6 +84,10 @@
   background-color: transparent;
 }
 
+.ant-input::placeholder {
+  color: rgb(209 213 219) !important;
+}
+
 .ant-picker-ranges {
   align-items: center;
 }
