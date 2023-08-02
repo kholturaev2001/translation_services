@@ -87,16 +87,15 @@
   align-items: center;
 }
 
-
 /* Ant Modal */
 
 .ant-modal-footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
-.ant-modal-wrap > div{
+.ant-modal-wrap > div {
   width: 80vw !important;
   max-width: 1440px;
 }

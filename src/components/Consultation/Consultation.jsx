@@ -12,19 +12,19 @@ const Consultation = () => {
   const [selectedTime, setSelectedTime] = useState(null);
 
   const [messageApi, contextHolder] = message.useMessage();
-  const key = 'updatable';
+  const key = "updatable";
 
   const openMessage = () => {
     messageApi.open({
       key,
-      type: 'loading',
-      content: 'Отправляется...',
+      type: "loading",
+      content: "Отправляется...",
     });
     setTimeout(() => {
       messageApi.open({
         key,
-        type: 'success',
-        content: 'Отправлено!',
+        type: "success",
+        content: "Отправлено!",
         duration: 2,
       });
     }, 2000);
@@ -45,19 +45,19 @@ const Consultation = () => {
   return (
     <>
       {contextHolder}
-      <div className="consult_container  min-h-[400px] py-[50px] px-[100px]">
-        <div className="flex flex-col gap-[30px]  w-[75%]">
-          <p className=" text-white font-semibold text-[42px]">
+      <div className="consult_container  min-h-[400px] md:py-[50px] py-[30px] px-[20px] md:px-[100px]">
+        <div className="flex flex-col gap-[30px]  md:w-[75%]">
+          <p className=" text-white font-semibold md:text-[42px] text-lg">
             Бесплатная консультация
           </p>
           <div className="flex flex-col gap-3">
-            <div className="grid-cols-2 grid gap-3">
+            <div className="md:grid-cols-2 grid-cols-1 grid gap-3">
               <Input
-                className="placeholder:text-gray-300 py-3 text-white text-base"
+                className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="ФИО"
               />
               <Input
-                className="placeholder:text-gray-300 py-3 text-white text-base"
+                className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="Тел: +7 --- --- -- --"
                 onKeyPress={(event) => {
                   if (!/[0-9,+]/.test(event.key)) {
@@ -74,7 +74,7 @@ const Consultation = () => {
                 onChange={handleTimeChange}
                 onOk={onOk}
                 locale={locale}
-                className="py-3 text-white text-lg w-full"
+                className="py-3 w-full"
               />
             </div>
             <div className="grid-rows-1">
@@ -83,13 +83,13 @@ const Consultation = () => {
                 maxLength={10000}
                 onChange={textAreaOnChange}
                 placeholder="Ваше сообщение"
-                className=" text-white text-base"
+                className=" text-white md:text-base"
                 style={{ padding: "10px 0" }}
               />
             </div>
             <button
               onClick={openMessage}
-              className="max-w-[280px] min-h-[60px] bg-[#c0bebd] rounded-lg font-semibold mt-[18px] text-[#24201f] "
+              className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] bg-[#c0bebd] rounded-lg font-semibold mt-[18px] text-[#24201f] "
             >
               Заказать
             </button>

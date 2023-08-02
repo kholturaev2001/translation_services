@@ -92,7 +92,7 @@ const Main = () => {
                   </h1>
                   <button
                     onClick={showModal}
-                    className="md:w-[320px] w-[185px] md:h-[50px] h-[35px]  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 "
+                    className="md:w-[320px] w-[185px] md:h-[50px] h-[40px]  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 "
                   >
                     Бесплатная консультация
                   </button>
