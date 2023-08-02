@@ -130,11 +130,11 @@ const Main = () => {
       </div>
 
       <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px]">
-        <div className="md:container w-full flex flex-col gap-10">
+        <div className="mx-auto w-full flex flex-col gap-10">
           <Carousel />
-          {/* <Advantages /> */}
+          <Advantages />
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
 
       <Modal

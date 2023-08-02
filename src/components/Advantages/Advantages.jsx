@@ -3,9 +3,9 @@ import AdvantageArrowCard from "./AdvantageArrowCard";
 
 const Advantages = () => {
   return (
-    <div className="flex flex-col gap-[35px] mb-4 mt-8">
+    <div className="flex flex-col gap-[35px] mb-4 mt-8 mx-auto">
       <p className="text-center text-2xl font-medium">Наши Преимущества</p>
-      <div className="flex">
+      <div className="flex md:flex-row lg:flex-nowrap md:flex-wrap flex-col items-center justify-center md:gap-0 gap-4">
         <AdvantageArrowCard
           title="Преимущество 1"
           txt="Предоставлять клиентам превосходное качество и инновационные решения, отвечающие их потребностям."

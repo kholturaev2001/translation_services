@@ -44,7 +44,7 @@ export default function Carousel({ data = houses }) {
   }, []);
 
   return (
-    <div className="md:max-w-[900px] max-w-[80%]   mx-auto mb-4 mt-8">
+    <div className="md:w-[900px] max-w-[80%]   mx-auto mb-4 mt-8">
       <p className="text-center md:text-2xl text-lg font-medium py-3">
         Наши Работы
       </p>
@@ -62,7 +62,7 @@ export default function Carousel({ data = houses }) {
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>
-            <img className="h-[400px] object-cover" src={el} alt="" />
+            <img className="md:h-[400px] h-[280px] object-cover" src={el} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>

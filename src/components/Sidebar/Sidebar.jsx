@@ -21,7 +21,6 @@ const navs = [
 ];
 
 const Sidebar = ({ isActive, onClick }) => {
-  console.log("🚀 ~ file: Sidebar.jsx:24 ~ Sidebar ~ isActive:", isActive)
   return (
     <div
       className={` ${
