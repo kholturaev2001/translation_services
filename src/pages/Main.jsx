@@ -84,22 +84,22 @@ const Main = () => {
               alt={`Main Image ${index}`}
               className={`w-full h-full object-cover absolute`}
             />
-            <div className="container left-0 right-0 m-auto absolute">
-              <div className="relative h-screen flex items-center">
-                <div className="relative h-[400px] flex flex-col justify-center items-center w-[700px] gap-2">
-                  <h1 className="text-[#24201F]  text-[48px] w-[500px] font-medium z-10 text-center">
+            <div className="md:container w-screen left-0 right-0 m-auto absolute">
+              <div className="relative h-screen flex items-center md:px-0 px-3">
+                <div className="relative h-[400px] flex flex-col justify-center md:items-center items-start md:w-[700px] gap-2">
+                  <h1 className="text-[#24201F]  md:text-[48px] text-[28px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 md:text-center leading-9 md:leading-snug">
                     {el.title}
                   </h1>
                   <button
                     onClick={showModal}
-                    className="w-[320px] h-[50px]  bg-[#4D4948] font-medium text-white rounded-xl z-10 "
+                    className="md:w-[320px] w-[185px] md:h-[50px] h-[30px]  bg-[#4D4948] font-medium text-white  md:text-base text-[10px] md:rounded-xl rounded-[5px] z-10 "
                   >
                     Бесплатная консультация
                   </button>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
                 </div>
-                <div className="items-center flex w-full h-full justify-end">
-                  <div className="gap-[200px] flex-col items-center flex">
+                <div className="items-center flex md:w-full md:h-full justify-end">
+                  <div className="gap-[200px] flex-col items-center flex md:text-md text-sm">
                     <a
                       href="mailto:addres@probuild.com"
                       className="flex p-1 gap-4 font-medium -rotate-90"
@@ -128,22 +128,25 @@ const Main = () => {
           </div>
         ))}
       </div>
-      <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px]">
+
+
+      {/* THIS PART IS COMMENTED IN ORDER TO MAKE A RESPOSIVE DESIGN */}
+      
+      {/* <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px]">
         <div className="container flex flex-col gap-10">
           <Carousel />
           <Advantages />
         </div>
         <Footer />
-      </div>
+      </div> */}
 
       <Modal
-        title="Basic Modal"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
         className="w-[80vw] max-w-[1440px]"
       >
-        <Consultation /> 
+        <Consultation />
       </Modal>
     </>
   );

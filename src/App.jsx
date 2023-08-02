@@ -4,7 +4,6 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,9 +15,6 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-      {/* <div className="relative">
-        <Footer />
-      </div> */}
     </div>
   );
 }

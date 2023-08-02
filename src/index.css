@@ -100,3 +100,16 @@
   width: 80vw !important;
   max-width: 1440px;
 }
+
+.ant-modal-content {
+  padding: 0 !important;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-modal-close {
+  top: -24px !important;
+  inset-inline-end: -17px !important;
+}
