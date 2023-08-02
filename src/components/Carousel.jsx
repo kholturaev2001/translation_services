@@ -18,17 +18,40 @@ import house4 from "../assets/images/house4.jpg";
 import house5 from "../assets/images/house5.jpg";
 import house6 from "../assets/images/bg_2.png";
 import house7 from "../assets/images/bg_3.png";
+import { useEffect, useState } from "react";
 
 const houses = [house1, house2, house3, house4, house5, house6, house7];
 
-export default function Carousel({data = houses}) {
+export default function Carousel({ data = houses }) {
+  const [slidesPerView, setSlidesPerView] = useState(2);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setSlidesPerView(3);
+      } else {
+        setSlidesPerView(2);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="max-w-[900px] mx-auto mb-4 mt-8 ">
-      <p className="text-center text-2xl font-medium py-3">Наши Работы</p>
+    <div className="md:max-w-[900px] max-w-[80%]   mx-auto mb-4 mt-8">
+      <p className="text-center md:text-2xl text-lg font-medium py-3">
+        Наши Работы
+      </p>
       <Swiper
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
         navigation
         autoplay={{
           delay: 2500,
@@ -36,8 +59,6 @@ export default function Carousel({data = houses}) {
         }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>

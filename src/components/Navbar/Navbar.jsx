@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="md:w-full w-screen overflow-hidden backdrop-blur-[10px] bg-[#FFFFFF80]">
+      <div className="w-full overflow-hidden backdrop-blur-[10px] bg-[#FFFFFF80]">
         <div className="md:container flex md:gap-14 md:justify-start justify-between items-center md:h-[100px] h-[60px] ">
           <div className="scale-50 md:scale-90">
             <Logo />
