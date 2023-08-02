@@ -54,7 +54,7 @@ const Main = () => {
   const startInterval = () => {
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 60000000);
+    }, 6000);
   };
 
   const showModal = () => {
