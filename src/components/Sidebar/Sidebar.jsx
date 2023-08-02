@@ -21,11 +21,12 @@ const navs = [
 ];
 
 const Sidebar = ({ isActive, onClick }) => {
+  console.log("🚀 ~ file: Sidebar.jsx:24 ~ Sidebar ~ isActive:", isActive)
   return (
     <div
       className={` ${
-        isActive ? "translate-x-0 shadow-2xl" : ""
-      } fixed top-0 right-0 w-[60vw] h-full bg-[#f5f5f5]  translate-x-full ease-in-out duration-300 transition flex flex-col`}
+        isActive ? "translate-x-0 shadow-2xl" : "translate-x-full"
+      } fixed top-0 right-0 w-[60vw] h-full bg-[#f5f5f5]   ease-in-out duration-300 transition flex flex-col`}
     >
       <div className="flex justify-end py-3 px-5">
         <button className="md:hidden " onClick={onClick}>
