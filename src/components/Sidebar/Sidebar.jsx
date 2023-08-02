@@ -20,7 +20,7 @@ const navs = [
   },
 ];
 
-const Sidebar = ({ isActive, onClick }) => {
+const Sidebar = ({ isActive, onClick, setIsActive }) => {
   return (
     <div
       className={` ${
@@ -44,6 +44,7 @@ const Sidebar = ({ isActive, onClick }) => {
                   : "to_hover text-[#5f6f79] border-b-2 border-b-[#ebebec]"
               } py-4 mx-5 w-[120px]`
             }
+            onClick={() => setIsActive((prevState) => !prevState)}
           >
             {nav.title}
           </NavLink>

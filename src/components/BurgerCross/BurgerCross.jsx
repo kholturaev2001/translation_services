@@ -1,6 +1,7 @@
 import "./BurgerCross.css";
 
-const BurgerCross = ({ isActive }) => {
+const 
+BurgerCross = ({ isActive }) => {
   return (
     <div
       className={`burger ${

@@ -24,13 +24,16 @@ const houses = [house1, house2, house3, house4, house5, house6, house7];
 
 export default function Carousel({ data = houses }) {
   const [slidesPerView, setSlidesPerView] = useState(2);
-  
+  const [slidesGap, setSlidesGap] = useState(5);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setSlidesPerView(3);
+        setSlidesGap(30);
       } else {
         setSlidesPerView(2);
+        setSlidesGap(5);
       }
     };
 
@@ -44,13 +47,13 @@ export default function Carousel({ data = houses }) {
   }, []);
 
   return (
-    <div className="md:w-[900px] max-w-[80%]   mx-auto mb-4 mt-8">
+    <div className="md:w-[900px] max-w-[95%]   mx-auto mb-4 mt-8">
       <p className="text-center md:text-2xl text-lg font-medium py-3">
         Наши Работы
       </p>
       <Swiper
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={30}
+        spaceBetween={slidesGap}
         slidesPerView={slidesPerView}
         navigation
         autoplay={{
@@ -62,7 +65,11 @@ export default function Carousel({ data = houses }) {
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>
-            <img className="md:h-[400px] h-[280px] object-cover" src={el} alt="" />
+            <img
+              className="md:h-[400px] h-[300px] object-cover"
+              src={el}
+              alt=""
+            />
           </SwiperSlide>
         ))}
       </Swiper>
