@@ -6,10 +6,31 @@ import "moment/locale/ru"; // without this line it didn't work
 moment.locale("ru");
 import "dayjs/locale/ru";
 import locale from "antd/es/date-picker/locale/ru_RU";
+import dayjs from "dayjs";
 const { TextArea } = Input;
 
 const Consultation = () => {
-  const [selectedTime, setSelectedTime] = useState(null);
+  
+  const initialValues = {
+    fullName: "",
+    phone: "",
+    message: "",
+    selectedTime: '',
+  };
+  const [values, setValues] = useState(initialValues);
+  console.log(
+    "🚀 ~ file: Consultation.jsx:23 ~ Consultation ~ values:",
+    values
+  );
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
@@ -27,21 +48,22 @@ const Consultation = () => {
         content: "Отправлено!",
         duration: 2,
       });
+      setValues({
+        ...values,
+        phone: '',
+        message: '',
+        fullName: ''
+      })
     }, 2000);
   };
 
   const handleTimeChange = (_, dateString) => {
-    const time = moment(dateString).locale("ru").format("Do MMMM YYYY, h:mm");
-    setSelectedTime(time);
+    setValues({
+      ...values,
+      selectedTime: dateString,
+    });
   };
 
-  const onOk = (value) => {
-    console.log("onOk: ", selectedTime);
-  };
-
-  const textAreaOnChange = (e) => {
-    console.log("Change:", e.target.value);
-  };
   return (
     <>
       {contextHolder}
@@ -55,40 +77,54 @@ const Consultation = () => {
               <Input
                 className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="ФИО"
+                name="fullName"
+                onChange={handleInputChange}
+                value={values.fullName}
               />
               <Input
                 className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="Тел: +7 --- --- -- --"
-                onKeyPress={(event) => {
-                  if (!/[0-9,+]/.test(event.key)) {
-                    event.preventDefault();
+                name="phone"
+                onChange={(e) => {
+                  const regex = /^[0-9,+\b]+$/;
+                  const { value } = e.target;
+                  if (value === "" || regex.test(value)) {
+                    setValues({
+                      ...values,
+                      phone: value,
+                    });
                   }
                 }}
+                value={values.phone}
               />
             </div>
             <div className="grid-rows-1">
               <DatePicker
                 placeholder="Выбрать время"
                 showTime={{ format: "HH:mm" }}
-                format={"Do MMMM YYYY, \n h:mm"}
+                format={"Do MMMM YYYY, HH:mm"}
                 onChange={handleTimeChange}
-                onOk={onOk}
                 locale={locale}
+                // value={values.selectedTime}
                 className="py-3 w-full"
+                allowClear
               />
             </div>
             <div className="grid-rows-1">
               <TextArea
                 showCount
-                maxLength={10000}
-                onChange={textAreaOnChange}
+                maxLength={1000}
                 placeholder="Ваше сообщение"
                 className=" text-white md:text-base"
                 style={{ padding: "10px 0" }}
+                name="message"
+                onChange={handleInputChange}
+                value={values.message}
               />
             </div>
             <button
               onClick={openMessage}
+              value={values.message}
               className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] bg-[#c0bebd] rounded-lg font-semibold mt-[18px] text-[#24201f] "
             >
               Заказать
