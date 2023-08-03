@@ -48,7 +48,7 @@ export default function Carousel({ data = houses }) {
 
   return (
     <div className="md:w-[900px] max-w-[95%]   mx-auto mb-4 mt-8">
-      <p className="text-center md:text-2xl text-lg font-medium py-3">
+      <p className="text-center md:text-2xl text-[28px] font-medium py-3">
         Наши Работы
       </p>
       <Swiper

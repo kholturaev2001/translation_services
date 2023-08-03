@@ -69,7 +69,7 @@ const Consultation = () => {
       {contextHolder}
       <div className="consult_container  min-h-[400px] md:py-[50px] py-[30px] px-[20px] md:px-[100px]">
         <div className="flex flex-col gap-[30px]  md:w-[75%]">
-          <p className=" text-white font-semibold md:text-[42px] text-lg">
+          <p className=" text-white font-semibold md:text-[42px] text-[28px]">
             Бесплатная консультация
           </p>
           <div className="flex flex-col gap-3">

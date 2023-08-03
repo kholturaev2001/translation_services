@@ -32,7 +32,7 @@ const Sidebar = ({ isActive, onClick, setIsActive }) => {
           <BurgerCross isActive={isActive} />
         </button>
       </div>
-      <nav className="flex flex-col  text-[15px]">
+      <nav className="flex flex-col  text-sm">
         {navs.map((nav, id) => (
           <NavLink
             key={id}

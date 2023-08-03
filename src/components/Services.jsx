@@ -84,7 +84,7 @@ const Services = () => {
         </BackBtn>
         <div className="md:flex-row flex flex-col-reverse md:gap-[70px] gap-8 w-full">
           <div className="md:w-[60%] flex flex-col ">
-            <p className="md:text-[35px] text-lg font-semibold my-4 md:text-start text-center">
+            <p className="md:text-[35px] text-[28px] font-semibold my-4 md:text-start text-center">
               {currentService.title}
             </p>
             <p className="md:text-base text-sm md:text-start text-justify">{currentService.description}</p>
@@ -96,7 +96,7 @@ const Services = () => {
 
   return (
     <div className="flex flex-col md:gap-10 gap-4 md:mt-[100px] mt-[40px]">
-      <h2 className="md:text-[30px] text-lg font-semibold md:text-start text-center">Наши Услуги</h2>
+      <h2 className="md:text-[30px] text-[28px] font-semibold md:text-start text-center">Наши Услуги</h2>
       {serviceContent}
     </div>
   );

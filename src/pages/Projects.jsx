@@ -100,18 +100,18 @@ const Projects = () => {
         </BackBtn>
         <div className="flex flex-col">
           <Carousel data={currentProject.swiperImages} />
-          <p className="text-[35px] font-semibold my-4">
+          <p className="md:text-[35px] text-[28px] font-semibold my-4">
             {currentProject.title}
           </p>
-          <p className="">{currentProject.description}</p>
+          <p className="md:text-base text-sm md:text-start text-justify">{currentProject.description}</p>
         </div>
       </div>
     );
 
   return (
     <div className="flex flex-col md:text-start text-center">
-      <div className="flex flex-col gap-10 mt-[50px] md:container">
-        <h2 className="md:text-[35px] text-lg font-semibold md:text-start text-center">Наши Проекты</h2>
+      <div className="flex flex-col gap-10 mt-[50px] md:container mx-3">
+        <h2 className="md:text-[35px] text-[28px] font-semibold md:text-start text-center">Наши Проекты</h2>
         {serviceContent}
       </div>
       <Footer />

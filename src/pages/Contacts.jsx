@@ -6,20 +6,20 @@ import Footer from "../components/Footer";
 const Contacts = () => {
   return (
     <>
-      <div className="container flex flex-col">
-        <div className=" flex h-[350px] items-center mb-10">
+      <div className="md:container md:px-0 px-3 flex flex-col">
+        <div className=" flex md:flex-row flex-col h-[350px] items-center mb-10">
           <div className="relative flex items-center">
-            <div className="flex items-center gap-4 transform -rotate-90 ">
+            <div className="flex items-center gap-4 transform md:-rotate-90">
               <span className="border-[1px] border-] w-[100px] "></span>
-              <p className="text-2xl text-[#cececd] font-semibold whitespace-nowrap">
+              <p className="md:text-2xl text-base text-[#cececd] font-semibold whitespace-nowrap">
                 Контакты
               </p>
             </div>
           </div>
           <div className="flex flex-col h-full justify-between">
             <div className="flex flex-col gap-[20px]">
-              <h2 className="text-[32px] font-semibold">Наши контакты</h2>
-              <p className="">
+              <h2 className="md:text-[32px] text-[28px] font-semibold">Наши контакты</h2>
+              <p className="md:text-start text-justify">
                 Если у вас возникли вопросы, комментарии или вы хотите получить
                 дополнительную информацию о наших услугах, пожалуйста, не
                 стесняйтесь связаться с нами.
