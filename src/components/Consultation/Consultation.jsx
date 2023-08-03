@@ -105,7 +105,6 @@ const Consultation = () => {
                 format={"Do MMMM YYYY, HH:mm"}
                 onChange={handleTimeChange}
                 locale={locale}
-                // value={values.selectedTime}
                 className="py-3 w-full"
                 allowClear
               />

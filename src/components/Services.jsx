@@ -66,7 +66,7 @@ const Services = () => {
 
   const serviceContent =
     currentService === "all" ? (
-      <div className="flex flex-wrap gap-7">
+      <div className="flex flex-wrap md:gap-7 gap-4 justify-center">
         {data.map((elem, id) => (
           <Card
             img={elem.img}
@@ -82,12 +82,12 @@ const Services = () => {
         <BackBtn onClick={() => setCurrentService("all")}>
           Назад ко всем услугам
         </BackBtn>
-        <div className="flex gap-[70px] w-full">
-          <div className="w-[60%] flex flex-col">
-            <p className="text-[35px] font-semibold my-4">
+        <div className="md:flex-row flex flex-col-reverse md:gap-[70px] gap-8 w-full">
+          <div className="md:w-[60%] flex flex-col ">
+            <p className="md:text-[35px] text-lg font-semibold my-4 md:text-start text-center">
               {currentService.title}
             </p>
-            <p className="">{currentService.description}</p>
+            <p className="md:text-base text-sm md:text-start text-justify">{currentService.description}</p>
           </div>
           <img src={currentService.img} alt="icon" className="object-cover" />
         </div>
@@ -95,8 +95,8 @@ const Services = () => {
     );
 
   return (
-    <div className="flex flex-col gap-10 mt-[100px]">
-      <h2 className="text-[30px] font-semibold">Наши Услуги</h2>
+    <div className="flex flex-col md:gap-10 gap-4 md:mt-[100px] mt-[40px]">
+      <h2 className="md:text-[30px] text-lg font-semibold md:text-start text-center">Наши Услуги</h2>
       {serviceContent}
     </div>
   );
