@@ -119,8 +119,8 @@
 }
 
 .ant-modal-close {
-  background: gray;
-  color: white;
+  background: gray !important;
+  color: white !important;
 
 }
 

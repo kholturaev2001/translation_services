@@ -30,14 +30,14 @@ const Contacts = () => {
             <div className="flex md:flex-row flex-col items-center justify-between md:gap-0 gap-9 mt-10">
               <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
-                  <PhoneIcon />
+                  <PhoneIcon color='#fff' />
                 </span>
                 <a href="tel:+79689750768">+7 968 975-07-68</a>
                 <a href="tel:+79689750768">+7 968 975-07-68</a>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
-                  <EmailIcon />
+                  <EmailIcon color='#fff' />
                 </span>
                 <a href="mailto:probuild.company22@gmail.com">
                   probuild.company22@gmail.com
