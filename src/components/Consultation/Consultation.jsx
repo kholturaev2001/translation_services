@@ -6,7 +6,7 @@ import "moment/locale/ru"; // without this line it didn't work
 moment.locale("ru");
 import "dayjs/locale/ru";
 import locale from "antd/es/date-picker/locale/ru_RU";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 const { TextArea } = Input;
 
 const Consultation = () => {
@@ -18,10 +18,6 @@ const Consultation = () => {
     selectedTime: '',
   };
   const [values, setValues] = useState(initialValues);
-  console.log(
-    "🚀 ~ file: Consultation.jsx:23 ~ Consultation ~ values:",
-    values
-  );
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
