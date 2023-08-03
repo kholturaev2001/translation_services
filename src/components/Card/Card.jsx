@@ -1,7 +1,7 @@
 const Card = ({ img, title, onClick }) => {
   return (
-    <div className="flex flex-col md:w-[290px]">
-      <img src={img} alt="" className=" md:h-[350px] h-[310px] object-cover " />
+    <div className="flex flex-col">
+      <img src={img} alt="" className=" md:h-[350px] h-[310px] w-[290px] object-cover " />
       <p className="bg-[#24201F] text-white md:text-base text-sm font-medium text-center py-3 w-full">
         {title}
       </p>

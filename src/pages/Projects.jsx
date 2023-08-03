@@ -82,7 +82,7 @@ const Projects = () => {
   }
   const serviceContent =
     currentProject === "all" ? (
-      <div className="flex flex-wrap gap-7">
+      <div className="flex flex-wrap md:gap-7 gap-4 justify-center">
         {data.map((elem, id) => (
           <Card
             img={elem.swiperImages[0]}
@@ -109,9 +109,9 @@ const Projects = () => {
     );
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col gap-10 mt-[50px] container">
-        <h2 className="text-[30px] font-semibold">Наши Проекты</h2>
+    <div className="flex flex-col md:text-start text-center">
+      <div className="flex flex-col gap-10 mt-[50px] md:container">
+        <h2 className="md:text-[35px] text-lg font-semibold md:text-start text-center">Наши Проекты</h2>
         {serviceContent}
       </div>
       <Footer />
