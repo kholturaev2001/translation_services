@@ -23,7 +23,7 @@ function App() {
     setIsModalOpen(false);
   };
   return (
-    <div className="">
+    <div className="bg-[#3a3330]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />

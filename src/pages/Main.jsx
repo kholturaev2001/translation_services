@@ -69,7 +69,7 @@ const Main = () => {
               alt={`Main Image ${index}`}
               className={`w-full h-full object-cover absolute`}
             />
-            <div className="md:container w-screen left-0 right-0 m-auto absolute">
+            <div className="md:max-w-[1280px] mx-auto w-screen left-0 right-0 m-auto absolute">
               <div className="relative h-screen flex items-center md:px-0 px-3">
                 <div className="relative h-[400px] flex flex-col justify-center md:items-center items-start md:w-[700px] gap-2">
                   <h1 className="text-[#24201F]  md:text-[48px] text-[24px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 text-center leading-9 md:leading-snug">
@@ -108,8 +108,8 @@ const Main = () => {
         ))}
       </div>
 
-      <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px]">
-        <div className="mx-auto w-full flex flex-col gap-10">
+      <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px] bg-[#3a3330]">
+        <div className="mx-auto w-full flex flex-col gap-10 text-white">
           <Carousel />
           <Advantages />
         </div>

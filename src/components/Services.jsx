@@ -87,16 +87,26 @@ const Services = () => {
             <p className="md:text-[35px] text-[24px] font-semibold my-4 md:text-start text-center">
               {currentService.title}
             </p>
-            <p className="md:text-base text-sm md:text-start text-justify">{currentService.description}</p>
+            <p className="md:text-base text-sm md:text-start text-justify">
+              {currentService.description}
+            </p>
           </div>
-          <img src={currentService.img} alt="icon" className="object-cover" />
+          <div className="max-w-[350px] mx-auto">
+            <img
+              src={currentService.img}
+              alt="icon"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     );
 
   return (
     <div className="flex flex-col md:gap-10 gap-4 md:mt-[100px] mt-[40px]">
-      <h2 className="md:text-[30px] text-[24px] font-semibold md:text-start text-center">Наши Услуги</h2>
+      <h2 className="md:text-[30px] text-[24px] font-semibold md:text-start text-center">
+        Наши Услуги
+      </h2>
       {serviceContent}
     </div>
   );

@@ -4,7 +4,8 @@ import ArrowIcon from "../../assets/icons/ArrowIcon";
 const AdvantageArrowCard = ({ title, txt }) => {
   return (
     <div className="flex items-center m-2">
-      <div className="flex space-between max-w-[430px] bg-[#F5F5F5] md:min-h-[200px] min-h-[145px] rounded-sm">
+      <div className="flex space-between max-w-[430px] bg-[#26211e] md:min-h-[200px] min-h-[145px] rounded-sm">
+      {/* <div className="flex space-between max-w-[430px] bg-[#F5F5F5] md:min-h-[200px] min-h-[145px] rounded-sm"> */}
         <div className=" p-5 gap-2 flex flex-col">
           <p className="md:text-xl text-base text-[#24201F] font-semibold">{title}</p>
           <p className="md:text-[16px] text-sm">{txt}</p>
