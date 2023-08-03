@@ -11,8 +11,6 @@ import EmailIcon from "../assets/icons/EmailIcon";
 import Carousel from "../components/Carousel";
 import Advantages from "../components/Advantages/Advantages";
 import Footer from "../components/Footer";
-import { Modal } from "antd";
-import Consultation from "../components/Consultation/Consultation";
 
 const data = [
   {
@@ -39,7 +37,6 @@ const data = [
 
 const Main = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const intervalRef = useRef();
 
@@ -55,18 +52,6 @@ const Main = () => {
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % data.length);
     }, 6000);
-  };
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
   };
 
   return (
@@ -87,7 +72,7 @@ const Main = () => {
             <div className="md:container w-screen left-0 right-0 m-auto absolute">
               <div className="relative h-screen flex items-center md:px-0 px-3">
                 <div className="relative h-[400px] flex flex-col justify-center md:items-center items-start md:w-[700px] gap-2">
-                  <h1 className="text-[#24201F]  md:text-[48px] text-[24px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 md:text-center leading-9 md:leading-snug">
+                  <h1 className="text-[#24201F]  md:text-[48px] text-[24px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 text-center leading-9 md:leading-snug">
                     {el.title}
                   </h1>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
@@ -130,21 +115,6 @@ const Main = () => {
         </div>
         <Footer />
       </div>
-
-      <Modal
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        className="w-[80vw] max-w-[1440px]"
-      >
-        <Consultation />
-      </Modal>
-      <button
-        onClick={showModal}
-        className="md:w-[210px] w-[120px] leading-3 md:py-1 py-2  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 fixed bottom-5 right-5 border-2 border-[#ef6f2e] "
-      >
-        Бесплатная <br /> консультация
-      </button>
     </>
   );
 };
