@@ -7,7 +7,7 @@ const Contacts = () => {
   return (
     <>
       <div className="md:container md:px-0 px-3 flex flex-col">
-        <div className=" flex md:flex-row flex-col h-[350px] items-center mb-10">
+        <div className=" flex md:flex-row flex-col min-h-[350px] items-center mb-10">
           <div className="relative flex items-center">
             <div className="flex items-center gap-4 transform md:-rotate-90">
               <span className="border-[1px] border-] w-[100px] "></span>
@@ -27,15 +27,15 @@ const Contacts = () => {
                 стесняйтесь связаться с нами.
               </p>
             </div>
-            <div className="flex items-center justify-between md:text-base text-[12.5px]">
-              <div className="flex flex-col gap-2">
+            <div className="flex md:flex-row flex-col items-center justify-between md:gap-0 gap-9 mt-10">
+              <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
                   <PhoneIcon />
                 </span>
                 <a href="tel:+79689750768">+7 968 975-07-68</a>
                 <a href="tel:+79689750768">+7 968 975-07-68</a>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
                   <EmailIcon />
                 </span>

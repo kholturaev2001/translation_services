@@ -90,12 +90,6 @@ const Main = () => {
                   <h1 className="text-[#24201F]  md:text-[48px] text-[24px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 md:text-center leading-9 md:leading-snug">
                     {el.title}
                   </h1>
-                  <button
-                    onClick={showModal}
-                    className="md:w-[320px] w-[185px] md:h-[50px] h-[40px]  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 "
-                  >
-                    Бесплатная консультация
-                  </button>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
                 </div>
                 <div className="items-center flex md:w-full md:h-full justify-end w-[40vw]">
@@ -145,6 +139,12 @@ const Main = () => {
       >
         <Consultation />
       </Modal>
+      <button
+        onClick={showModal}
+        className="md:w-[210px] w-[120px] leading-3 md:py-1 py-2  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 fixed bottom-5 right-5 border-2 border-[#ef6f2e] "
+      >
+        Бесплатная <br /> консультация
+      </button>
     </>
   );
 };
