@@ -27,7 +27,7 @@ const Contacts = () => {
                 стесняйтесь связаться с нами.
               </p>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between md:text-base text-[12.5px]">
               <div className="flex flex-col gap-2">
                 <span className="rotate-90 max-w-fit">
                   <PhoneIcon />
