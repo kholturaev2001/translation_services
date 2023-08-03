@@ -22,7 +22,7 @@ const About = () => {
               className="w-[390px] object-cover"
             />
             <div className="flex justify-center flex-col md:text-start text-justify">
-              <h2 className="md:text-[32px] text-[28px] font-semibold md:text-start text-center">О компании</h2>
+              <h2 className="md:text-[32px] text-[24px] font-semibold md:text-start text-center">О компании</h2>
               <div className="flex flex-col gap-[20px] md:text-base text-sm ">
                 <p className="">
                   Строительная компания Pro.Build — ваш надежный партнер в

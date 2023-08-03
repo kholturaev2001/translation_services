@@ -18,7 +18,7 @@ const Contacts = () => {
           </div>
           <div className="flex flex-col h-full justify-between">
             <div className="flex flex-col gap-[20px]">
-              <h2 className="md:text-[32px] text-[28px] font-semibold">Наши контакты</h2>
+              <h2 className="md:text-[32px] text-[24px] font-semibold">Наши контакты</h2>
               <p className="md:text-start text-justify">
                 Если у вас возникли вопросы, комментарии или вы хотите получить
                 дополнительную информацию о наших услугах, пожалуйста, не

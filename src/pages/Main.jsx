@@ -87,7 +87,7 @@ const Main = () => {
             <div className="md:container w-screen left-0 right-0 m-auto absolute">
               <div className="relative h-screen flex items-center md:px-0 px-3">
                 <div className="relative h-[400px] flex flex-col justify-center md:items-center items-start md:w-[700px] gap-2">
-                  <h1 className="text-[#24201F]  md:text-[48px] text-[28px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 md:text-center leading-9 md:leading-snug">
+                  <h1 className="text-[#24201F]  md:text-[48px] text-[24px] md:w-[500px] w-[70vw] md:font-medium font-semibold z-10 md:text-center leading-9 md:leading-snug">
                     {el.title}
                   </h1>
                   <button
