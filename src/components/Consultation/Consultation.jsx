@@ -4,19 +4,19 @@ import { useState } from "react";
 import moment from "moment/moment";
 import "moment/locale/ru"; // without this line it didn't work
 moment.locale("ru");
+import emailjs from '@emailjs/browser'
 import "dayjs/locale/ru";
 import locale from "antd/es/date-picker/locale/ru_RU";
-// import dayjs from "dayjs";
 const { TextArea } = Input;
 
 const Consultation = () => {
-  
   const initialValues = {
     fullName: "",
     phone: "",
     message: "",
-    selectedTime: '',
+    selectedTime: "",
   };
+
   const [values, setValues] = useState(initialValues);
 
   const handleInputChange = (e) => {
@@ -31,33 +31,74 @@ const Consultation = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
 
-  const openMessage = () => {
-    messageApi.open({
-      key,
-      type: "loading",
-      content: "Отправляется...",
-    });
-    setTimeout(() => {
-      messageApi.open({
-        key,
-        type: "success",
-        content: "Отправлено!",
-        duration: 2,
-      });
-      setValues({
-        ...values,
-        phone: '',
-        message: '',
-        fullName: ''
-      })
-    }, 2000);
-  };
 
   const handleTimeChange = (_, dateString) => {
     setValues({
       ...values,
       selectedTime: dateString,
     });
+  };
+
+  const handleSubmit = async () => {
+
+    if (
+      values.fullName.trim() &&
+      values.phone.trim() &&
+      values.selectedTime.trim() &&
+      values.message.trim()
+    ) {
+      messageApi.open({
+        key,
+        type: "loading",
+        content: "Отправляется...",
+      });
+      emailjs
+        .send(
+          "service_ii58z1v",
+          "template_d3bm84l",
+          {
+            fullName: values.fullName,
+            to_name: "Muhammadrasul",
+            to_email: "holturaevm@gmail.com",
+            message: values.message,
+            phone: values.phone,
+            selectedTime: values.selectedTime,
+          },
+          "_rkzuLmsOwLYHbQq2"
+        )
+        .then(
+          () => {
+            messageApi.open({
+              key,
+              type: "success",
+              content: "Отправлено!",
+              duration: 2,
+            });
+
+            setValues({
+              ...values,
+              phone: "",
+              message: "",
+              fullName: "",
+            });
+          },
+          (error) => {
+            messageApi.open({
+              key,
+              type: "error",
+              content: "Ошибка!",
+              duration: 2,
+            });
+          }
+        );
+    } else {
+      messageApi.open({
+        key,
+        type: "warning",
+        content: "Все поля необходимы для заполнения!",
+        duration: 2,
+      });
+    }
   };
 
   return (
@@ -118,7 +159,7 @@ const Consultation = () => {
               />
             </div>
             <button
-              onClick={openMessage}
+              onClick={handleSubmit}
               value={values.message}
               className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] bg-[#c0bebd] rounded-lg font-semibold mt-[18px] text-[#24201f] "
             >
