@@ -37,7 +37,7 @@
 .ant-input-affix-wrapper,
 .ant-picker,
 .ant-input {
-  border: 1px solid #ef6f2e;
+  border: 1px solid #33a3ed;
   background-color: transparent !important;
 }
 
@@ -51,14 +51,14 @@
 .ant-btn-primary {
   color: #24201f !important;
   font-weight: 500;
-  border: 2px solid #ef6f2e;
+  border: 2px solid #33a3ed;
   transition: all 0.4s ease-in-out;
   display: flex;
 }
 
 .ant-btn-primary:hover,
 .ant-picker-now-btn:hover {
-  background: #ef6f2e !important;
+  background: #33a3ed !important;
   color: white !important;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .ant-picker-now-btn {
-  border: 2px solid #ef6f2e;
+  border: 2px solid #33a3ed;
   transition: all 0.4s ease-in-out;
   background-color: transparent;
 }

@@ -5,7 +5,7 @@ import Services from "../components/Services";
 const About = () => {
   return (
     <>
-      <div className="md:max-w-[1280px] mx-auto md:px-0 px-3 flex flex-col text-white">
+      <div className="md:max-w-[1280px] mx-auto md:px-0 px-3 flex flex-col ">
         <div className=" flex min-h-[400px] items-center md:flex-row flex-col">
           <div className="relative flex items-center">
             <div className="flex items-center gap-4 transform md:-rotate-90 md:p-0 p-3">

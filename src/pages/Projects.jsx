@@ -109,7 +109,7 @@ const Projects = () => {
     );
 
   return (
-    <div className="flex flex-col md:text-start text-center text-white">
+    <div className="flex flex-col md:text-start text-center">
       <div className="flex flex-col gap-10 mt-[50px] md:max-w-[1280px] md:mx-auto mx-3">
         <h2 className="md:text-[35px] text-[24px] font-semibold md:text-start text-center">Наши Проекты</h2>
         {serviceContent}

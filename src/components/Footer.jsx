@@ -3,6 +3,7 @@ import Logo from "../assets/icons/Logo";
 import TelegramIcon from "./../assets/icons/TelegramIcon";
 import WhatsAppIcon from "./../assets/icons/WhatsAppIcon";
 import InstagramIcon from "./../assets/icons/InstagramIcon";
+import logo from '../assets/images/ais_perevodchik.jpg'
 
 const Footer = () => {
   const navs = [
@@ -25,12 +26,12 @@ const Footer = () => {
   ];
 
   return (
-    <div className="mt-16 bg-[#24201F]">
+    <div className="mt-16 bg-[#7dc0ec]">
       <div className="md:max-w-[1280px] mx-auto w-full flex flex-col ">
         <div className="md:max-w-[1280px] mx-auto w-full md:min-h-[240px] flex md:flex-row flex-col items-center justify-between px-4 ">
           <div className="flex md:flex-row flex-col md:gap-14 gap-2 md:items-center items-start w-full">
-            <div className="md:scale-100 scale-50">
-              <Logo color="#fff" />
+          <div className="w-[140px]">
+              <img src={logo} alt="" />
             </div>
             <nav className="stroke flex md:flex-nowrap w-full flex-wrap md md:gap-7 font-medium text-white md:justify-start justify-between">
               {navs.map((nav, id) => (
@@ -40,7 +41,7 @@ const Footer = () => {
                   className={({ isActive }) =>
                     `${
                       isActive
-                        ? "border-b-2 border-b-[#ef6f2e] py-1 px-1"
+                        ? "border-b-2 border-b-[#33a3ed] py-1 px-1"
                         : "to_hover py-1 px-1 text-[#5f6f79]"
                     } flex items-center justify-center text-center py-3 md:text-base text-sm`
                   }

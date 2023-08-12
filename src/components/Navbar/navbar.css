@@ -16,8 +16,8 @@ nav.stroke .to_hover:after {
   width: 0%;
   content: "";
   color: transparent;
-  background: #ef6f2e;
-  height: 1px;
+  background: #33a3ed;
+  height: 2px;
 }
 nav.stroke .to_hover:hover:after {
   width: 100%;

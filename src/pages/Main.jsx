@@ -6,8 +6,8 @@ import img3 from "../assets/images/bg_3.png";
 import img4 from "../assets/images/bg_4.png";
 import img5 from "../assets/images/bg_5.png";
 import ScrollDown from "../components/ScrollDown/ScrollDown";
-import PhoneIcon from "../assets/icons/PhoneIcon";
-import EmailIcon from "../assets/icons/EmailIcon";
+// import PhoneIcon from "../assets/icons/PhoneIcon";
+// import EmailIcon from "../assets/icons/EmailIcon";
 import Carousel from "../components/Carousel";
 import Advantages from "../components/Advantages/Advantages";
 import Footer from "../components/Footer";
@@ -77,28 +77,6 @@ const Main = () => {
                   </h1>
                   <div className="shadow absolute top-0 rounded-full text-[48px] w-full h-[400px] "></div>
                 </div>
-                <div className="items-center flex md:w-full md:h-full justify-end w-[40vw]">
-                  <div className="gap-[200px] flex-col items-center flex md:text-md text-sm">
-                    <a
-                      href="mailto:addres@probuild.com"
-                      className="flex p-1 gap-4 font-medium -rotate-90"
-                    >
-                      <div className="rotate-90">
-                        <EmailIcon />
-                      </div>
-                      <p>addres@probuild.com</p>
-                    </a>
-                    <a
-                      href="tel:+79224583465"
-                      className="flex p-1 gap-4 font-medium -rotate-90"
-                    >
-                      <div className="rotate-90">
-                        <PhoneIcon />
-                      </div>
-                      <p>+79224583465</p>
-                    </a>
-                  </div>
-                </div>
               </div>
               <div className="relative bottom-[-70px]">
                 <ScrollDown />
@@ -108,7 +86,7 @@ const Main = () => {
         ))}
       </div>
 
-      <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px] bg-[#3a3330]">
+      <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px] ">
         <div className="mx-auto w-full flex flex-col gap-10 text-white">
           <Carousel />
           <Advantages />

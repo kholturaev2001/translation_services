@@ -11,8 +11,8 @@ const navs = [
     url: "/about",
   },
   {
-    title: "Наши Проекты",
-    url: "/projects",
+    title: "Вакансии",
+    url: "/vacancies",
   },
   {
     title: "Контакты",
@@ -40,7 +40,7 @@ const Sidebar = ({ isActive, onClick, setIsActive }) => {
             className={({ isActive }) =>
               `${
                 isActive
-                  ? "border-b-2 border-b-[#ef6f2e] text-[#ef6f2e]"
+                  ? "border-b-2 border-b-[#33a3ed] text-[#33a3ed]"
                   : "to_hover text-[#5f6f79] border-b-2 border-b-[#ebebec]"
               } py-4 mx-5 w-[120px]`
             }

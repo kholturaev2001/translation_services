@@ -7,6 +7,7 @@ import Contacts from "./pages/Contacts";
 import { useState } from "react";
 import { Modal } from "antd";
 import Consultation from "./components/Consultation/Consultation";
+import BackBtn from "./components/BackBtn";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,12 +24,12 @@ function App() {
     setIsModalOpen(false);
   };
   return (
-    <div className="bg-[#3a3330]">
+    <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/vacancies" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Modal
@@ -39,12 +40,15 @@ function App() {
       >
         <Consultation />
       </Modal>
-      <button
-        onClick={showModal}
-        className="md:w-[210px] w-[120px] leading-3 md:py-1 py-2  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 fixed bottom-5 right-2 border-2 border-[#ef6f2e] "
-      >
+      {/* <button className="md:w-[210px] w-[120px] leading-3 md:py-1 py-2  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 fixed bottom-5 right-2 border-2 border-[#33a3ed] ">
         Бесплатная <br /> консультация
-      </button>
+      </button> */}
+      <BackBtn
+        onClick={showModal}
+        className="md:w-[210px] w-[120px] leading-3 md:py-1 py-2  bg-[#4D4948] font-medium text-white  md:text-base text-[12px] md:rounded-xl rounded-[5px] z-10 fixed bottom-5 right-2 border-2 border-[#33a3ed] "
+      >
+         Бесплатная <br /> консультация
+      </BackBtn>
     </div>
   );
 }

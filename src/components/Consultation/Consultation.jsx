@@ -4,7 +4,7 @@ import { useState } from "react";
 import moment from "moment/moment";
 import "moment/locale/ru"; // without this line it didn't work
 moment.locale("ru");
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 import "dayjs/locale/ru";
 import locale from "antd/es/date-picker/locale/ru_RU";
 const { TextArea } = Input;
@@ -14,7 +14,7 @@ const Consultation = () => {
     fullName: "",
     phone: "",
     message: "",
-    selectedTime: "",
+    emailjs: "",
   };
 
   const [values, setValues] = useState(initialValues);
@@ -31,20 +31,17 @@ const Consultation = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
 
-
-  const handleTimeChange = (_, dateString) => {
-    setValues({
-      ...values,
-      selectedTime: dateString,
-    });
-  };
+  // const handleTimeChange = (_, dateString) => {
+  //   setValues({
+  //     ...values,
+  //   });
+  // };
 
   const handleSubmit = async () => {
-
     if (
       values.fullName.trim() &&
       values.phone.trim() &&
-      values.selectedTime.trim() &&
+      values.emailjs.trim() &&
       values.message.trim()
     ) {
       messageApi.open({
@@ -62,7 +59,7 @@ const Consultation = () => {
             to_email: "holturaevm@gmail.com",
             message: values.message,
             phone: values.phone,
-            selectedTime: values.selectedTime,
+            emailjs: values.emailjs,
           },
           "_rkzuLmsOwLYHbQq2"
         )
@@ -110,7 +107,7 @@ const Consultation = () => {
             Бесплатная консультация
           </p>
           <div className="flex flex-col gap-3">
-            <div className="md:grid-cols-2 grid-cols-1 grid gap-3">
+            <div className="grid-cols-1 grid gap-3">
               <Input
                 className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="ФИО"
@@ -118,6 +115,8 @@ const Consultation = () => {
                 onChange={handleInputChange}
                 value={values.fullName}
               />
+            </div>
+            <div className="grid-cols-2 grid gap-3">
               <Input
                 className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="Тел: +7 --- --- -- --"
@@ -134,9 +133,7 @@ const Consultation = () => {
                 }}
                 value={values.phone}
               />
-            </div>
-            <div className="grid-rows-1">
-              <DatePicker
+              {/* <DatePicker
                 placeholder="Выбрать время"
                 showTime={{ format: "HH:mm" }}
                 format={"Do MMMM YYYY, HH:mm"}
@@ -144,6 +141,14 @@ const Consultation = () => {
                 locale={locale}
                 className="py-3 w-full"
                 allowClear
+              /> */}
+              <Input
+                className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
+                placeholder="Электронная почта"
+                type="emailjs"
+                name="emailjs"
+                onChange={handleInputChange}
+                value={values.emailjs}
               />
             </div>
             <div className="grid-rows-1">

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const Contacts = () => {
   return (
     <>
-      <div className="md:max-w-[1280px] mx-auto md:px-0 px-3 flex flex-col text-white">
+      <div className="md:max-w-[1280px] mx-auto md:px-0 px-3 flex flex-col">
         <div className=" flex md:flex-row flex-col min-h-[350px] items-center mb-10">
           <div className="relative flex items-center">
             <div className="flex items-center gap-4 transform md:-rotate-90">
