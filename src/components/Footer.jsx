@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="mt-16 bg-[#7dc0ec]">
+    <div className="mt-16 bg-[#1b252e]">
       <div className="md:max-w-[1280px] mx-auto w-full flex flex-col ">
         <div className="md:max-w-[1280px] mx-auto w-full md:min-h-[240px] flex md:flex-row flex-col items-center justify-between px-4 ">
           <div className="flex md:flex-row flex-col md:gap-14 gap-2 md:items-center items-start w-full">

@@ -23,7 +23,6 @@
 
 .ant-picker-input > input::placeholder,
 .ant-picker-suffix,
-.css-dev-only-do-not-override-1w4v3hc,
 .css-dev-only-do-not-override-1w4v3hc::placeholder,
 .ant-input-data-count {
   color: rgb(209 213 219) !important;
@@ -85,7 +84,7 @@
 }
 
 .ant-input::placeholder {
-  color: rgb(209 213 219) !important;
+  /* color: rgb(209 213 219) !important; */
 }
 
 .ant-picker-ranges {
@@ -121,6 +120,23 @@
 .ant-modal-close {
   background: gray !important;
   color: white !important;
+}
+
+.ant-menu-submenu-selected > .ant-menu-submenu-title {
+  color: #33a3ed !important;
+}
+
+/* .ant-picker-input > input::placeholder, */
+/* .ant-picker-suffix, */
+.nav_menu > .css-dev-only-do-not-override-1w4v3hc
+/* .css-dev-only-do-not-override-1w4v3hc::placeholder, */
+/* .ant-input-data-count  */
+{
+  /* color: black !important; */
+}
+
+.ant-menu-title-content {
+  font-size: 12px; 
 }
 
 @media screen and (max-width: 768px) and (min-width: 320px) {

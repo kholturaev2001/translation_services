@@ -1,20 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 
-import img1 from "../assets/images/bg_1.png";
-import img2 from "../assets/images/bg_2.png";
-import img3 from "../assets/images/bg_3.png";
-import img4 from "../assets/images/bg_4.png";
-import img5 from "../assets/images/bg_5.png";
+import img1 from "../assets/images/main_bg/exp1.jpg";
+import img2 from "../assets/images/main_bg/exp2.jpg";
+import img3 from "../assets/images/main_bg/exp3.jpg";
+import img4 from "../assets/images/main_bg/exp4.jpg";
+import img5 from "../assets/images/main_bg/exp5.jpg";
+import img6 from "../assets/images/main_bg/exp6.jpg";
 import ScrollDown from "../components/ScrollDown/ScrollDown";
-// import PhoneIcon from "../assets/icons/PhoneIcon";
-// import EmailIcon from "../assets/icons/EmailIcon";
 import Carousel from "../components/Carousel";
 import Advantages from "../components/Advantages/Advantages";
 import Footer from "../components/Footer";
 
 const data = [
   {
-    image: img1,
+    image: img6,
     title: "Строим мечты, творим будущее!",
   },
   {
@@ -87,7 +86,7 @@ const Main = () => {
       </div>
 
       <div className=" left-0 right-0 absolute top-[100vh] flex flex-col align-center gap-[100px] ">
-        <div className="mx-auto w-full flex flex-col gap-10 text-white">
+        <div className="mx-auto w-full flex flex-col gap-10">
           <Carousel />
           <Advantages />
         </div>

@@ -32,18 +32,18 @@ const Contacts = () => {
                 <span className="rotate-90 max-w-fit">
                   <PhoneIcon color='#fff' />
                 </span>
-                <a href="tel:+79689750768">+7 968 975-07-68</a>
-                <a href="tel:+79689750768">+7 968 975-07-68</a>
+                <a href="tel:+79559750755">+7 955 975-07-55</a>
+                <a href="tel:+79559750755">+7 955 975-07-55</a>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
                   <EmailIcon color='#fff' />
                 </span>
-                <a href="mailto:probuild.company22@gmail.com">
-                  probuild.company22@gmail.com
+                <a href="mailto:aisperevodchik@gmail.com">
+                  aisperevodchik@gmail.com
                 </a>
-                <a href="mailto:probuild.company22@gmail.com">
-                  probuild.company22@gmail.com
+                <a href="mailto:aisperevodchik@gmail.com">
+                  aisperevodchik@gmail.com
                 </a>
               </div>
             </div>
