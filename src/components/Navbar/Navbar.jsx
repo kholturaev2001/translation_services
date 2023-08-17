@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { useHistory } from "react-router-dom";
 import { Menu } from "antd";
-
 
 import "./navbar.css";
 import BurgerCross from "../BurgerCross/BurgerCross";
@@ -25,10 +24,64 @@ const items = [
     getItem("Карьера", "/vacancies"),
     getItem("Контакты", "/contacts"),
   ]),
-  getItem(`Оценка ▼`, "assess", null, [
-    getItem("Option 5", "5"),
-    getItem("Option 6", "6"),
-    getItem("Submenu", "assess_subs", null, [
+  getItem(`Оценка ▼`, "valuation", null, [
+    getItem("Оценка недвижимости", "estates_valuation", null, [
+      getItem("Оценка коммерческой недвижимости", "commercial_estates_valuation", null, [
+        getItem("Оценка склада", "store_valuation"),
+        getItem("Оценка нежилых помещений", "non_residential_premises_valuation"),
+        getItem("Оценка производственных помещений", "industrial_premises_valuation"),
+        getItem("Оценка сооружений", "building_valuation"),
+        getItem("Оценка имущественных комплексов", "property_complexes_valuation"),
+        getItem("Оценка объектов торговой недвижимости", "commercial_estate_valuation"),
+        getItem("Оценка офиса", "office_valuation"),
+      ]),
+      getItem("Оценка земли", "land_valuation", null, [
+        getItem("Оценка земельных участков c/x назначения", "agriculture_land_valuation"),
+        getItem("Оценка сервитута земельного участка", "easement_land_valuation"),
+      ]),
+      getItem("Оценка загородной недвижимости", "countryside_estate_valuation", null, [
+        getItem("Оценка частого дома", "private_house_valuation"),
+        getItem("Оценка таунхауса", "townhouse_valuation"),
+        getItem("Оценка коттеджа", "cottage_valuation"),
+        getItem("Оценка особняка", "mansion_valuation"),
+        getItem("Оценка дома без земельного участка", "without_landplot_valuation"),
+        getItem("Оценка дачи", "dacha_valuation"),
+        getItem("Оценка с земельным участком", "with_landplot_valuation"),
+      ]),
+      getItem("Оценка квартиры", "apartment_valuation", null, [
+        getItem("Оценка доли квартиры", "room_share_valuation"),
+        getItem("Оценка квартиры в новостройке, при покупке у застройщика", "new_room_valuation"),
+        getItem("Оценка квартиры для АИЖК", "home_mortgage_agency_valuation"),
+        getItem("Оценка апартаментов", "apartments_valuation"),
+        getItem("Оценка комнаты в коммунальной квартире", "shared_room_valuation"),
+      ]),
+      getItem("Определение стоимости неотделимых улучшений", "cost_of_inseparable_improvements"),
+      getItem("Оценка объектов незавершенного строительства", "under_construction_object_valuation"),
+      getItem("Оценка технического состояния здания", "building_technical_condition_valuation"),
+      getItem("Приемка помещений", "room_acceptance_valuation"),
+      getItem("Оценка зданий", "buildings_valuation"),
+    ]),
+    getItem("Оценка бизнеса", "business_valuation", null, [
+      getItem("Option 7", "7"),
+      getItem("Option 8", "8"),
+    ]),
+    getItem("Оценка нематериальных активов", "assets_valuation", null, [
+      getItem("Option 7", "7"),
+      getItem("Option 8", "8"),
+    ]),
+    getItem("Оценка транспорта", "transport_valuation", null, [
+      getItem("Option 7", "7"),
+      getItem("Option 8", "8"),
+    ]),
+    getItem("Оценка имущества", "property_valuation", null, [
+      getItem("Option 7", "7"),
+      getItem("Option 8", "8"),
+    ]),
+    getItem("Оценка ущерба", "damage_valuation", null, [
+      getItem("Option 7", "7"),
+      getItem("Option 8", "8"),
+    ]),
+    getItem("Цели оценки", "valuation_aims", null, [
       getItem("Option 7", "7"),
       getItem("Option 8", "8"),
     ]),
@@ -63,14 +116,17 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const navigateTo = useNavigate();
 
+  useEffect(() => {
+    navigateTo("/");
+  }, []);
+
   const handleBurgerClick = () => {
     setIsActive((prevState) => !prevState);
   };
 
-  const onClick = (e) => {
+  const handleNavigate = (e) => {
     console.log("click", e);
-    navigateTo(e.key)
-
+    navigateTo(e.key);
   };
 
   return (
@@ -87,7 +143,8 @@ const Navbar = () => {
           </div>
           <div className="nav_menu  w-full">
             <Menu
-              onClick={onClick}
+              onClick={handleNavigate}
+              defaultSelectedKeys={["/"]}
               style={{
                 backgroundColor: "transparent",
               }}
