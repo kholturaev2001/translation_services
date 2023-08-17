@@ -21,7 +21,7 @@ function App() {
   };
 
   const handleCancel = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false); 
   };
   return (
     <div className="">
