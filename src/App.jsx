@@ -23,6 +23,7 @@ function App() {
   const handleCancel = () => {
     setIsModalOpen(false); 
   };
+  
   return (
     <div className="">
       <Navbar />
