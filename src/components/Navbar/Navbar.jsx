@@ -244,20 +244,77 @@ const items = [
     ]),
   ]),
   getItem("Экспертиза ▼", "expert", null, [
-    getItem("Строительно-техническая экспертиза", "9"),
-    getItem("Техническая экспертиза документов", "10"),
-    getItem("Почерковедческая экспертиза", "11"),
-    getItem("Финансово-экономическая экспертиза", "12"),
-    getItem("Бухгалтерская экспертиза", "12"),
-    getItem("Лингвистическая экспертиза", "12"),
-    getItem("Фоноскопическая экспертиза", "12"),
-    getItem("Компьютерно-техническая экспертиза", "12"),
-    getItem("Экспертиза объектов интеллектуальной деятельности", "12"),
-    getItem("Товароведческая экспертиза", "12"),
-    getItem("Автотехническая экспертиза", "12"),
-    getItem("Землеустроительная экспертиза", "12"),
-    getItem("Пожарная экспертиза", "12"),
-    getItem("Оценочная экспертиза", "12"),
+    getItem(
+      "Строительно-техническая экспертиза",
+      "construction_and_technical_expert",
+      null,
+      [
+        getItem(
+          "Определение стоимости выполненных строительно-технических работ",
+          "cost_of_completed_construction_work_determination"
+        ),
+        getItem(
+          "Экспертиза сметной документации",
+          "estimate_documentation_expert"
+        ),
+        getItem("Экспертиза фасада здания", "building_facade_expert"),
+        getItem("Экспертиза окон", "window_expert"),
+        getItem(
+          "Экспертиза строительно-монтажных работ",
+          "construction_and_installation_works_expert"
+        ),
+        getItem(
+          "Экспертиза качества внутренней отделки",
+          "quality_of_interior_decoration_expert"
+        ),
+        getItem(
+          "Экспертиза зданий и сооружений",
+          "buildings_and_structures_expert"
+        ),
+        getItem(
+          "Экспертиза капитальности зданий",
+          "capitality_of_buildings_expert"
+        ),
+        getItem("Экспертиза дверных блоков", "door_blocks_expert"),
+        getItem(
+          "Строительная экспертиза квартиры",
+          "apartment_contruction_expert"
+        ),
+        getItem("Экспертиза кровли", "roof_expert"),
+      ]
+    ),
+    getItem(
+      "Техническая экспертиза документов",
+      "technical_document_expert",
+      null,
+      [
+        getItem(
+          "Экспертиза срока давности составления документа",
+          "statute_of_limitations_for_compiling_a_document_expert"
+        ),
+      ]
+    ),
+    getItem("Почерковедческая экспертиза", "handwriting_expert"),
+    getItem(
+      "Финансово-экономическая экспертиза",
+      "financial_and_economic_expert"
+    ),
+    getItem("Бухгалтерская экспертиза", "accounting_expert"),
+    getItem("Лингвистическая экспертиза", "linguistic_expert"),
+    getItem("Фоноскопическая экспертиза", "phonoscopic_expert"),
+    getItem(
+      "Компьютерно-ехническая экспертиза",
+      "computer_and_technical_expert"
+    ),
+    getItem(
+      "Экспертиза объектов интеллектуальной деятельности",
+      "intellectual_activity_objects_expert"
+    ),
+    getItem("Товароведческая экспертиза", "commodity_expert"),
+    getItem("Автотехническая экспертиза", "automotive_expert"),
+    getItem("Землеустроительная экспертиза", "land_management_expert"),
+    getItem("Пожарная экспертиза", "fire_expert"),
+    getItem("Оценочная экспертиза", "appraisal_expert"),
   ]),
   getItem("Снижение налогов ▼", "taxcuts", null, [
     getItem("Оспаривание кадастровой стоимости недвижимости", "13"),
@@ -271,9 +328,9 @@ const items = [
     ),
     getItem("Изменение категории земельного участка", "18"),
     getItem("Снижение арендной ставки земельного участка", "19"),
-    getItem("Легализация самовольной постройки", "20"),
-    getItem("Юристы по кадастровым вопросам", "20"),
-    getItem("Согласование перепланировок", "20"),
+    getItem("Легализация самовольной постройки", "20l"),
+    getItem("Юристы по кадастровым вопросам", "20as"),
+    getItem("Согласование перепланировок", "20;lk"),
   ]),
   getItem("Бизнес планирование ▼", "businessplanning", null, [
     getItem("Анализ финансово-хозяйственной деятельности предприятия", "21"),
