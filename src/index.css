@@ -91,6 +91,22 @@
   align-items: center;
 }
 
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-item,
+.ant-menu-item-only-child {
+  height: 31px !important;
+  display: flex ;
+  align-items: center ;
+}
+
+.ant-menu-title-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
 /* Ant Modal */
 
 .ant-modal-footer {
@@ -130,13 +146,12 @@
 /* .ant-picker-suffix, */
 .nav_menu > .css-dev-only-do-not-override-1w4v3hc
 /* .css-dev-only-do-not-override-1w4v3hc::placeholder, */
-/* .ant-input-data-count  */
-{
+/* .ant-input-data-count  */ {
   /* color: black !important; */
 }
 
 .ant-menu-title-content {
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
