@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import BurgerCross from "../BurgerCross/BurgerCross";
+import { Menu } from "antd";
 
 const navs = [
   {
@@ -20,7 +21,15 @@ const navs = [
   },
 ];
 
-const Sidebar = ({ isActive, onClick, setIsActive }) => {
+const Sidebar = ({
+  isActive,
+  onClick,
+  setIsActive,
+  handleNavigate,
+  items,
+  defaultOpenKeys,
+  defaultSelectedKeys
+}) => {
   return (
     <div
       className={` ${
@@ -32,7 +41,7 @@ const Sidebar = ({ isActive, onClick, setIsActive }) => {
           <BurgerCross isActive={isActive} />
         </button>
       </div>
-      <nav className="flex flex-col  text-sm">
+      {/* <nav className="flex flex-col  text-sm">
         {navs.map((nav, id) => (
           <NavLink
             key={id}
@@ -49,7 +58,18 @@ const Sidebar = ({ isActive, onClick, setIsActive }) => {
             {nav.title}
           </NavLink>
         ))}
-      </nav>
+      </nav> */}
+      <Menu
+        onClick={handleNavigate}
+        defaultSelectedKeys={defaultSelectedKeys}
+        style={{
+          backgroundColor: "transparent",
+          overflow: "auto",
+        }}
+        defaultOpenKeys={defaultOpenKeys}
+        mode="inline"
+        items={items}
+      />
     </div>
   );
 };

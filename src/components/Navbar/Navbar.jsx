@@ -317,26 +317,44 @@ const items = [
     getItem("Оценочная экспертиза", "appraisal_expert"),
   ]),
   getItem("Снижение налогов ▼", "taxcuts", null, [
-    getItem("Оспаривание кадастровой стоимости недвижимости", "13"),
-    getItem("Применение налоговых льгот", "14"),
-    getItem("Исключение объектов недвижимости из 700-ПП", "15"),
+    getItem(
+      "Оспаривание кадастровой стоимости недвижимости",
+      "challenging_the_cadastral_value_of_real_estate"
+    ),
+    getItem("Применение налоговых льгот", "application_of_tax_incentives"),
+    getItem(
+      "Исключение объектов недвижимости из 700-ПП",
+      "exclusion_of_real_estate_objects_from_700_pp"
+    ),
   ]),
   getItem("Юридические услуги ▼", "legalservice", null, [
     getItem(
       "Изменение вида разрешенного использования земельного участка",
-      "17"
+      "permitted_land_type_change"
     ),
-    getItem("Изменение категории земельного участка", "18"),
-    getItem("Снижение арендной ставки земельного участка", "19"),
-    getItem("Легализация самовольной постройки", "20l"),
-    getItem("Юристы по кадастровым вопросам", "20as"),
-    getItem("Согласование перепланировок", "20;lk"),
+    getItem("Изменение категории земельного участка", "land_category_change"),
+    getItem(
+      "Снижение арендной ставки земельного участка",
+      "land_rent_decrease"
+    ),
+    getItem(
+      "Легализация самовольной постройки",
+      "unauthorized_construction_legalization"
+    ),
+    getItem("Юристы по кадастровым вопросам", "cadastral_matters_lawyers"),
+    getItem("Согласование перепланировок", "redevelopment_coordination"),
   ]),
   getItem("Бизнес планирование ▼", "businessplanning", null, [
-    getItem("Анализ финансово-хозяйственной деятельности предприятия", "21"),
-    getItem("Разработка бизнес-плана", "22"),
+    getItem(
+      "Анализ финансово-хозяйственной деятельности предприятия",
+      "enterprise_financial_and_economic_activities_analysis"
+    ),
+    getItem("Разработка бизнес-плана", "business_plan_development"),
   ]),
 ];
+
+const defaultSelectedKeys = ['/']
+const defaultOpenKeys=['about_company']
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -367,10 +385,10 @@ const Navbar = () => {
             </div>
             <nav className="stroke md:flex gap-4 font-medium hidden"></nav>
           </div>
-          <div className="nav_menu  w-full">
+          <div className=" w-full hidden md:block">
             <Menu
               onClick={handleNavigate}
-              defaultSelectedKeys={["/"]}
+              defaultSelectedKeys={defaultSelectedKeys}
               style={{
                 backgroundColor: "transparent",
               }}
@@ -387,9 +405,9 @@ const Navbar = () => {
             </section>
             <a href="mailto:akwindows@gmail.com">aisperevodchik@gmail.com</a>
           </div>
-          {/* <button className="md:hidden px-5" onClick={handleBurgerClick}>
+          <button className="md:hidden px-5" onClick={handleBurgerClick}>
             <BurgerCross isActive={isActive} />
-          </button> */}
+          </button>
         </div>
       </div>
       <div className="block md:hidden">
@@ -397,6 +415,10 @@ const Navbar = () => {
           isActive={isActive}
           setIsActive={setIsActive}
           onClick={handleBurgerClick}
+          handleNavigate={handleNavigate}
+          items={items}
+          defaultSelectedKeys={defaultSelectedKeys}
+          defaultOpenKeys={defaultOpenKeys}
         />
       </div>
     </>

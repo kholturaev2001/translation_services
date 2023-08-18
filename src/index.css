@@ -142,14 +142,6 @@
   color: #33a3ed !important;
 }
 
-/* .ant-picker-input > input::placeholder, */
-/* .ant-picker-suffix, */
-.nav_menu > .css-dev-only-do-not-override-1w4v3hc
-/* .css-dev-only-do-not-override-1w4v3hc::placeholder, */
-/* .ant-input-data-count  */ {
-  /* color: black !important; */
-}
-
 .ant-menu-title-content {
   font-size: 12px;
 }
