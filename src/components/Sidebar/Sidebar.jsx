@@ -34,7 +34,7 @@ const Sidebar = ({
     <div
       className={` ${
         isActive ? "translate-x-0 shadow-2xl" : "translate-x-full"
-      } fixed top-0 right-0 w-[60vw] h-full bg-[#f5f5f5] z-10  ease-in-out duration-300 transition flex flex-col`}
+      } fixed top-0 right-0 w-[90vw] h-full bg-[#f5f5f5] z-10  ease-in-out duration-300 transition flex flex-col`}
     >
       <div className="flex justify-end py-3 px-5">
         <button className="md:hidden " onClick={onClick}>
