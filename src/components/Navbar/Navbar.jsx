@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { useHistory } from "react-router-dom";
 import { Menu } from "antd";
 
 import "./navbar.css";
@@ -371,6 +370,7 @@ const Navbar = () => {
   const handleNavigate = (e) => {
     console.log("click", e);
     navigateTo(e.key);
+    setIsActive((prevState) => !prevState)
   };
 
   return (
@@ -413,7 +413,6 @@ const Navbar = () => {
       <div className="block md:hidden">
         <Sidebar
           isActive={isActive}
-          setIsActive={setIsActive}
           onClick={handleBurgerClick}
           handleNavigate={handleNavigate}
           items={items}
