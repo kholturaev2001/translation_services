@@ -1,3 +1,5 @@
 .consult_container {
-    background-image: url('../../assets/images/modal_bg.png');
+    background-image: url('../../assets/images/istockphoto-4-transformed.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

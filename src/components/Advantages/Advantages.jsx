@@ -1,22 +1,51 @@
 import AdvantageCard from "./AdvantageCard";
-import AdvantageArrowCard from "./AdvantageArrowCard";
+import deep_expertise from '../../assets/images/advantages/deep_expertise.png'
+import individual_consultation from '../../assets/images/advantages/individual_consultation.png'
+import responsibility from '../../assets/images/advantages/responsibility.png'
+import damage_estimate from '../../assets/images/advantages/damage_estimate.png'
+import assets_and_business from '../../assets/images/advantages/assets_and_business.png'
+import high_quality from '../../assets/images/advantages/high_quality.png'
+
+
+
+
 
 const Advantages = () => {
   return (
     <div className="flex flex-col gap-[35px] mb-4 mt-8 mx-auto">
-      <p className="text-center md:text-2xl text-[24px] font-medium">Наши Преимущества</p>
-      <div className="flex md:flex-row lg:flex-nowrap md:flex-wrap flex-col items-center justify-center md:gap-0 gap-4">
-        <AdvantageArrowCard
-          title="Преимущество 1"
-          txt="Предоставлять клиентам превосходное качество и инновационные решения, отвечающие их потребностям."
-        />
-        <AdvantageArrowCard
-          title="Преимущество 2"
-          txt="Предоставлять клиентам превосходное качество и инновационные решения, отвечающие их потребностям."
+      <p className="text-center md:text-2xl text-[24px] font-medium">
+        Наши Преимущества
+      </p>
+      <div className="flex md:flex-row md:flex-wrap flex-col justify-center gap-6">
+        <AdvantageCard
+        icon={deep_expertise}
+          title="Глубокая экспертиза в разнообразных областях"
+          txt="Наши высококвалифицированные эксперты обладают многолетним опытом в оценке недвижимости, бизнеса, нематериальных активов, транспорта и имущества. Мы применяем современные методики и аналитические инструменты для точных и объективных оценок, позволяя нашим клиентам принимать основанные на данных решения."
         />
         <AdvantageCard
-          title="Преимущество 3"
-          txt="Предоставлять клиентам превосходное качество и инновационные решения, отвечающие их потребностям."
+        icon={individual_consultation}
+          title="Индивидуальный подход и бесплатная консультация"
+          txt="Мы ценим уникальность каждого клиента и его потребности. Поэтому перед проведением оценки мы предоставляем бесплатную консультацию, нацеленную на понимание ваших целей и требований. Это помогает нам разработать наилучший план действий и предоставить вам наиболее релевантную информацию."
+        />
+        <AdvantageCard
+        icon={responsibility}
+          title="Прозрачность и ответственность"
+          txt="Мы придерживаемся высоких стандартов прозрачности и этики в каждой оценке и консультации. Наша цель - предоставить вам объективные результаты, поддержанные четкими объяснениями. Если у вас возникнут вопросы или потребуется дополнительное объяснение, мы всегда готовы предоставить детальные разъяснения."
+        />
+        <AdvantageCard
+        icon={damage_estimate}
+          title="Комплексный анализ ущерба и оценка стоимости"
+          txt="Наша команда специалистов проводит тщательный анализ ущерба в различных ситуациях, начиная от страховых случаев до судебных процессов. Мы также предоставляем профессиональную оценку стоимости объектов недвижимости и имущества, что является важным элементом принятия решений о продаже, аренде или инвестировании."
+        />
+        <AdvantageCard
+        icon={assets_and_business}
+          title="Экспертиза нематериальных активов и бизнеса"
+          txt="Мы специализируемся не только на оценке материальных активов, но и на нематериальных, таких как бренды, патенты, лицензии и бизнес-процессы. Наш подход учитывает как финансовую, так и стратегическую ценность этих активов, помогая вам максимизировать возврат вложений."
+        />
+        <AdvantageCard
+        icon={high_quality}
+          title="Высококачественное обслуживание и внимание к деталям"
+          txt="Мы стремимся предоставить не только высококлассные оценочные услуги, но и превосходное обслуживание клиентов. Наша команда всегда готова ответить на ваши вопросы и обеспечить понимание каждого этапа оценки или консультации. Мы уделяем особое внимание деталям, чтобы обеспечить точные и надежные результаты."
         />
       </div>
     </div>

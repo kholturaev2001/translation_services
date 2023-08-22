@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import img1 from "../assets/images/main_bg/exp1.jpg";
+import img7 from "../assets/images/main_bg/exp7.jpeg";
 import img2 from "../assets/images/main_bg/exp2.jpg";
 import img3 from "../assets/images/main_bg/exp3.jpg";
 import img4 from "../assets/images/main_bg/exp4.jpg";
@@ -31,6 +31,10 @@ const data = [
   {
     image: img5,
     title: "Инновации в каждом доме, забота в каждом проекте!",
+  },
+  {
+    image: img7,
+    title: "Партнерство в каждой стадии строительства!",
   },
 ];
 

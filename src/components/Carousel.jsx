@@ -27,27 +27,27 @@ const partners = [
   {
     img: partner2,
     title: "Следственный коммитет РФ",
-    scale: "75",
+    scale: "scale-75",
   },
   {
     img: partner3,
     title: "Федеральная служба безопасности",
-    scale: "125",
+    scale: "scale-125",
   },
   {
     img: partner4,
     title: "Судебный департамент г. Москвы и МО",
-    scale: "75",
+    scale: "scale-75",
   },
   {
     img: partner5,
     title: "Прокуратура Московского метрополитена",
-    scale: "50",
+    scale: "scale-50",
   },
   {
     img: partner6,
     title: "Прокуратура г. Москвы",
-    scale: '75',
+    scale: 'scale-75',
   },
 ];
 
@@ -94,15 +94,15 @@ export default function Carousel({ data = partners }) {
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>
-            <div className="flex flex-col items-center justify-center shadow-xl">
+            <div className="flex flex-col items-center justify-center shadow-xl overflow-hidden">
               <img
                 className={`${
-                  el.scale ? `scale-${el.scale}` : "scale-100"
+                  el.scale ? el.scale : "scale-100"
                 } md:h-[330px] h-[200px] object-contain`}
                 src={el.img}
                 alt=""
               />
-              <p className="text-[#33a3ed] text-center h-[100px] font-bold px-5 text-lg">
+              <p className="text-[#33a3ed] text-center h-[120px] font-bold px-5 text-lg">
                 {el.title}
               </p>
             </div>

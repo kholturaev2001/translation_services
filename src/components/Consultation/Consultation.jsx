@@ -1,4 +1,4 @@
-import { DatePicker, Input, message } from "antd";
+import { Input, message } from "antd";
 import "./Consultation.css";
 import { useState } from "react";
 import moment from "moment/moment";
@@ -6,13 +6,14 @@ import "moment/locale/ru"; // without this line it didn't work
 moment.locale("ru");
 import emailjs from "@emailjs/browser";
 import "dayjs/locale/ru";
-import locale from "antd/es/date-picker/locale/ru_RU";
 const { TextArea } = Input;
+import { MaskedInput } from "antd-mask-input";
 
 const Consultation = () => {
+  const [maskedPhone, setMaskedPhone] = useState("");
+
   const initialValues = {
     fullName: "",
-    phone: "",
     message: "",
     emailjs: "",
   };
@@ -22,25 +23,25 @@ const Consultation = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    setValues({
-      ...values,
-      [name]: value,
-    });
+    if (name === "phone") {
+      setMaskedPhone(value);
+    } else {
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    }
   };
+
+  console.log(values);
 
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
 
-  // const handleTimeChange = (_, dateString) => {
-  //   setValues({
-  //     ...values,
-  //   });
-  // };
-
   const handleSubmit = async () => {
     if (
       values.fullName.trim() &&
-      values.phone.trim() &&
+      maskedPhone.trim() &&
       values.emailjs.trim() &&
       values.message.trim()
     ) {
@@ -58,7 +59,7 @@ const Consultation = () => {
             to_name: "Muhammadrasul",
             to_email: "holturaevm@gmail.com",
             message: values.message,
-            phone: values.phone,
+            phone: maskedPhone,
             emailjs: values.emailjs,
           },
           "_rkzuLmsOwLYHbQq2"
@@ -73,11 +74,11 @@ const Consultation = () => {
             });
 
             setValues({
-              ...values,
-              phone: "",
+              emailjs: "",
               message: "",
               fullName: "",
             });
+            setMaskedPhone("");
           },
           (error) => {
             messageApi.open({
@@ -117,31 +118,15 @@ const Consultation = () => {
               />
             </div>
             <div className="grid-cols-2 grid gap-3">
-              <Input
-                className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
-                placeholder="Тел: +7 --- --- -- --"
+              <MaskedInput
+                mask="+7 (000) 000-00-00"
                 name="phone"
                 onChange={(e) => {
-                  const regex = /^[0-9,+\b]+$/;
-                  const { value } = e.target;
-                  if (value === "" || regex.test(value)) {
-                    setValues({
-                      ...values,
-                      phone: value,
-                    });
-                  }
+                  handleInputChange(e);
+                  console.log(e);
                 }}
-                value={values.phone}
+                value={maskedPhone}
               />
-              {/* <DatePicker
-                placeholder="Выбрать время"
-                showTime={{ format: "HH:mm" }}
-                format={"Do MMMM YYYY, HH:mm"}
-                onChange={handleTimeChange}
-                locale={locale}
-                className="py-3 w-full"
-                allowClear
-              /> */}
               <Input
                 className="placeholder:text-gray-300 py-3 text-white md:text-base text-sm"
                 placeholder="Электронная почта"
@@ -166,7 +151,7 @@ const Consultation = () => {
             <button
               onClick={handleSubmit}
               value={values.message}
-              className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] bg-[#c0bebd] rounded-lg font-semibold mt-[18px] text-[#24201f] "
+              className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] text-white hover:text-[#33a3ed]  bg-[#33a3ed] hover:bg-white border-2 hover:border-[#33a3ed] rounded-lg font-semibold mt-[18px] duration-500 ease-in-out "
             >
               Заказать
             </button>

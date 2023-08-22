@@ -1,6 +1,6 @@
 import about_img from "../assets/images/about_img.png";
 import Footer from "../components/Footer";
-import Services from "../components/Services";
+// import Services from "../components/Services";
 
 const About = () => {
   return (
@@ -40,7 +40,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <Services />
+        {/* <Services /> */}
       </div>
       <Footer />
     </>

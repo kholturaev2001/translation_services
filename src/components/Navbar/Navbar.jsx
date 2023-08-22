@@ -5,7 +5,6 @@ import "./navbar.css";
 import BurgerCross from "../BurgerCross/BurgerCross";
 import Sidebar from "../Sidebar/Sidebar";
 import logo from "../../assets/images/logo.svg";
-import LocationIcon from "../../assets/icons/LocationIcon";
 import { useNavigate } from "react-router-dom";
 function getItem(label, key, icon, children, type) {
   return {
@@ -30,7 +29,7 @@ const items = [
         "commercial_estates_valuation",
         null,
         [
-          getItem("Оценка склада", "store_valuation"),
+          getItem("Оценка склада", "/services/store_valuation"),
           getItem(
             "Оценка нежилых помещений",
             "non_residential_premises_valuation"
@@ -51,6 +50,7 @@ const items = [
           getItem("Оценка офиса", "office_valuation"),
         ]
       ),
+
       getItem("Оценка земли", "land_valuation", null, [
         getItem(
           "Оценка земельных участков c/x назначения",
@@ -106,6 +106,7 @@ const items = [
       getItem("Приемка помещений", "room_acceptance_valuation"),
       getItem("Оценка зданий", "buildings_valuation"),
     ]),
+
     getItem("Оценка бизнеса", "business_valuation", null, [
       getItem("Оценка векселей", "bills_valuation"),
       getItem("Оценка акций", "stock_valuation"),
@@ -242,6 +243,7 @@ const items = [
       ),
     ]),
   ]),
+
   getItem("Экспертиза ▼", "expert", null, [
     getItem(
       "Строительно-техническая экспертиза",
@@ -366,29 +368,59 @@ const items = [
     getItem("Устный перевод", "oral_translation", null, [
       getItem("Перевод на переговорах", "for_negotiations_translation"),
       getItem("Переводчик на выставку", "for_exhibition_translation"),
-      getItem("Перевод на собраниях, конференциях", "for_meetings_and_conference_translation"),
+      getItem(
+        "Перевод на собраниях, конференциях",
+        "for_meetings_and_conference_translation"
+      ),
       getItem("Сопровождение делегации", "delegation_accompanying"),
-      getItem("Перевод при нотариальных действиях", "notarial_actions_translation"),
+      getItem(
+        "Перевод при нотариальных действиях",
+        "notarial_actions_translation"
+      ),
       getItem("Перевод на производстве", "in_production_translation"),
       getItem("Гид-переводчик", "guide_interpreter"),
       getItem("Синхронный перевод", "synchronic_translation"),
       getItem("Специфический перевод", "specific_translation"),
     ]),
-    getItem('Личные документы', 'private_documents', null, [
-      getItem('Перевод паспорта', 'passport_translation'),
-      getItem('Перевод водительских удостоверений, ПТС', "drivers_licenses_and_pts_translation"),
-      getItem('Перевод печатей, апостилей', 'seals_and_apostilles_translation'),
-      getItem('Перевод справок, свидетельств', 'references_certificates_translation'),
-      getItem('Перевод и нотариальное заверение согласий на выезд ребенка', 'departure_of_child_consents_translation_and_notarization'),
-      getItem('Перевод аттестатов и приложений', 'certificates_and_applications_translation'),
-      getItem('Перевод дипломов и приложений', 'diplomas_and_applications_translation'),
-      getItem('Перевод зачетных книжек', 'transcripts_translation'),
-      getItem('Перевод корпоративных документов', 'corporate_documents_translation'),
-      getItem('Перевод и апостилирование свидетельства о рождении', 'birth_certificate_apostille_translation'),
-      getItem('Перевод договоров, приложений', 'contracts_and_applications_translation'),
-      getItem('Услуги по переводу документов', 'document_translation_services'),
-      getItem('Нотариальные услуги', 'notary_services'),
-    ])
+    getItem("Личные документы", "private_documents", null, [
+      getItem("Перевод паспорта", "passport_translation"),
+      getItem(
+        "Перевод водительских удостоверений, ПТС",
+        "drivers_licenses_and_pts_translation"
+      ),
+      getItem("Перевод печатей, апостилей", "seals_and_apostilles_translation"),
+      getItem(
+        "Перевод справок, свидетельств",
+        "references_certificates_translation"
+      ),
+      getItem(
+        "Перевод и нотариальное заверение согласий на выезд ребенка",
+        "departure_of_child_consents_translation_and_notarization"
+      ),
+      getItem(
+        "Перевод аттестатов и приложений",
+        "certificates_and_applications_translation"
+      ),
+      getItem(
+        "Перевод дипломов и приложений",
+        "diplomas_and_applications_translation"
+      ),
+      getItem("Перевод зачетных книжек", "transcripts_translation"),
+      getItem(
+        "Перевод корпоративных документов",
+        "corporate_documents_translation"
+      ),
+      getItem(
+        "Перевод и апостилирование свидетельства о рождении",
+        "birth_certificate_apostille_translation"
+      ),
+      getItem(
+        "Перевод договоров, приложений",
+        "contracts_and_applications_translation"
+      ),
+      getItem("Услуги по переводу документов", "document_translation_services"),
+      getItem("Нотариальные услуги", "notary_services"),
+    ]),
   ]),
 ];
 
@@ -407,9 +439,9 @@ const Navbar = () => {
     setIsActive((prevState) => !prevState);
   };
 
-  const handleNavigate = (e) => {
-    console.log("click", e);
-    navigateTo(e.key);
+  const handleNavigate = ({ key }) => {
+    console.log("click", key);
+    navigateTo(key);
     setIsActive((prevState) => !prevState);
   };
 

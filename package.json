@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.9.5",
     "antd": "^5.8.0",
+    "antd-mask-input": "^2.0.7",
     "dayjs": "^1.11.9",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
