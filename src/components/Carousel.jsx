@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Autoplay,
   Navigation,
@@ -11,18 +12,46 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import house1 from "../assets/images/house1.jpg";
-import house2 from "../assets/images/house2.jpg";
-import house3 from "../assets/images/house3.jpg";
-import house4 from "../assets/images/house4.jpg";
-import house5 from "../assets/images/house5.jpg";
-import house6 from "../assets/images/bg_2.png";
-import house7 from "../assets/images/bg_3.png";
-import { useEffect, useState } from "react";
+import partner1 from "../assets/images/partners/Russia_MFA_emblem.png";
+import partner2 from "../assets/images/partners/Investigative_Committee_Russia_Emblem.png";
+import partner3 from "../assets/images/partners/fsb.jpg";
+import partner4 from "../assets/images/partners/judical_department.png";
+import partner5 from "../assets/images/partners/moscow_metropolitan.png";
+import partner6 from "../assets/images/partners/Prosecutor_General_of_Russia.png";
 
-const houses = [house1, house2, house3, house4, house5, house6, house7];
+const partners = [
+  {
+    img: partner1,
+    title: "Министерство внутренних дел РФ",
+  },
+  {
+    img: partner2,
+    title: "Следственный коммитет РФ",
+    scale: "75",
+  },
+  {
+    img: partner3,
+    title: "Федеральная служба безопасности",
+    scale: "125",
+  },
+  {
+    img: partner4,
+    title: "Судебный департамент г. Москвы и МО",
+    scale: "75",
+  },
+  {
+    img: partner5,
+    title: "Прокуратура Московского метрополитена",
+    scale: "50",
+  },
+  {
+    img: partner6,
+    title: "Прокуратура г. Москвы",
+    scale: '75',
+  },
+];
 
-export default function Carousel({ data = houses }) {
+export default function Carousel({ data = partners }) {
   const [slidesPerView, setSlidesPerView] = useState(2);
   const [slidesGap, setSlidesGap] = useState(5);
 
@@ -65,11 +94,18 @@ export default function Carousel({ data = houses }) {
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>
-            <img
-              className="md:h-[400px] h-[300px] object-cover"
-              src={el}
-              alt=""
-            />
+            <div className="flex flex-col items-center justify-center shadow-xl">
+              <img
+                className={`${
+                  el.scale ? `scale-${el.scale}` : "scale-100"
+                } md:h-[330px] h-[200px] object-contain`}
+                src={el.img}
+                alt=""
+              />
+              <p className="text-[#33a3ed] text-center h-[100px] font-bold px-5 text-lg">
+                {el.title}
+              </p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
