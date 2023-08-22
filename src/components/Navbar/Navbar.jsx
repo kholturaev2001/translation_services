@@ -350,10 +350,50 @@ const items = [
     ),
     getItem("Разработка бизнес-плана", "business_plan_development"),
   ]),
+  getItem("Переводческая деятельность ▼", "translating", null, [
+    getItem("Письменный перевод", "written_translation", null, [
+      getItem("Технический перевод", "technical_translation"),
+      getItem("Перевод экономических текстов", "economic_texts_translation"),
+      getItem("Финансовый перевод", "financial_translation"),
+      getItem("ИТ перевод", "it_translation"),
+      getItem("Юридический перевод", "legal_translation"),
+      getItem("Медицинский перевод", "medical_translation"),
+      getItem("Художественный перевод", "literary_translation"),
+      getItem("Публицистический перевод", "publicistic_translation"),
+      getItem("Перевод рекламных текстов", "advertising_texts_translation"),
+      getItem("Фармацевтический перевод", "pharmaceutical_translation"),
+    ]),
+    getItem("Устный перевод", "oral_translation", null, [
+      getItem("Перевод на переговорах", "for_negotiations_translation"),
+      getItem("Переводчик на выставку", "for_exhibition_translation"),
+      getItem("Перевод на собраниях, конференциях", "for_meetings_and_conference_translation"),
+      getItem("Сопровождение делегации", "delegation_accompanying"),
+      getItem("Перевод при нотариальных действиях", "notarial_actions_translation"),
+      getItem("Перевод на производстве", "in_production_translation"),
+      getItem("Гид-переводчик", "guide_interpreter"),
+      getItem("Синхронный перевод", "synchronic_translation"),
+      getItem("Специфический перевод", "specific_translation"),
+    ]),
+    getItem('Личные документы', 'private_documents', null, [
+      getItem('Перевод паспорта', 'passport_translation'),
+      getItem('Перевод водительских удостоверений, ПТС', "drivers_licenses_and_pts_translation"),
+      getItem('Перевод печатей, апостилей', 'seals_and_apostilles_translation'),
+      getItem('Перевод справок, свидетельств', 'references_certificates_translation'),
+      getItem('Перевод и нотариальное заверение согласий на выезд ребенка', 'departure_of_child_consents_translation_and_notarization'),
+      getItem('Перевод аттестатов и приложений', 'certificates_and_applications_translation'),
+      getItem('Перевод дипломов и приложений', 'diplomas_and_applications_translation'),
+      getItem('Перевод зачетных книжек', 'transcripts_translation'),
+      getItem('Перевод корпоративных документов', 'corporate_documents_translation'),
+      getItem('Перевод и апостилирование свидетельства о рождении', 'birth_certificate_apostille_translation'),
+      getItem('Перевод договоров, приложений', 'contracts_and_applications_translation'),
+      getItem('Услуги по переводу документов', 'document_translation_services'),
+      getItem('Нотариальные услуги', 'notary_services'),
+    ])
+  ]),
 ];
 
-const defaultSelectedKeys = ['/']
-const defaultOpenKeys=['about_company']
+const defaultSelectedKeys = ["/"];
+const defaultOpenKeys = ["about_company"];
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -370,7 +410,7 @@ const Navbar = () => {
   const handleNavigate = (e) => {
     console.log("click", e);
     navigateTo(e.key);
-    setIsActive((prevState) => !prevState)
+    setIsActive((prevState) => !prevState);
   };
 
   return (
@@ -396,7 +436,7 @@ const Navbar = () => {
               items={items}
             />
           </div>
-          <div className="md:block hidden text-sm">
+          {/* <div className="md:block hidden text-sm">
             <section className="flex items-center justify-end gap-3 text-black">
               <button>
                 <LocationIcon />
@@ -404,7 +444,7 @@ const Navbar = () => {
               <a href="tel:+79559011516">79559011516</a>
             </section>
             <a href="mailto:akwindows@gmail.com">aisperevodchik@gmail.com</a>
-          </div>
+          </div> */}
           <button className="md:hidden px-5" onClick={handleBurgerClick}>
             <BurgerCross isActive={isActive} />
           </button>
