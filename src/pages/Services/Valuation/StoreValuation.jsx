@@ -1,4 +1,5 @@
 import { Breadcrumb } from "antd";
+import ServiceCard from "../../../components/Card/ServiceCard";
 
 const StoreValuation = () => {
   return (
@@ -21,6 +22,7 @@ const StoreValuation = () => {
         ]}
         className="m-auto pb-4"
       />
+      <ServiceCard />
       StoreValuation
     </div>
   );

@@ -100,6 +100,10 @@
   align-items: center ;
 }
 
+.ant-menu-submenu {
+  padding-inline: 10px !important;
+}
+
 .ant-menu-title-content {
   height: 100%;
   display: flex;

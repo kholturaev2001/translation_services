@@ -4,7 +4,7 @@ import { Menu } from "antd";
 import "./navbar.css";
 import BurgerCross from "../BurgerCross/BurgerCross";
 import Sidebar from "../Sidebar/Sidebar";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/images/logo_with_txt.svg";
 import { useNavigate } from "react-router-dom";
 function getItem(label, key, icon, children, type) {
   return {
@@ -428,21 +428,33 @@ const defaultSelectedKeys = ["/"];
 const defaultOpenKeys = ["about_company"];
 
 const Navbar = () => {
+  // const [defaultSelectedKeys, setDefaultSelectedKeys] = useState(['/']);
+  console.log("🚀 ~ file: Navbar.jsx:432 ~ Navbar ~ defaultSelectedKeys:", defaultSelectedKeys)
   const [isActive, setIsActive] = useState(false);
   const navigateTo = useNavigate();
-
+  
   useEffect(() => {
-    navigateTo("/");
-  }, []);
+      navigateTo("/");
+    }, []);
+    
+    // useEffect(() => {
+    //   const active_nav = sessionStorage.getItem("active_nav");
+    //   if (active_nav !== null) {
+    //     setDefaultSelectedKeys([active_nav]); // Wrap active_nav in an array
+    //   } else {
+    //     setDefaultSelectedKeys(['/']);
+    //   }
+    // }, []);
 
   const handleBurgerClick = () => {
     setIsActive((prevState) => !prevState);
   };
 
   const handleNavigate = ({ key }) => {
-    console.log("click", key);
+    // console.log("click", key);
     navigateTo(key);
     setIsActive((prevState) => !prevState);
+    sessionStorage.setItem("active_nav", key);
   };
 
   return (
@@ -451,7 +463,7 @@ const Navbar = () => {
         <div className="md:max-w-[1280px] mx-auto flex md:gap-4 justify-between items-center md:h-[100px] h-[60px] ">
           <div className="scale-50 md:scale-90 flex items-center">
             <div className="flex items-center  md:gap-14">
-              <div className="w-[140px] ">
+              <div className="w-[100px] ">
                 <img src={logo} alt="" />
               </div>
             </div>
@@ -463,20 +475,12 @@ const Navbar = () => {
               defaultSelectedKeys={defaultSelectedKeys}
               style={{
                 backgroundColor: "transparent",
+                textTransform: "uppercase",
               }}
               mode="horizontal"
               items={items}
             />
           </div>
-          {/* <div className="md:block hidden text-sm">
-            <section className="flex items-center justify-end gap-3 text-black">
-              <button>
-                <LocationIcon />
-              </button>
-              <a href="tel:+79559011516">79559011516</a>
-            </section>
-            <a href="mailto:akwindows@gmail.com">aisperevodchik@gmail.com</a>
-          </div> */}
           <button className="md:hidden px-5" onClick={handleBurgerClick}>
             <BurgerCross isActive={isActive} />
           </button>
