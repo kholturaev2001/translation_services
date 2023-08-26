@@ -1,6 +1,6 @@
 import s_img from "../../assets/images/services/valuation/store.jpg";
 
-const ServiceCard = ({ img = s_img, deadline,price = 8000 }) => {
+const ServiceCard = ({ img = s_img, deadline, price }) => {
   function formattedNumber(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
@@ -8,7 +8,7 @@ const ServiceCard = ({ img = s_img, deadline,price = 8000 }) => {
     <div className="flex justify-center">
       <div className="md:max-w-[1000px] max-w-[100%] flex flex-col m-auto md:h-[400px] mx-3">
         <p className="text-xl font-semibold py-3">Независимая оценка склада</p>
-        <div className="flex md:flex-row flex-col gap-[30px] items-center justify-center bg-gray-100 border-2 border-[#33a3ed] rounded-lg overflow-hidden h-full md:pb-0 pb-4">
+        <div className="flex md:flex-row flex-col gap-[30px] items-center justify-center bg-gray-100 rounded-lg overflow-hidden h-full md:pb-0 pb-4 shadow-xl">
           <img
             src={img}
             alt="service"
@@ -34,7 +34,7 @@ const ServiceCard = ({ img = s_img, deadline,price = 8000 }) => {
                 </p>
               )}
             </div>
-            <button className="my-2 border-2 rounded-3xl border-[#33a3ed] duration-500 ease-in-out font-medium text-center py-2 px-6  hover:bg-[#33a3ed] hover:text-white ">
+            <button className="my-2 border-2 rounded-3xl hover:border-[#33a3ed] duration-500 ease-in-out  text-center py-3 px-6  bg-[#33a3ed] hover:bg-gray-100 text-white font-semibold hover:text-[#33a3ed]">
               Заказать услугу
             </button>
           </div>

@@ -1,9 +1,11 @@
 import { Breadcrumb } from "antd";
 import ServiceCard from "../../../components/Card/ServiceCard";
+import s_img from "../../../assets/images/services/valuation/store.jpg";
+import Title from "../../../components/Title";
 
 const StoreValuation = () => {
   return (
-    <div>
+    <div className="">
       <Breadcrumb
         separator=">"
         items={[
@@ -23,7 +25,7 @@ const StoreValuation = () => {
         className="m-auto pb-4"
       />
       <ServiceCard />
-      StoreValuation
+      <Title>Наши преимущества</Title>
     </div>
   );
 };

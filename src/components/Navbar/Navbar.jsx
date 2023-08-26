@@ -428,23 +428,9 @@ const defaultSelectedKeys = ["/"];
 const defaultOpenKeys = ["about_company"];
 
 const Navbar = () => {
-  // const [defaultSelectedKeys, setDefaultSelectedKeys] = useState(['/']);
-  console.log("🚀 ~ file: Navbar.jsx:432 ~ Navbar ~ defaultSelectedKeys:", defaultSelectedKeys)
   const [isActive, setIsActive] = useState(false);
   const navigateTo = useNavigate();
-  
-  useEffect(() => {
-      navigateTo("/");
-    }, []);
-    
-    // useEffect(() => {
-    //   const active_nav = sessionStorage.getItem("active_nav");
-    //   if (active_nav !== null) {
-    //     setDefaultSelectedKeys([active_nav]); // Wrap active_nav in an array
-    //   } else {
-    //     setDefaultSelectedKeys(['/']);
-    //   }
-    // }, []);
+  const active_nav = sessionStorage.getItem("active_nav");
 
   const handleBurgerClick = () => {
     setIsActive((prevState) => !prevState);
@@ -472,7 +458,7 @@ const Navbar = () => {
           <div className=" w-full hidden md:block">
             <Menu
               onClick={handleNavigate}
-              defaultSelectedKeys={defaultSelectedKeys}
+              defaultSelectedKeys={[active_nav]}
               style={{
                 backgroundColor: "transparent",
                 textTransform: "uppercase",
@@ -492,7 +478,7 @@ const Navbar = () => {
           onClick={handleBurgerClick}
           handleNavigate={handleNavigate}
           items={items}
-          defaultSelectedKeys={defaultSelectedKeys}
+          defaultSelectedKeys={[active_nav]}
           defaultOpenKeys={defaultOpenKeys}
         />
       </div>

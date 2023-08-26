@@ -7,8 +7,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
 }
 
+
+/* 
+// Background color of selected text
+
+::selection {
+  background-color: #33a3ed; 
+  color: white;
+} */
 .container {
   width: 1280px;
   margin-right: auto;
