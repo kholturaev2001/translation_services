@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu } from "antd";
 
 import "./navbar.css";
@@ -32,22 +32,22 @@ const items = [
           getItem("Оценка склада", "/services/store_valuation"),
           getItem(
             "Оценка нежилых помещений",
-            "non_residential_premises_valuation"
+            "/services/non_residential_premises_valuation"
           ),
           getItem(
             "Оценка производственных помещений",
-            "industrial_premises_valuation"
+            "/services/industrial_premises_valuation"
           ),
           getItem("Оценка сооружений", "building_valuation"),
           getItem(
             "Оценка имущественных комплексов",
-            "property_complexes_valuation"
+            "/services/property_complexes_valuation"
           ),
           getItem(
             "Оценка объектов торговой недвижимости",
-            "commercial_estate_valuation"
+            "/services/commercial_estate_valuation"
           ),
-          getItem("Оценка офиса", "office_valuation"),
+          getItem("Оценка офиса", "/services/office_valuation"),
         ]
       ),
 
@@ -424,20 +424,21 @@ const items = [
   ]),
 ];
 
-const defaultSelectedKeys = ["/"];
 const defaultOpenKeys = ["about_company"];
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const navigateTo = useNavigate();
-  const active_nav = sessionStorage.getItem("active_nav");
+  const active_nav =
+    sessionStorage.getItem("active_nav") !== null
+      ? sessionStorage.getItem("active_nav")
+      : "/";
 
   const handleBurgerClick = () => {
     setIsActive((prevState) => !prevState);
   };
 
   const handleNavigate = ({ key }) => {
-    // console.log("click", key);
     navigateTo(key);
     setIsActive((prevState) => !prevState);
     sessionStorage.setItem("active_nav", key);
