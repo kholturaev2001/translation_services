@@ -5,12 +5,12 @@ import Title from "../../../components/Typography/Title";
 import Description from "../../../components/Typography/Description";
 import Ul from "../../../components/Typography/Ul";
 import Paragraph from "../../../components/Typography/Paragraph";
+import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
 
 const StoreValuation = () => {
   return (
     <div>
-      <Breadcrumb
-        separator=">"
+      <HeadBreadcrumb
         items={[
           {
             title: "Оценка",
@@ -25,7 +25,6 @@ const StoreValuation = () => {
             title: "Склад",
           },
         ]}
-        className="m-auto pb-4"
       />
       <ServiceCard img={s_img} title="Независимая оценка склада" />
       <Description>
