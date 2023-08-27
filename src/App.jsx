@@ -12,6 +12,9 @@ import Services from "./components/Services";
 import StoreValuation from "./pages/Services/Valuation/StoreValuation";
 import NonResidentialPremises from "./pages/Services/Valuation/NonResidentialPremises";
 import IndustrialPremises from "./pages/Services/Valuation/IndustrialPremises";
+import BuildingValuation from "./pages/Services/Valuation/BuildingValuation";
+import PropertyComplexes from "./pages/Services/Valuation/PropertyComplexes";
+import CommercialEstate from "./pages/Services/Valuation/CommercialEstate";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,6 +48,18 @@ function App() {
           <Route
             path="industrial_premises_valuation"
             element={<IndustrialPremises />}
+          />
+          <Route
+            path="building_valuation"
+            element={<BuildingValuation />}
+          />
+          <Route
+            path="property_complexes_valuation"
+            element={<PropertyComplexes />}
+          />
+          <Route
+            path="commercial_estate_valuation"
+            element={<CommercialEstate />}
           />
         </Route>
       </Routes>

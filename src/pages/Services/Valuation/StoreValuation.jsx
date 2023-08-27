@@ -1,5 +1,5 @@
 import ServiceCard from "../../../components/Card/ServiceCard";
-import s_img from "../../../assets/images/services/valuation/store.jpeg";
+import s_img from "../../../assets/images/services/valuation/store.jpg";
 import Title from "../../../components/Typography/Title";
 import Description from "../../../components/Typography/Description";
 import Ul from "../../../components/Typography/Ul";

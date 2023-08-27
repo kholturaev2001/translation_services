@@ -28,12 +28,18 @@ const ServiceCard = ({
             <div className="my-2">
               {deadline && (
                 <p>
-                  Сроки ............................ <b>{deadline}</b>
+                  Сроки{" "}
+                  <span className="text-gray-400">
+                    ............................
+                  </span>{" "}
+                  <b>{deadline}</b>
                 </p>
               )}
               {price && (
                 <p>
-                  Цена ....................... от <b>{formattedNumber(price)}</b> ₽
+                  Цена{" "}
+                  <span className="text-gray-400">.......................</span>{" "}
+                  от <b>{formattedNumber(price)}</b> ₽
                 </p>
               )}
             </div>

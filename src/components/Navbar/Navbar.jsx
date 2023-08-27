@@ -38,7 +38,7 @@ const items = [
               "Оценка производственных помещений",
             "/services/industrial_premises_valuation"
           ),
-          getItem("Оценка сооружений", "building_valuation"),
+          getItem("Оценка сооружений", "/services/building_valuation"),
           getItem(
             "Оценка имущественных комплексов",
             "/services/property_complexes_valuation"
