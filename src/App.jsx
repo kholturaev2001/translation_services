@@ -11,6 +11,7 @@ import BackBtn from "./components/BackBtn";
 import Services from "./components/Services";
 import StoreValuation from "./pages/Services/Valuation/StoreValuation";
 import NonResidentialPremises from "./pages/Services/Valuation/NonResidentialPremises";
+import IndustrialPremises from "./pages/Services/Valuation/IndustrialPremises";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +38,14 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/services/" element={<Services />}>
           <Route path="store_valuation" element={<StoreValuation />} />
-          <Route path='non_residential_premises_valuation' element={<NonResidentialPremises />} />
+          <Route
+            path="non_residential_premises_valuation"
+            element={<NonResidentialPremises />}
+          />
+          <Route
+            path="industrial_premises_valuation"
+            element={<IndustrialPremises />}
+          />
         </Route>
       </Routes>
       <Modal

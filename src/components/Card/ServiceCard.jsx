@@ -12,7 +12,7 @@ const ServiceCard = ({
   }
   return (
     <div className="flex justify-center">
-      <div className="md:max-w-[1000px] max-w-[100%] flex flex-col m-auto md:h-[400px] mx-3">
+      <div className="md:max-w-[1000px] max-w-[100%] flex flex-col m-auto md:h-[400px] mx-3 mb-4">
         <p className="text-xl font-semibold py-3">{title}</p>
         <div className="flex md:flex-row flex-col gap-[30px] items-center justify-center bg-gray-100 rounded-lg overflow-hidden h-full md:pb-0 pb-4 shadow-xl">
           <img

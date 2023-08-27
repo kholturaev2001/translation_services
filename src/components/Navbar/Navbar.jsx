@@ -34,8 +34,8 @@ const items = [
             "Оценка нежилых помещений",
             "/services/non_residential_premises_valuation"
           ),
-          getItem(
-            "Оценка производственных помещений",
+            getItem(
+              "Оценка производственных помещений",
             "/services/industrial_premises_valuation"
           ),
           getItem("Оценка сооружений", "building_valuation"),
