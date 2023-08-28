@@ -1,6 +1,7 @@
 import ServiceCard from "../../../components/Card/ServiceCard"
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb"
 import s_img from "../../../assets/images/services/valuation/house_with_landplot.jpeg";
+import Description from "../../../components/Typography/Description";
 
 
 const HouseWithLandplot = () => {
@@ -29,6 +30,7 @@ const HouseWithLandplot = () => {
         price={7000}
         deadline="5 дней"
       />
+      
     </div>
   )
 }
