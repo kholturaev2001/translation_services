@@ -19,6 +19,12 @@ import Office from "./pages/Services/Valuation/Office";
 import AgricultureLand from "./pages/Services/Valuation/AgricultureLand";
 import EasementLand from "./pages/Services/Valuation/EasementLand";
 import PrivateHouse from "./pages/Services/Valuation/PrivateHouse";
+import Townhouse from "./pages/Services/Valuation/Townhouse";
+import Cottage from "./pages/Services/Valuation/Cottage";
+import Mansion from "./pages/Services/Valuation/Mansion";
+import HouseWithoutLandplot from "./pages/Services/Valuation/HouseWithoutLandplot";
+import Dacha from "./pages/Services/Valuation/Dacha";
+import HouseWithLandplot from "./pages/Services/Valuation/HouseWithLandplot";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,14 +73,14 @@ function App() {
             path="agriculture_land_valuation"
             element={<AgricultureLand />}
           />
-          <Route
-            path="easement_land_valuation"
-            element={<EasementLand />}
-          />
-          <Route
-            path="private_house_valuation"
-            element={<PrivateHouse />}
-          />
+          <Route path="easement_land_valuation" element={<EasementLand />} />
+          <Route path="private_house_valuation" element={<PrivateHouse />} />
+          <Route path="townhouse_valuation" element={<Townhouse />} />
+          <Route path="cottage_valuation" element={<Cottage />} />
+          <Route path="mansion_valuation" element={<Mansion />} />
+          <Route path="without_landplot_valuation" element={<HouseWithoutLandplot />} />
+          <Route path="dacha_valuation" element={<Dacha />} />
+          <Route path="with_landplot_valuation" element={<HouseWithLandplot />} />
         </Route>
       </Routes>
       <Modal
