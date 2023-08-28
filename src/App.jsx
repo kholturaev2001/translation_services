@@ -15,6 +15,10 @@ import IndustrialPremises from "./pages/Services/Valuation/IndustrialPremises";
 import BuildingValuation from "./pages/Services/Valuation/BuildingValuation";
 import PropertyComplexes from "./pages/Services/Valuation/PropertyComplexes";
 import CommercialEstate from "./pages/Services/Valuation/CommercialEstate";
+import Office from "./pages/Services/Valuation/Office";
+import AgricultureLand from "./pages/Services/Valuation/AgricultureLand";
+import EasementLand from "./pages/Services/Valuation/EasementLand";
+import PrivateHouse from "./pages/Services/Valuation/PrivateHouse";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,10 +53,7 @@ function App() {
             path="industrial_premises_valuation"
             element={<IndustrialPremises />}
           />
-          <Route
-            path="building_valuation"
-            element={<BuildingValuation />}
-          />
+          <Route path="building_valuation" element={<BuildingValuation />} />
           <Route
             path="property_complexes_valuation"
             element={<PropertyComplexes />}
@@ -60,6 +61,19 @@ function App() {
           <Route
             path="commercial_estate_valuation"
             element={<CommercialEstate />}
+          />
+          <Route path="office_valuation" element={<Office />} />
+          <Route
+            path="agriculture_land_valuation"
+            element={<AgricultureLand />}
+          />
+          <Route
+            path="easement_land_valuation"
+            element={<EasementLand />}
+          />
+          <Route
+            path="private_house_valuation"
+            element={<PrivateHouse />}
           />
         </Route>
       </Routes>

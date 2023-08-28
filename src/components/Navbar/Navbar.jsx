@@ -54,11 +54,11 @@ const items = [
       getItem("Оценка земли", "land_valuation", null, [
         getItem(
           "Оценка земельных участков c/x назначения",
-          "agriculture_land_valuation"
+          "/services/agriculture_land_valuation"
         ),
         getItem(
           "Оценка сервитута земельного участка",
-          "easement_land_valuation"
+          "/services/easement_land_valuation"
         ),
       ]),
       getItem(
@@ -66,19 +66,19 @@ const items = [
         "countryside_estate_valuation",
         null,
         [
-          getItem("Оценка частого дома", "private_house_valuation"),
-          getItem("Оценка таунхауса", "townhouse_valuation"),
-          getItem("Оценка коттеджа", "cottage_valuation"),
-          getItem("Оценка особняка", "mansion_valuation"),
+          getItem("Оценка частного дома", "/services/private_house_valuation"),
+          getItem("Оценка таунхауса", "/services/townhouse_valuation"),
+          getItem("Оценка коттеджа", "/services/cottage_valuation"),
+          getItem("Оценка особняка", "/services/mansion_valuation"),
           getItem(
             "Оценка дома без земельного участка",
-            "without_landplot_valuation"
+            "/services/without_landplot_valuation"
           ),
-          getItem("Оценка дачи", "dacha_valuation"),
-          getItem("Оценка с земельным участком", "with_landplot_valuation"),
+          getItem("Оценка дачи", "/services/dacha_valuation"),
+          getItem("Оценка с земельным участком", "/services/with_landplot_valuation"),
         ]
       ),
-      getItem("Оценка квартиры", "apartment_valuation", null, [
+      getItem("Оценка квартиры", "/services/apartment_valuation", null, [
         getItem("Оценка доли квартиры", "room_share_valuation"),
         getItem(
           "Оценка квартиры в новостройке, при покупке у застройщика",
