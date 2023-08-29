@@ -79,16 +79,16 @@ const items = [
         ]
       ),
       getItem("Оценка квартиры", "/services/apartment_valuation", null, [
-        getItem("Оценка доли квартиры", "room_share_valuation"),
+        getItem("Оценка доли квартиры", "/services/room_share_valuation"),
         getItem(
           "Оценка квартиры в новостройке, при покупке у застройщика",
-          "new_room_valuation"
+          "/services/new_room_valuation"
         ),
-        getItem("Оценка квартиры для АИЖК", "home_mortgage_agency_valuation"),
-        getItem("Оценка апартаментов", "apartments_valuation"),
+        getItem("Оценка квартиры для АИЖК", "/services/home_mortgage_agency_valuation"),
+        getItem("Оценка апартаментов", "/services/apartments_valuation"),
         getItem(
           "Оценка комнаты в коммунальной квартире",
-          "shared_room_valuation"
+          "/services/communal_room_valuation"
         ),
       ]),
       getItem(

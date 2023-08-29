@@ -25,6 +25,11 @@ import Mansion from "./pages/Services/Valuation/Mansion";
 import HouseWithoutLandplot from "./pages/Services/Valuation/HouseWithoutLandplot";
 import Dacha from "./pages/Services/Valuation/Dacha";
 import HouseWithLandplot from "./pages/Services/Valuation/HouseWithLandplot";
+import RoomShare from "./pages/Services/Valuation/RoomShare";
+import NewRoom from "./pages/Services/Valuation/NewRoom";
+import HomeMortgageAgency from "./pages/Services/Valuation/HomeMortgageAgency";
+import Apartments from "./pages/Services/Valuation/Apartments";
+import CommunalRoom from "./pages/Services/Valuation/CommunalRoom";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,6 +86,11 @@ function App() {
           <Route path="without_landplot_valuation" element={<HouseWithoutLandplot />} />
           <Route path="dacha_valuation" element={<Dacha />} />
           <Route path="with_landplot_valuation" element={<HouseWithLandplot />} />
+          <Route path="room_share_valuation" element={<RoomShare />} />
+          <Route path="new_room_valuation" element={<NewRoom />} />
+          <Route path="home_mortgage_agency_valuation" element={<HomeMortgageAgency />} />
+          <Route path="apartments_valuation" element={<Apartments />} />
+          <Route path="communal_room_valuation" element={<CommunalRoom />} />
         </Route>
       </Routes>
       <Modal
