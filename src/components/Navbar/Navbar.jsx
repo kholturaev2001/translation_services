@@ -93,18 +93,19 @@ const items = [
       ]),
       getItem(
         "Определение стоимости неотделимых улучшений",
-        "cost_of_inseparable_improvements"
+        "/services/cost_of_inseparable_improvements"
       ),
       getItem(
         "Оценка объектов незавершенного строительства",
-        "under_construction_object_valuation"
+        "/services/under_construction_object_valuation"
       ),
       getItem(
         "Оценка технического состояния здания",
-        "building_technical_condition_valuation"
+        "/services/building_technical_condition_valuation"
       ),
-      getItem("Приемка помещений", "room_acceptance_valuation"),
-      getItem("Оценка зданий", "buildings_valuation"),
+      getItem("Приемка помещений", "/services/room_acceptance_valuation"),
+      getItem("Оценка гостиницы", "/services/hotel_valuation"),
+      getItem("Оценка зданий", "/services/buildings_valuation"),
     ]),
 
     getItem("Оценка бизнеса", "business_valuation", null, [

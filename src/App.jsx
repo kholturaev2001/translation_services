@@ -30,6 +30,12 @@ import NewRoom from "./pages/Services/Valuation/NewRoom";
 import HomeMortgageAgency from "./pages/Services/Valuation/HomeMortgageAgency";
 import Apartments from "./pages/Services/Valuation/Apartments";
 import CommunalRoom from "./pages/Services/Valuation/CommunalRoom";
+import CostOfInseparableImprovements from "./pages/Services/Valuation/CostOfInseparableImprovements";
+import UnderConstructionObject from "./pages/Services/Valuation/UnderConstructionObject";
+import BuildingTechnicalCondition from "./pages/Services/Valuation/BuildingTechnicalCondition";
+import Buildings from "./pages/Services/Valuation/Buildings";
+import RoomAcceptance from "./pages/Services/Valuation/RoomAcceptance";
+import Hotel from "./pages/Services/Valuation/Hotel";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -91,6 +97,12 @@ function App() {
           <Route path="home_mortgage_agency_valuation" element={<HomeMortgageAgency />} />
           <Route path="apartments_valuation" element={<Apartments />} />
           <Route path="communal_room_valuation" element={<CommunalRoom />} />
+          <Route path="cost_of_inseparable_improvements" element={<CostOfInseparableImprovements />} />
+          <Route path="under_construction_object_valuation" element={<UnderConstructionObject />} />
+          <Route path="building_technical_condition_valuation" element={<BuildingTechnicalCondition />} />
+          <Route path="room_acceptance_valuation" element={<RoomAcceptance />} />
+          <Route path="hotel_valuation" element={<Hotel />} />
+          <Route path="buildings_valuation" element={<Buildings />} />
         </Route>
       </Routes>
       <Modal
