@@ -1,5 +1,5 @@
 import ServiceCard from "../../../components/Card/ServiceCard";
-import s_img from "../../../assets/images/services/valuation/non_residential_premises.jpg";
+import s_img from "../../../assets/images/services/valuation/estates/non_residential_premises.jpg";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";

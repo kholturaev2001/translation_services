@@ -109,23 +109,23 @@ const items = [
     ]),
 
     getItem("Оценка бизнеса", "business_valuation", null, [
-      getItem("Оценка векселей", "bills_valuation"),
-      getItem("Оценка акций", "stock_valuation"),
-      getItem("Оценка имущества компании", "company_property_valuation"),
+      getItem("Оценка векселей", "/services/bills_valuation"),
+      getItem("Оценка акций", "/services/stock_valuation"),
+      getItem("Оценка имущества компании", "/services/company_property_valuation"),
       getItem(
         "Оценка инвестиционных проектов",
-        "investment_projects_valuation"
+        "/services/investment_projects_valuation"
       ),
-      getItem("Оценка месторождений и недр", "deposits_and_subsoil_valuation"),
-      getItem("Оценка стоимости ценных бумаг", "securities_valuation"),
+      getItem("Оценка месторождений и недр", "/services/deposits_and_subsoil_valuation"),
+      getItem("Оценка стоимости ценных бумаг", "/services/securities_valuation"),
       getItem(
         "Оценка дебиторской задолженности",
-        "accounts_receivable_valuation"
+        "/services/accounts_receivable_valuation"
       ),
-      getItem("Оценка стоимости доли в ООО", "share_in_llc_valuation"),
+      getItem("Оценка стоимости доли в ООО", "/services/share_in_llc_valuation"),
       getItem(
         "Оценка вклада в уставной капитал",
-        "capital_contribution_valuation"
+        "/services/capital_contribution_valuation"
       ),
     ]),
     getItem("Оценка нематериальных активов", "assets_valuation", null, [

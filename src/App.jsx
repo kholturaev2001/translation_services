@@ -36,6 +36,15 @@ import BuildingTechnicalCondition from "./pages/Services/Valuation/BuildingTechn
 import Buildings from "./pages/Services/Valuation/Buildings";
 import RoomAcceptance from "./pages/Services/Valuation/RoomAcceptance";
 import Hotel from "./pages/Services/Valuation/Hotel";
+import BillsValuation from "./pages/Services/Valuation/BillsValuation";
+import StockValuation from "./pages/Services/Valuation/StockValuation";
+import CompanyPropertyValuation from "./pages/Services/Valuation/CompanyPropertyValuation";
+import InvestmentProjectsValuation from "./pages/Services/Valuation/InvestmentProjectsValuation";
+import DepositsAndSubsoilValuation from "./pages/Services/Valuation/DepositsAndSubsoilValuation";
+import SecuritiesValuation from "./pages/Services/Valuation/SecuritiesValuation";
+import AccountsReceivableValuation from "./pages/Services/Valuation/AccountsReceivableValuation";
+import LLCShareValuation from "./pages/Services/Valuation/LLCShareValuation";
+import CapitalContributionValuation from "./pages/Services/Valuation/CapitalContributionValuation";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -103,7 +112,17 @@ function App() {
           <Route path="room_acceptance_valuation" element={<RoomAcceptance />} />
           <Route path="hotel_valuation" element={<Hotel />} />
           <Route path="buildings_valuation" element={<Buildings />} />
-        </Route>
+          <Route path="bills_valuation" element={<BillsValuation />} />
+          <Route path="stock_valuation" element={<StockValuation />} />
+          <Route path="company_property_valuation" element={<CompanyPropertyValuation />} />
+          <Route path="investment_projects_valuation" element={<InvestmentProjectsValuation />} />
+          <Route path="deposits_and_subsoil_valuation" element={<DepositsAndSubsoilValuation />} />
+          <Route path="securities_valuation" element={<SecuritiesValuation />} />
+          <Route path="accounts_receivable_valuation" element={<AccountsReceivableValuation />} />
+          <Route path="share_in_llc_valuation" element={<LLCShareValuation />} />
+          <Route path="capital_contribution_valuation" element={<CapitalContributionValuation />} />
+       
+ </Route>
       </Routes>
       <Modal
         open={isModalOpen}

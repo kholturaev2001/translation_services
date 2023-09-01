@@ -1,6 +1,6 @@
 import ServiceCard from "../../../components/Card/ServiceCard";
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/under_construction_object_valuation.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/under_construction_object_valuation.jpeg";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import Ol from "../../../components/Typography/Ol";

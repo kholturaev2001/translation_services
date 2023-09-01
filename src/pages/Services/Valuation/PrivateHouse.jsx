@@ -1,6 +1,6 @@
 import ServiceCard from "../../../components/Card/ServiceCard";
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/private_house.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/private_house.jpeg";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import Ul from "../../../components/Typography/Ul";

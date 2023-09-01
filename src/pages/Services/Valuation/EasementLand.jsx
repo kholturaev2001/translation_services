@@ -1,6 +1,6 @@
 import ServiceCard from "../../../components/Card/ServiceCard";
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/easement_land.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/easement_land.jpeg";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import Ol from "../../../components/Typography/Ol";

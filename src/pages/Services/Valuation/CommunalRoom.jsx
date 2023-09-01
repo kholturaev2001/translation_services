@@ -1,5 +1,5 @@
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/communal_room_valuation.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/communal_room_valuation.jpeg";
 import ServiceCard from "../../../components/Card/ServiceCard";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";

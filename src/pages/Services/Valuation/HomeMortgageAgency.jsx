@@ -1,5 +1,5 @@
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/home_mortgage_agency.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/home_mortgage_agency.jpeg";
 import ServiceCard from "../../../components/Card/ServiceCard";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";

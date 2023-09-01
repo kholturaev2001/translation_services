@@ -1,5 +1,5 @@
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
-import s_img from "../../../assets/images/services/valuation/agriculture_land.jpg";
+import s_img from "../../../assets/images/services/valuation/estates/agriculture_land.jpg";
 import ServiceCard from "../../../components/Card/ServiceCard";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";

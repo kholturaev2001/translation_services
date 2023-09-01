@@ -1,4 +1,4 @@
-import s_img from "../../../assets/images/services/valuation/townhouse.jpeg";
+import s_img from "../../../assets/images/services/valuation/estates/townhouse.jpeg";
 import ServiceCard from "../../../components/Card/ServiceCard";
 import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
 import Description from "../../../components/Typography/Description";
