@@ -45,6 +45,11 @@ import SecuritiesValuation from "./pages/Services/Valuation/SecuritiesValuation"
 import AccountsReceivableValuation from "./pages/Services/Valuation/AccountsReceivableValuation";
 import LLCShareValuation from "./pages/Services/Valuation/LLCShareValuation";
 import CapitalContributionValuation from "./pages/Services/Valuation/CapitalContributionValuation";
+import MutualInvestmentFunds from "./pages/Services/Valuation/MutualInvestmentFunds";
+import InventionPatent from "./pages/Services/Valuation/InventionPatent";
+import DistressedAssets from "./pages/Services/Valuation/DistressedAssets";
+import Trademark from "./pages/Services/Valuation/Trademark";
+import ResearchAndDevelopmentWork from "./pages/Services/Valuation/ResearchAndDevelopmentWork";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -98,31 +103,89 @@ function App() {
           <Route path="townhouse_valuation" element={<Townhouse />} />
           <Route path="cottage_valuation" element={<Cottage />} />
           <Route path="mansion_valuation" element={<Mansion />} />
-          <Route path="without_landplot_valuation" element={<HouseWithoutLandplot />} />
+          <Route
+            path="without_landplot_valuation"
+            element={<HouseWithoutLandplot />}
+          />
           <Route path="dacha_valuation" element={<Dacha />} />
-          <Route path="with_landplot_valuation" element={<HouseWithLandplot />} />
+          <Route
+            path="with_landplot_valuation"
+            element={<HouseWithLandplot />}
+          />
           <Route path="room_share_valuation" element={<RoomShare />} />
           <Route path="new_room_valuation" element={<NewRoom />} />
-          <Route path="home_mortgage_agency_valuation" element={<HomeMortgageAgency />} />
+          <Route
+            path="home_mortgage_agency_valuation"
+            element={<HomeMortgageAgency />}
+          />
           <Route path="apartments_valuation" element={<Apartments />} />
           <Route path="communal_room_valuation" element={<CommunalRoom />} />
-          <Route path="cost_of_inseparable_improvements" element={<CostOfInseparableImprovements />} />
-          <Route path="under_construction_object_valuation" element={<UnderConstructionObject />} />
-          <Route path="building_technical_condition_valuation" element={<BuildingTechnicalCondition />} />
-          <Route path="room_acceptance_valuation" element={<RoomAcceptance />} />
+          <Route
+            path="cost_of_inseparable_improvements"
+            element={<CostOfInseparableImprovements />}
+          />
+          <Route
+            path="under_construction_object_valuation"
+            element={<UnderConstructionObject />}
+          />
+          <Route
+            path="building_technical_condition_valuation"
+            element={<BuildingTechnicalCondition />}
+          />
+          <Route
+            path="room_acceptance_valuation"
+            element={<RoomAcceptance />}
+          />
           <Route path="hotel_valuation" element={<Hotel />} />
           <Route path="buildings_valuation" element={<Buildings />} />
           <Route path="bills_valuation" element={<BillsValuation />} />
           <Route path="stock_valuation" element={<StockValuation />} />
-          <Route path="company_property_valuation" element={<CompanyPropertyValuation />} />
-          <Route path="investment_projects_valuation" element={<InvestmentProjectsValuation />} />
-          <Route path="deposits_and_subsoil_valuation" element={<DepositsAndSubsoilValuation />} />
-          <Route path="securities_valuation" element={<SecuritiesValuation />} />
-          <Route path="accounts_receivable_valuation" element={<AccountsReceivableValuation />} />
-          <Route path="share_in_llc_valuation" element={<LLCShareValuation />} />
-          <Route path="capital_contribution_valuation" element={<CapitalContributionValuation />} />
-       
- </Route>
+          <Route
+            path="company_property_valuation"
+            element={<CompanyPropertyValuation />}
+          />
+          <Route
+            path="investment_projects_valuation"
+            element={<InvestmentProjectsValuation />}
+          />
+          <Route
+            path="deposits_and_subsoil_valuation"
+            element={<DepositsAndSubsoilValuation />}
+          />
+          <Route
+            path="securities_valuation"
+            element={<SecuritiesValuation />}
+          />
+          <Route
+            path="accounts_receivable_valuation"
+            element={<AccountsReceivableValuation />}
+          />
+          <Route
+            path="share_in_llc_valuation"
+            element={<LLCShareValuation />}
+          />
+          <Route
+            path="capital_contribution_valuation"
+            element={<CapitalContributionValuation />}
+          />
+          <Route
+            path="mutual_investment_funds_valuation"
+            element={<MutualInvestmentFunds />}
+          />
+          <Route
+            path="invention_patent_valuation"
+            element={<InventionPatent />}
+          />
+          <Route
+            path="distressed_assets_valuation"
+            element={<DistressedAssets />}
+          />
+          <Route path="trademark_valuation" element={<Trademark />} />
+          <Route
+            path="research_and_development_work_valuation"
+            element={<ResearchAndDevelopmentWork />}
+          />
+        </Route>
       </Routes>
       <Modal
         open={isModalOpen}

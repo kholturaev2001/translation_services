@@ -128,17 +128,17 @@ const items = [
         "/services/capital_contribution_valuation"
       ),
     ]),
-    getItem("Оценка нематериальных активов", "assets_valuation", null, [
+    getItem("Оценка нематериальных активов", "intangible_assets_valuation", null, [
       getItem(
         "Оценка паевых инвестиционных фондов (ПИФ)",
-        "mutual investment_unds_valuation"
+        "/services/mutual_investment_funds_valuation"
       ),
-      getItem("Оценка патента на изобретение", "invention_patent_valuation"),
-      getItem("Оценка проблемных активов", "distressed_assets_valuation"),
-      getItem("Оценка товарного знака", "trademark_valuation"),
+      getItem("Оценка патента на изобретение", "/services/invention_patent_valuation"),
+      getItem("Оценка проблемных активов", "/services/distressed_assets_valuation"),
+      getItem("Оценка товарного знака", "/services/trademark_valuation"),
       getItem(
         "Оценка научно-исследовательских и опытно-конструкторских работ",
-        "research_and_development_work_valuation"
+        "/services/research_and_development_work_valuation"
       ),
     ]),
     getItem("Оценка транспорта", "transport_valuation", null, [
