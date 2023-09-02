@@ -148,10 +148,6 @@ const MutualInvestmentFunds = () => {
       <LiColored>по телефону +7 (929) 532-33-80;</LiColored>
       <LiColored>по e-mail example@example.ru;</LiColored>
       <LiColored>через онлайн-заявку.</LiColored>
-      <Description>
-        Мы находимся по адресу: г. Москва, ул. просп. Мира, д. 150, , рядом со
-        ст. м. «ВДНХ».
-      </Description>
     </div>
   );
 };
