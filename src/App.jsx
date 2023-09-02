@@ -59,6 +59,11 @@ import WeaponValuation from "./pages/Services/Valuation/WeaponValuation";
 import ComputerValuation from "./pages/Services/Valuation/ComputerValuation";
 import HouseholdAppliancesValuation from "./pages/Services/Valuation/HouseholdAppliancesValuation";
 import FurnitureValuation from "./pages/Services/Valuation/FurnitureValuation";
+import DamageAfterFire from "./pages/Services/Valuation/DamageAfterFire";
+import ApartmentAfterBay from "./pages/Services/Valuation/ApartmentAfterBay";
+import BayExpertise from "./pages/Services/Valuation/BayExpertise";
+import ActionsInactionOfThirdPartiesDamage from "./pages/Services/Valuation/ActionsInactionOfThirdPartiesDamage";
+import LostProfit from "./pages/Services/Valuation/LostProfit";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -212,6 +217,26 @@ function App() {
             element={<HouseholdAppliancesValuation />}
           />
           <Route path="furniture_valuation" element={<FurnitureValuation />} />
+          <Route
+            path="damage_after_fire_valuation"
+            element={<DamageAfterFire />}
+          />
+          <Route
+            path="apartment_after_bay_valuation"
+            element={<ApartmentAfterBay />}
+          />
+          <Route
+            path="bay_expertise_valuation"
+            element={<BayExpertise />}
+          />
+          <Route
+            path="actions_inaction_of_third_parties_damage_valuation"
+            element={<ActionsInactionOfThirdPartiesDamage />}
+          />
+          <Route
+            path="lost_profit_valuation"
+            element={<LostProfit />}
+          />
         </Route>
       </Routes>
       <Modal

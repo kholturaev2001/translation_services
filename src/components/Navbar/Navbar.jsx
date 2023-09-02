@@ -155,14 +155,14 @@ const items = [
       getItem("Оценка мебели", "/services/furniture_valuation"),
     ]),
     getItem("Оценка ущерба", "damage_valuation", null, [
-      getItem("Оценка ущерба после пожара", "damage_after_fire_valuation"),
-      getItem("Оценка квартиры после залива", "apartment_after_bay_valuation"),
-      getItem("Экспертиза после залива", "bay_expertise_valuation"),
+      getItem("Оценка ущерба после пожара", "/services/damage_after_fire_valuation"),
+      getItem("Оценка квартиры после залива", "/services/apartment_after_bay_valuation"),
+      getItem("Экспертиза после залива", "/services/bay_expertise_valuation"),
       getItem(
         "Оценка ущерба от действий/бездействия третьих лиц",
-        "actions_inaction_of_third_parties_damage_valuation"
+        "/services/actions_inaction_of_third_parties_damage_valuation"
       ),
-      getItem("Оценка упущенной выгоды", "lost_profit_valuation"),
+      getItem("Оценка упущенной выгоды", "/services/lost_profit_valuation"),
     ]),
     getItem("Цели оценки", "valuation_aims", null, [
       getItem(
