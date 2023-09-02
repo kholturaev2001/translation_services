@@ -38,7 +38,7 @@ const ServiceCard = ({
               {price && (
                 <p>
                   Цена{" "}
-                  <span className="text-gray-400">.......................</span>{" "}
+                  <span className="text-gray-400">..........................</span>{" "}
                   от <b>{formattedNumber(price)}</b> ₽
                 </p>
               )}

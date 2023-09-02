@@ -5,6 +5,7 @@ import Description from "../../../components/Typography/Description";
 import LiColored from "../../../components/Typography/LiColored";
 import Title from "../../../components/Typography/Title";
 import DTable from "../../../components/DTable";
+import Email from "../../../components/Typography/Email";
 
 const PropertyComplexes = () => {
   return (
@@ -233,7 +234,7 @@ const PropertyComplexes = () => {
       </Description>
       <Description>
         <i>
-          Наша компания работает на рынке экспертных услуг с 2005 года.
+          Наша компания работает на рынке экспертных услуг с 2018 года.
           Благодаря солидному практическому опыту мы предлагаем профессиональный
           подход, быстрое решение практически любого вопроса клиента и
           корректное оформление отчета. Наши клиенты оставляют о нас
@@ -245,7 +246,7 @@ const PropertyComplexes = () => {
         <i>
           Заказать услугу независимой оценки имущественного комплекса можно,
           позвонив по указанному на сайте телефону. Также можно отправить запрос
-          по адресу электронной почты <a className="underline font-semibold" href="mailto:example@ru">example@ru</a>. Наш специалист свяжется с
+          по адресу электронной почты <Email />. Наш специалист свяжется с
           вами для обсуждения деталей сотрудничества.
         </i>
       </Description>

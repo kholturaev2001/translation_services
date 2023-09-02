@@ -5,6 +5,8 @@ import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import LiColored from "../../../components/Typography/LiColored";
 import Title3 from "../../../components/Typography/Title3";
+import Email from "../../../components/Typography/Email";
+import PhoneNumber from "../../../components/Typography/PhoneNumber";
 
 const DistressedAssets = () => {
   return (
@@ -137,10 +139,10 @@ const DistressedAssets = () => {
       </Description>
 
       <LiColored>
-        по телефону <a href="tel:+79295323380"> +7 (916) 808-11-66</a>;
+        по телефону <PhoneNumber />;
       </LiColored>
       <LiColored>
-        по e-mail <a href="mailto:example@example.ru">example@example.ru</a> ;
+        по e-mail <Email /> ;
       </LiColored>
       <LiColored>через онлайн-заявку;</LiColored>
       <LiColored>при личном визите.</LiColored>

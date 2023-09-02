@@ -50,6 +50,15 @@ import InventionPatent from "./pages/Services/Valuation/InventionPatent";
 import DistressedAssets from "./pages/Services/Valuation/DistressedAssets";
 import Trademark from "./pages/Services/Valuation/Trademark";
 import ResearchAndDevelopmentWork from "./pages/Services/Valuation/ResearchAndDevelopmentWork";
+import SpecialEqipment from "./pages/Services/Valuation/SpecialEqipment";
+import TruckValuation from "./pages/Services/Valuation/TruckValuation";
+import CarValuation from "./pages/Services/Valuation/CarValuation";
+import MachineValuation from "./pages/Services/Valuation/MachineValuation";
+import OfficeEquipmentValuation from "./pages/Services/Valuation/OfficeEquipmentValuation";
+import WeaponValuation from "./pages/Services/Valuation/WeaponValuation";
+import ComputerValuation from "./pages/Services/Valuation/ComputerValuation";
+import HouseholdAppliancesValuation from "./pages/Services/Valuation/HouseholdAppliancesValuation";
+import FurnitureValuation from "./pages/Services/Valuation/FurnitureValuation";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -185,6 +194,24 @@ function App() {
             path="research_and_development_work_valuation"
             element={<ResearchAndDevelopmentWork />}
           />
+          <Route
+            path="special_equipment_valuation"
+            element={<SpecialEqipment />}
+          />
+          <Route path="truck_valuation" element={<TruckValuation />} />
+          <Route path="car_valuation" element={<CarValuation />} />
+          <Route path="machine_valuation" element={<MachineValuation />} />
+          <Route
+            path="office_equipment_valuation"
+            element={<OfficeEquipmentValuation />}
+          />
+          <Route path="weapon_valuation" element={<WeaponValuation />} />
+          <Route path="computer_valuation" element={<ComputerValuation />} />
+          <Route
+            path="household_appliances_valuation"
+            element={<HouseholdAppliancesValuation />}
+          />
+          <Route path="furniture_valuation" element={<FurnitureValuation />} />
         </Route>
       </Routes>
       <Modal

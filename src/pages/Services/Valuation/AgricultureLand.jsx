@@ -4,6 +4,7 @@ import ServiceCard from "../../../components/Card/ServiceCard";
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import LiColored from "../../../components/Typography/LiColored";
+import Email from "../../../components/Typography/Email";
 
 const AgricultureLand = () => {
   return (
@@ -145,7 +146,7 @@ const AgricultureLand = () => {
           Заказать услугу независимой оценки земельного участка
           сельскохозяйственного назначения можно, позвонив по указанному на
           сайте телефону. Также можно отправить запрос по адресу электронной
-          почты <a href="mailto:example@gmail.ru">example@gmail.ru</a>. Наш
+          почты <Email />. Наш
           специалист свяжется с вами для обсуждения деталей сотрудничества.
         </i>
       </Description>

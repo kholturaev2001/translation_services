@@ -2,6 +2,8 @@ import EmailIcon from "../assets/icons/EmailIcon";
 import PhoneIcon from "../assets/icons/PhoneIcon";
 import Consultation from "../components/Consultation/Consultation";
 import Footer from "../components/Footer";
+import Email from "../components/Typography/Email";
+import PhoneNumber from "../components/Typography/PhoneNumber";
 
 const Contacts = () => {
   return (
@@ -32,19 +34,13 @@ const Contacts = () => {
                 <span className="rotate-90 max-w-fit">
                   <PhoneIcon color='#fff' />
                 </span>
-                <a href="tel:+79559750755">+7 955 975-07-55</a>
-                <a href="tel:+79559750755">+7 955 975-07-55</a>
+                <PhoneNumber />
               </div>
               <div className="flex flex-col items-center gap-2">
                 <span className="rotate-90 max-w-fit">
                   <EmailIcon color='#fff' />
                 </span>
-                <a href="mailto:aisperevodchik@gmail.com">
-                  aisperevodchik@gmail.com
-                </a>
-                <a href="mailto:aisperevodchik@gmail.com">
-                  aisperevodchik@gmail.com
-                </a>
+               <Email />
               </div>
             </div>
           </div>

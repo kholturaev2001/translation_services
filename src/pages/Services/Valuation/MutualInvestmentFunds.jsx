@@ -4,6 +4,8 @@ import s_img from "../../../assets/images/services/valuation/intangible_assets/m
 import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import LiColored from "../../../components/Typography/LiColored";
+import PhoneNumber from "../../../components/Typography/PhoneNumber";
+import Email from "../../../components/Typography/Email";
 
 const MutualInvestmentFunds = () => {
   return (
@@ -146,10 +148,10 @@ const MutualInvestmentFunds = () => {
         Вы можете связаться с нами любым удобным способом:
       </Description>
       <LiColored>
-        по телефону <a href="tel:+79295323380"> +7 (929) 532-33-80</a>;
+        по телефону <PhoneNumber />;
       </LiColored>
       <LiColored>
-        по e-mail <a href="mailto:example@example.ru">example@example.ru</a> ;
+        по e-mail <Email /> ;
       </LiColored>
       <LiColored>через онлайн-заявку;</LiColored>
       <LiColored>при личном визите.</LiColored>
