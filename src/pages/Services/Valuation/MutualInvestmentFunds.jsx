@@ -145,9 +145,14 @@ const MutualInvestmentFunds = () => {
       <Description>
         Вы можете связаться с нами любым удобным способом:
       </Description>
-      <LiColored>по телефону +7 (929) 532-33-80;</LiColored>
-      <LiColored>по e-mail example@example.ru;</LiColored>
-      <LiColored>через онлайн-заявку.</LiColored>
+      <LiColored>
+        по телефону <a href="tel:+79295323380"> +7 (929) 532-33-80</a>;
+      </LiColored>
+      <LiColored>
+        по e-mail <a href="mailto:example@example.ru">example@example.ru</a> ;
+      </LiColored>
+      <LiColored>через онлайн-заявку;</LiColored>
+      <LiColored>при личном визите.</LiColored>
     </div>
   );
 };

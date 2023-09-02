@@ -6,7 +6,7 @@ const YandexMap = () => {
       <YMaps>
         <div className="flex flex-col gap-2 mx-auto md:text-base text-sm md:max-w-[1000px] max-w-[100%] items-center">
           <p className="font-semibold text-center">
-            Мы находимся по адресу: г. Москва, ул. просп. Мира, д. 150, рядом со
+            Мы находимся по адресу: г. Москва, ул. просп. Мира, д. 150 офис 546, рядом со
             ст. м. «ВДНХ».
           </p>
           <Map

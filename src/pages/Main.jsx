@@ -10,6 +10,7 @@ import ScrollDown from "../components/ScrollDown/ScrollDown";
 import Carousel from "../components/Carousel";
 import Advantages from "../components/Advantages/Advantages";
 import Footer from "../components/Footer";
+import YandexMap from "../components/YandexMap";
 
 const data = [
   {
@@ -93,6 +94,7 @@ const Main = () => {
         <div className="mx-auto w-full flex flex-col gap-10">
           <Carousel />
           <Advantages />
+          <YandexMap />
         </div>
         <Footer />
       </div>

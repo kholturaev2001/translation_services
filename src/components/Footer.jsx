@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/icons/Logo";
 import TelegramIcon from "./../assets/icons/TelegramIcon";
 import WhatsAppIcon from "./../assets/icons/WhatsAppIcon";
 import InstagramIcon from "./../assets/icons/InstagramIcon";
