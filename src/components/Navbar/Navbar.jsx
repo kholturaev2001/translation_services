@@ -34,8 +34,8 @@ const items = [
             "Оценка нежилых помещений",
             "/services/non_residential_premises_valuation"
           ),
-            getItem(
-              "Оценка производственных помещений",
+          getItem(
+            "Оценка производственных помещений",
             "/services/industrial_premises_valuation"
           ),
           getItem("Оценка сооружений", "/services/building_valuation"),
@@ -75,7 +75,10 @@ const items = [
             "/services/without_landplot_valuation"
           ),
           getItem("Оценка дачи", "/services/dacha_valuation"),
-          getItem("Оценка с земельным участком", "/services/with_landplot_valuation"),
+          getItem(
+            "Оценка с земельным участком",
+            "/services/with_landplot_valuation"
+          ),
         ]
       ),
       getItem("Оценка квартиры", "/services/apartment_valuation", null, [
@@ -84,7 +87,10 @@ const items = [
           "Оценка квартиры в новостройке, при покупке у застройщика",
           "/services/new_room_valuation"
         ),
-        getItem("Оценка квартиры для АИЖК", "/services/home_mortgage_agency_valuation"),
+        getItem(
+          "Оценка квартиры для АИЖК",
+          "/services/home_mortgage_agency_valuation"
+        ),
         getItem("Оценка апартаментов", "/services/apartments_valuation"),
         getItem(
           "Оценка комнаты в коммунальной квартире",
@@ -111,36 +117,59 @@ const items = [
     getItem("Оценка бизнеса", "business_valuation", null, [
       getItem("Оценка векселей", "/services/bills_valuation"),
       getItem("Оценка акций", "/services/stock_valuation"),
-      getItem("Оценка имущества компании", "/services/company_property_valuation"),
+      getItem(
+        "Оценка имущества компании",
+        "/services/company_property_valuation"
+      ),
       getItem(
         "Оценка инвестиционных проектов",
         "/services/investment_projects_valuation"
       ),
-      getItem("Оценка месторождений и недр", "/services/deposits_and_subsoil_valuation"),
-      getItem("Оценка стоимости ценных бумаг", "/services/securities_valuation"),
+      getItem(
+        "Оценка месторождений и недр",
+        "/services/deposits_and_subsoil_valuation"
+      ),
+      getItem(
+        "Оценка стоимости ценных бумаг",
+        "/services/securities_valuation"
+      ),
       getItem(
         "Оценка дебиторской задолженности",
         "/services/accounts_receivable_valuation"
       ),
-      getItem("Оценка стоимости доли в ООО", "/services/share_in_llc_valuation"),
+      getItem(
+        "Оценка стоимости доли в ООО",
+        "/services/share_in_llc_valuation"
+      ),
       getItem(
         "Оценка вклада в уставной капитал",
         "/services/capital_contribution_valuation"
       ),
     ]),
-    getItem("Оценка нематериальных активов", "intangible_assets_valuation", null, [
-      getItem(
-        "Оценка паевых инвестиционных фондов (ПИФ)",
-        "/services/mutual_investment_funds_valuation"
-      ),
-      getItem("Оценка патента на изобретение", "/services/invention_patent_valuation"),
-      getItem("Оценка проблемных активов", "/services/distressed_assets_valuation"),
-      getItem("Оценка товарного знака", "/services/trademark_valuation"),
-      getItem(
-        "Оценка научно-исследовательских и опытно-конструкторских работ",
-        "/services/research_and_development_work_valuation"
-      ),
-    ]),
+    getItem(
+      "Оценка нематериальных активов",
+      "intangible_assets_valuation",
+      null,
+      [
+        getItem(
+          "Оценка паевых инвестиционных фондов (ПИФ)",
+          "/services/mutual_investment_funds_valuation"
+        ),
+        getItem(
+          "Оценка патента на изобретение",
+          "/services/invention_patent_valuation"
+        ),
+        getItem(
+          "Оценка проблемных активов",
+          "/services/distressed_assets_valuation"
+        ),
+        getItem("Оценка товарного знака", "/services/trademark_valuation"),
+        getItem(
+          "Оценка научно-исследовательских и опытно-конструкторских работ",
+          "/services/research_and_development_work_valuation"
+        ),
+      ]
+    ),
     getItem("Оценка транспорта", "transport_valuation", null, [
       getItem("Оценка спецтехники", "/services/special_equipment_valuation"),
       getItem("Оценка грузовых автомобилей", "/services/truck_valuation"),
@@ -151,12 +180,21 @@ const items = [
       getItem("Оценка оргтехники", "/services/office_equipment_valuation"),
       getItem("Оценка оружия", "/services/weapon_valuation"),
       getItem("Оценка компьютеров", "/services/computer_valuation"),
-      getItem("Оценка бытовой техники", "/services/household_appliances_valuation"),
+      getItem(
+        "Оценка бытовой техники",
+        "/services/household_appliances_valuation"
+      ),
       getItem("Оценка мебели", "/services/furniture_valuation"),
     ]),
     getItem("Оценка ущерба", "damage_valuation", null, [
-      getItem("Оценка ущерба после пожара", "/services/damage_after_fire_valuation"),
-      getItem("Оценка квартиры после залива", "/services/apartment_after_bay_valuation"),
+      getItem(
+        "Оценка ущерба после пожара",
+        "/services/damage_after_fire_valuation"
+      ),
+      getItem(
+        "Оценка квартиры после залива",
+        "/services/apartment_after_bay_valuation"
+      ),
       getItem("Экспертиза после залива", "/services/bay_expertise_valuation"),
       getItem(
         "Оценка ущерба от действий/бездействия третьих лиц",
@@ -172,75 +210,94 @@ const items = [
         [
           getItem(
             "Оценка арендной платы нежилого помещения",
-            "non_residential_rent_valuation"
+            "/services/non_residential_rent_valuation"
           ),
           getItem(
             "Оценка права аренды земельного участка",
-            "right_to_lease_land_valuation"
+            "/services/right_to_lease_land_valuation"
           ),
         ]
       ),
       getItem("Оценка для банка", "for_bank_valuation", null, [
-        getItem("Оценка квартиры для банка", "apartment_for_bank_valuation"),
-        getItem("Оценка недвижимости для банка", "estate_for_bank_valuation"),
-        getItem("Оценка дома для Сбербанка", "house_for_sberbank_valuation"),
+        getItem(
+          "Оценка квартиры для банка",
+          "/services/apartment_for_bank_valuation"
+        ),
+        getItem(
+          "Оценка недвижимости для банка",
+          "/services/estate_for_bank_valuation"
+        ),
+        getItem(
+          "Оценка дома для Сбербанка",
+          "/services/house_for_sberbank_valuation"
+        ),
       ]),
       getItem("Оценка для суда", "for_court_valuation", null, [
         getItem(
           "Оценка недвижимости для суда",
-          "real_estate_for_court_valuation"
+          "/services/real_estate_for_court_valuation"
         ),
-        getItem("Оценка квартиры для суда", "apartment_for_court_valuation"),
+        getItem(
+          "Оценка квартиры для суда",
+          "/services/apartment_for_court_valuation"
+        ),
       ]),
       getItem("Оценка для нотариуса", "for_notary_valuation", null, [
         getItem(
           "Оценка квартиры для нотариуса",
-          "apartment_for_notary_valuation"
+          "/services/apartment_for_notary_valuation"
         ),
-        getItem("Оценка акций для нотариуса", "shares_for_notary_valuation"),
+        getItem(
+          "Оценка акций для нотариуса",
+          "/services/shares_for_notary_valuation"
+        ),
         getItem(
           "Оценка бизнеса для вступления в наследство",
-          "business_for_inheritance_valuation"
+          "/services/business_for_inheritance_valuation"
         ),
         getItem(
           "Оценка автомобиля для наследства",
-          "vehicle_for_inheritance_valuation"
+          "/services/vehicle_for_inheritance_valuation"
         ),
         getItem(
           "Оценка мотоцикла для нотариуса",
-          "motorcycle_for_notary_valuation"
+          "/services/motorcycle_for_notary_valuation"
         ),
-        getItem("Оценка гаража для нотариуса", "garage_for_notary_valuation"),
+        getItem(
+          "Оценка гаража для нотариуса",
+          "/services/garage_for_notary_valuation"
+        ),
         getItem(
           "Оценка катера/лодки для наследства",
-          "boat_for_inheritance_valuation"
+          "/services/boat_for_inheritance_valuation"
         ),
         getItem(
           "Оценка земельного участка для нотариуса",
-          "land_for_notary_valuation"
+          "/services/land_for_notary_valuation"
         ),
       ]),
-      getItem("Оценка для продажи", "for_sale_valuation", null, [
-        getItem("Оценка квартиры для продажи", "apartment_for_sale_valuation"),
-      ]),
-      getItem("Оценка для ипотеки", "for_mortgage_valuation", null, [
-        getItem("Оценка дома для ипотеки", "mortgage_house_valuation"),
-      ]),
+      getItem(
+        "Оценка квартиры для продажи",
+        "/services/apartment_for_sale_valuation"
+      ),
+      getItem("Оценка дома для ипотеки", "/services/mortgage_house_valuation"),
       getItem(
         "Оценка для арбитражных управляющих",
-        "for_arbitration_managers_valuation"
+        "/services/for_arbitration_managers_valuation"
       ),
-      getItem("Оценка для страхования", "for_insurance_valuation"),
-      getItem("Оценка для опеки", "for_guardianship_valuation", null, [
-        getItem(
-          "Оценка квартиры для опеки",
-          "apartment_for_guardianship_valuation"
-        ),
-      ]),
-      getItem("Оценка стоимости залога", "collateral_valuation"),
+      getItem("Оценка для страхования", "/services/for_insurance_valuation"),
+      getItem(
+        "Оценка квартиры для опеки",
+        "/services/apartment_for_guardianship_valuation"
+      ),
+      getItem("Оценка стоимости залога", "/services/collateral_valuation"),
       getItem(
         "Оценка для оспаривания кадастровой стоимости",
-        "cadastral_cost_valuation"
+        "/services/cadastral_cost_valuation"
+      ),
+      getItem(
+        "Оценка для постановки на баланс",
+        "/services/house_balance_valuation"
       ),
     ]),
   ]),

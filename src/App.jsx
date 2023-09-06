@@ -64,6 +64,29 @@ import ApartmentAfterBay from "./pages/Services/Valuation/ApartmentAfterBay";
 import BayExpertise from "./pages/Services/Valuation/BayExpertise";
 import ActionsInactionOfThirdPartiesDamage from "./pages/Services/Valuation/ActionsInactionOfThirdPartiesDamage";
 import LostProfit from "./pages/Services/Valuation/LostProfit";
+import NonResidentialRent from "./pages/Services/Valuation/NonResidentialRent";
+import RightToLeaseLand from "./pages/Services/Valuation/RightToLeaseLand";
+import ApartmentForBank from "./pages/Services/Valuation/ApartmentForBank";
+import EstateForBank from "./pages/Services/Valuation/EstateForBank";
+import HouseForSberbank from "./pages/Services/Valuation/HouseForSberbank";
+import RealEstateForCourt from "./pages/Services/Valuation/RealEstateForCourt";
+import ApartmentForCourt from "./pages/Services/Valuation/ApartmentForCourt";
+import ApartmentForNotary from "./pages/Services/Valuation/ApartmentForNotary";
+import SharesForNotary from "./pages/Services/Valuation/SharesForNotary";
+import BusinessForInheritance from "./pages/Services/Valuation/BusinessForInheritance";
+import VehicleForInheritance from "./pages/Services/Valuation/VehicleForInheritance";
+import MotorcycleForNotary from "./pages/Services/Valuation/MotorcycleForNotary";
+import GarageForNotary from "./pages/Services/Valuation/GarageForNotary";
+import BoatForInheritance from "./pages/Services/Valuation/BoatForInheritance";
+import LandForNotary from "./pages/Services/Valuation/LandForNotary";
+import ApartmentForSale from "./pages/Services/Valuation/ApartmentForSale";
+import MortgageHouse from "./pages/Services/Valuation/MortgageHouse";
+import ForArbitrationManagers from "./pages/Services/Valuation/ForArbitrationManagers";
+import ForInsurance from "./pages/Services/Valuation/ForInsurance";
+import ApartmentForGuardianship from "./pages/Services/Valuation/ApartmentForGuardianship";
+import CollateralValuation from "./pages/Services/Valuation/CollateralValuation";
+import CadastralCost from "./pages/Services/Valuation/CadastralCost";
+import HouseBalance from "./pages/Services/Valuation/HouseBalance";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -236,6 +259,98 @@ function App() {
           <Route
             path="lost_profit_valuation"
             element={<LostProfit />}
+          />
+          <Route
+            path="non_residential_rent_valuation"
+            element={<NonResidentialRent />}
+          />
+          <Route
+            path="right_to_lease_land_valuation"
+            element={<RightToLeaseLand />}
+          />
+          <Route
+            path="apartment_for_bank_valuation"
+            element={<ApartmentForBank />}
+          />
+          <Route
+            path="estate_for_bank_valuation"
+            element={<EstateForBank />}
+          />
+          <Route
+            path="house_for_sberbank_valuation"
+            element={<HouseForSberbank />}
+          />
+          <Route
+            path="real_estate_for_court_valuation"
+            element={<RealEstateForCourt />}
+          />
+          <Route
+            path="apartment_for_court_valuation"
+            element={<ApartmentForCourt />}
+          />
+          <Route
+            path="apartment_for_notary_valuation"
+            element={<ApartmentForNotary />}
+          />
+          <Route
+            path="shares_for_notary_valuation"
+            element={<SharesForNotary />}
+          />
+          <Route
+            path="business_for_inheritance_valuation"
+            element={<BusinessForInheritance />}
+          />
+          <Route
+            path="vehicle_for_inheritance_valuation"
+            element={<VehicleForInheritance />}
+          />
+          <Route
+            path="motorcycle_for_notary_valuation"
+            element={<MotorcycleForNotary />}
+          />
+          <Route
+            path="garage_for_notary_valuation"
+            element={<GarageForNotary />}
+          />
+          <Route
+            path="boat_for_inheritance_valuation"
+            element={<BoatForInheritance />}
+          />
+          <Route
+            path="land_for_notary_valuation"
+            element={<LandForNotary />}
+          />
+          <Route
+            path="apartment_for_sale_valuation"
+            element={<ApartmentForSale />}
+          />
+          <Route
+            path="mortgage_house_valuation"
+            element={<MortgageHouse />}
+          />
+          <Route
+            path="for_arbitration_managers_valuation"
+            element={<ForArbitrationManagers />}
+          />
+          <Route
+            path="for_insurance_valuation"
+            element={<ForInsurance />}
+          />
+          <Route
+            path="apartment_for_guardianship_valuation"
+            element={<ApartmentForGuardianship />}
+          />
+          <Route
+            path="collateral_valuation"
+            element={<CollateralValuation />}
+          />
+          <Route
+            path="cadastral_cost_valuation"
+            element={<CadastralCost />}
+          />
+          <Route
+            path="house_balance_valuation"
+            element={<HouseBalance />}
           />
         </Route>
       </Routes>
