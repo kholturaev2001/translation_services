@@ -94,7 +94,7 @@ export default function Carousel({ data = partners }) {
       >
         {data.map((el, id) => (
           <SwiperSlide key={id}>
-            <div className="flex flex-col items-center justify-center shadow-xl overflow-hidden">
+            <div className="flex flex-col items-center justify-center shadow-xl overflow-hidden border-t-2 border-blue-600">
               <img
                 className={`${
                   el.scale ? el.scale : "scale-100"
