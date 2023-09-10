@@ -310,70 +310,71 @@ const items = [
       [
         getItem(
           "Определение стоимости выполненных строительно-технических работ",
-          "cost_of_completed_construction_work_determination"
+          "/services/cost_of_completed_construction_work_determination"
         ),
         getItem(
           "Экспертиза сметной документации",
-          "estimate_documentation_expert"
+          "/services/estimate_documentation_expert"
         ),
         getItem("Экспертиза фасада здания", "building_facade_expert"),
-        getItem("Экспертиза окон", "window_expert"),
+        getItem("Экспертиза окон", "/services/window_expert"),
         getItem(
           "Экспертиза строительно-монтажных работ",
-          "construction_and_installation_works_expert"
+          "/services/construction_and_installation_works_expert"
         ),
         getItem(
           "Экспертиза качества внутренней отделки",
-          "quality_of_interior_decoration_expert"
+          "/services/quality_of_interior_decoration_expert"
         ),
         getItem(
           "Экспертиза зданий и сооружений",
-          "buildings_and_structures_expert"
+          "/services/buildings_and_structures_expert"
         ),
         getItem(
           "Экспертиза капитальности зданий",
-          "capitality_of_buildings_expert"
+          "/services/capitality_of_buildings_expert"
         ),
-        getItem("Экспертиза дверных блоков", "door_blocks_expert"),
+        getItem("Экспертиза дверных блоков", "/services/door_blocks_expert"),
         getItem(
           "Строительная экспертиза квартиры",
-          "apartment_contruction_expert"
+          "/services/apartment_contruction_expert"
         ),
-        getItem("Экспертиза кровли", "roof_expert"),
+        getItem("Экспертиза кровли", "/services/roof_expert"),
+        getItem(
+          "Экспертиза удорожания стоимости строительства",
+          "/services/increase_in_construction_сosts_expert"
+        ),
+        getItem(
+          "Экспертиза деревянных конструкций",
+          "/services/wooden_structures_exert"
+        ),
       ]
     ),
     getItem(
-      "Техническая экспертиза документов",
-      "technical_document_expert",
-      null,
-      [
-        getItem(
-          "Экспертиза срока давности составления документа",
-          "statute_of_limitations_for_compiling_a_document_expert"
-        ),
-      ]
+      "Экспертиза срока давности составления документа",
+      "/services/statute_of_limitations_for_compiling_a_document_expert"
     ),
-    getItem("Почерковедческая экспертиза", "handwriting_expert"),
+    getItem("Почерковедческая экспертиза", "/services/handwriting_expert"),
     getItem(
       "Финансово-экономическая экспертиза",
-      "financial_and_economic_expert"
+      "/services/financial_and_economic_expert"
     ),
-    getItem("Бухгалтерская экспертиза", "accounting_expert"),
-    getItem("Лингвистическая экспертиза", "linguistic_expert"),
-    getItem("Фоноскопическая экспертиза", "phonoscopic_expert"),
+    getItem("Бухгалтерская экспертиза", "/services/accounting_expert"),
+    getItem("Лингвистическая экспертиза", "/services/linguistic_expert"),
+    getItem("Фоноскопическая экспертиза", "/services/phonoscopic_expert"),
     getItem(
       "Компьютерно-ехническая экспертиза",
-      "computer_and_technical_expert"
+      "/services/computer_and_technical_expert"
     ),
     getItem(
       "Экспертиза объектов интеллектуальной деятельности",
-      "intellectual_activity_objects_expert"
+      "/services/intellectual_activity_objects_expert"
     ),
-    getItem("Товароведческая экспертиза", "commodity_expert"),
-    getItem("Автотехническая экспертиза", "automotive_expert"),
-    getItem("Землеустроительная экспертиза", "land_management_expert"),
-    getItem("Пожарная экспертиза", "fire_expert"),
-    getItem("Оценочная экспертиза", "appraisal_expert"),
+    getItem("Товароведческая экспертиза", "/services/commodity_expert"),
+    getItem("Автотехническая экспертиза", "/services/automotive_expert"),
+    getItem("Землеустроительная экспертиза", "/services/land_management_expert"),
+    getItem("Пожарная экспертиза", "/services/fire_expert"),
+    getItem("Оценочная экспертиза", "/services/appraisal_expert"),
   ]),
   getItem("Снижение налогов ▼", "taxcuts", null, [
     getItem(

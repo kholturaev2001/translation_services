@@ -87,6 +87,31 @@ import ApartmentForGuardianship from "./pages/Services/Valuation/ApartmentForGua
 import CollateralValuation from "./pages/Services/Valuation/CollateralValuation";
 import CadastralCost from "./pages/Services/Valuation/CadastralCost";
 import HouseBalance from "./pages/Services/Valuation/HouseBalance";
+import CostOfCompletedConstructionWorkDetermination from "./pages/Services/Expertise/CostOfCompletedConstructionWorkDetermination";
+import EstimateDocumentationExpert from "./pages/Services/Expertise/EstimateDocumentationExpert";
+import WindowExpert from "./pages/Services/Expertise/WindowExpert";
+import ConstructionAndInstallationWorksExpert from "./pages/Services/Expertise/ConstructionAndInstallationWorksExpert";
+import QualityOfInteriorDecorationExpert from "./pages/Services/Expertise/QualityOfInteriorDecorationExpert";
+import BuildingsAndStructuresExpert from "./pages/Services/Expertise/BuildingsAndStructuresExpert";
+import CapitalityOfBuildingsExpert from "./pages/Services/Expertise/CapitalityOfBuildingsExpert";
+import DoorBlocksExpert from "./pages/Services/Expertise/DoorBlocksExpert";
+import ApartmentContructionExpert from "./pages/Services/Expertise/ApartmentContructionExpert";
+import RoofExpert from "./pages/Services/Expertise/RoofExpert";
+import IncreaseInConstructionCostsExpert from "./pages/Services/Expertise/IncreaseInConstructionCostsExpert";
+import WoodenStructuresExert from "./pages/Services/Expertise/WoodenStructuresExert";
+import StatuteOfLimitationsForCompilingDocumentExpert from "./pages/Services/Expertise/StatuteOfLimitationsForCompilingDocumentExpert";
+import HandwritingExpert from "./pages/Services/Expertise/HandwritingExpert";
+import FinancialAndEconomicExpert from "./pages/Services/Expertise/FinancialAndEconomicExpert";
+import AccountingExpert from "./pages/Services/Expertise/AccountingExpert";
+import LinguisticExpert from "./pages/Services/Expertise/LinguisticExpert";
+import PhonoscopicExpert from "./pages/Services/Expertise/PhonoscopicExpert";
+import ComputerAndTechnicalExpert from "./pages/Services/Expertise/ComputerAndTechnicalExpert";
+import IntellectualActivityObjectsExpert from "./pages/Services/Expertise/IntellectualActivityObjectsExpert";
+import CommodityExpert from "./pages/Services/Expertise/CommodityExpert";
+import AutomotiveExpert from "./pages/Services/Expertise/AutomotiveExpert";
+import LandManagementExpert from "./pages/Services/Expertise/LandManagementExpert";
+import FireExpert from "./pages/Services/Expertise/FireExpert";
+import AppraisalExpert from "./pages/Services/Expertise/AppraisalExpert";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -112,6 +137,7 @@ function App() {
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/services/" element={<Services />}>
+          {/*  ============   VALUATION  ===============  */}
           <Route path="store_valuation" element={<StoreValuation />} />
           <Route
             path="non_residential_premises_valuation"
@@ -248,18 +274,12 @@ function App() {
             path="apartment_after_bay_valuation"
             element={<ApartmentAfterBay />}
           />
-          <Route
-            path="bay_expertise_valuation"
-            element={<BayExpertise />}
-          />
+          <Route path="bay_expertise_valuation" element={<BayExpertise />} />
           <Route
             path="actions_inaction_of_third_parties_damage_valuation"
             element={<ActionsInactionOfThirdPartiesDamage />}
           />
-          <Route
-            path="lost_profit_valuation"
-            element={<LostProfit />}
-          />
+          <Route path="lost_profit_valuation" element={<LostProfit />} />
           <Route
             path="non_residential_rent_valuation"
             element={<NonResidentialRent />}
@@ -272,10 +292,7 @@ function App() {
             path="apartment_for_bank_valuation"
             element={<ApartmentForBank />}
           />
-          <Route
-            path="estate_for_bank_valuation"
-            element={<EstateForBank />}
-          />
+          <Route path="estate_for_bank_valuation" element={<EstateForBank />} />
           <Route
             path="house_for_sberbank_valuation"
             element={<HouseForSberbank />}
@@ -316,26 +333,17 @@ function App() {
             path="boat_for_inheritance_valuation"
             element={<BoatForInheritance />}
           />
-          <Route
-            path="land_for_notary_valuation"
-            element={<LandForNotary />}
-          />
+          <Route path="land_for_notary_valuation" element={<LandForNotary />} />
           <Route
             path="apartment_for_sale_valuation"
             element={<ApartmentForSale />}
           />
-          <Route
-            path="mortgage_house_valuation"
-            element={<MortgageHouse />}
-          />
+          <Route path="mortgage_house_valuation" element={<MortgageHouse />} />
           <Route
             path="for_arbitration_managers_valuation"
             element={<ForArbitrationManagers />}
           />
-          <Route
-            path="for_insurance_valuation"
-            element={<ForInsurance />}
-          />
+          <Route path="for_insurance_valuation" element={<ForInsurance />} />
           <Route
             path="apartment_for_guardianship_valuation"
             element={<ApartmentForGuardianship />}
@@ -344,14 +352,86 @@ function App() {
             path="collateral_valuation"
             element={<CollateralValuation />}
           />
+          <Route path="cadastral_cost_valuation" element={<CadastralCost />} />
+          <Route path="house_balance_valuation" element={<HouseBalance />} />
+
+          {/*  ============   EXPERTISE  ===============  */}
           <Route
-            path="cadastral_cost_valuation"
-            element={<CadastralCost />}
+            path="cost_of_completed_construction_work_determination"
+            element={<CostOfCompletedConstructionWorkDetermination />}
+          />
+
+          <Route
+            path="estimate_documentation_expert"
+            element={<EstimateDocumentationExpert />}
+          />
+
+          <Route path="window_expert" element={<WindowExpert />} />
+
+          <Route
+            path="construction_and_installation_works_expert"
+            element={<ConstructionAndInstallationWorksExpert />}
+          />
+
+          <Route
+            path="quality_of_interior_decoration_expert"
+            element={<QualityOfInteriorDecorationExpert />}
+          />
+
+          <Route
+            path="buildings_and_structures_expert"
+            element={<BuildingsAndStructuresExpert />}
+          />
+
+          <Route
+            path="capitality_of_buildings_expert"
+            element={<CapitalityOfBuildingsExpert />}
+          />
+
+          <Route path="door_blocks_expert" element={<DoorBlocksExpert />} />
+
+          <Route
+            path="apartment_contruction_expert"
+            element={<ApartmentContructionExpert />}
+          />
+
+          <Route path="roof_expert" element={<RoofExpert />} />
+          <Route
+            path="increase_in_construction_сosts_expert"
+            element={<IncreaseInConstructionCostsExpert />}
           />
           <Route
-            path="house_balance_valuation"
-            element={<HouseBalance />}
+            path="wooden_structures_exert"
+            element={<WoodenStructuresExert />}
           />
+          <Route
+            path="statute_of_limitations_for_compiling_a_document_expert"
+            element={<StatuteOfLimitationsForCompilingDocumentExpert />}
+          />
+          <Route path="handwriting_expert" element={<HandwritingExpert />} />
+          <Route
+            path="financial_and_economic_expert"
+            element={<FinancialAndEconomicExpert />}
+          />
+          <Route path="accounting_expert" element={<AccountingExpert />} />
+          <Route path="linguistic_expert" element={<LinguisticExpert />} />
+          <Route path="phonoscopic_expert" element={<PhonoscopicExpert />} />
+          <Route
+            path="computer_and_technical_expert"
+            element={<ComputerAndTechnicalExpert />}
+          />
+          <Route
+            path="intellectual_activity_objects_expert"
+            element={<IntellectualActivityObjectsExpert />}
+          />
+          <Route path="commodity_expert" element={<CommodityExpert />} />
+          <Route path="automotive_expert" element={<AutomotiveExpert />} />
+          <Route
+            path="land_management_expert"
+            element={<LandManagementExpert />}
+          />
+          <Route path="fire_expert" element={<FireExpert />} />
+          <Route path="appraisal_expert" element={<AppraisalExpert />} />
         </Route>
       </Routes>
       <Modal
