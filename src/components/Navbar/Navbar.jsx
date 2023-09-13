@@ -316,7 +316,7 @@ const items = [
           "Экспертиза сметной документации",
           "/services/estimate_documentation_expert"
         ),
-        getItem("Экспертиза фасада здания", "building_facade_expert"),
+        getItem("Экспертиза фасада здания", "/services/building_facade_expert"),
         getItem("Экспертиза окон", "/services/window_expert"),
         getItem(
           "Экспертиза строительно-монтажных работ",

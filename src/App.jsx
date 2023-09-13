@@ -112,6 +112,7 @@ import AutomotiveExpert from "./pages/Services/Expertise/AutomotiveExpert";
 import LandManagementExpert from "./pages/Services/Expertise/LandManagementExpert";
 import FireExpert from "./pages/Services/Expertise/FireExpert";
 import AppraisalExpert from "./pages/Services/Expertise/AppraisalExpert";
+import BuildingFacadeExpert from "./pages/Services/Expertise/BuildingFacadeExpert";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -366,6 +367,7 @@ function App() {
             element={<EstimateDocumentationExpert />}
           />
 
+          <Route path="building_facade_expert" element={<BuildingFacadeExpert />} />
           <Route path="window_expert" element={<WindowExpert />} />
 
           <Route
