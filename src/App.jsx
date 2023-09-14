@@ -113,6 +113,7 @@ import LandManagementExpert from "./pages/Services/Expertise/LandManagementExper
 import FireExpert from "./pages/Services/Expertise/FireExpert";
 import AppraisalExpert from "./pages/Services/Expertise/AppraisalExpert";
 import BuildingFacadeExpert from "./pages/Services/Expertise/BuildingFacadeExpert";
+import IndependentJudicalExpert from "./pages/Services/Expertise/IndependentJudicalExpert";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -356,10 +357,16 @@ function App() {
           <Route path="cadastral_cost_valuation" element={<CadastralCost />} />
           <Route path="house_balance_valuation" element={<HouseBalance />} />
 
+
+
           {/*  ============   EXPERTISE  ===============  */}
           <Route
             path="cost_of_completed_construction_work_determination"
             element={<CostOfCompletedConstructionWorkDetermination />}
+          />
+          <Route
+            path="independent_judical_expert"
+            element={<IndependentJudicalExpert />}
           />
 
           <Route

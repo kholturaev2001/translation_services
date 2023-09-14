@@ -5,7 +5,7 @@ import "./navbar.css";
 import BurgerCross from "../BurgerCross/BurgerCross";
 import Sidebar from "../Sidebar/Sidebar";
 import logo from "../../assets/images/logo_with_txt.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -304,6 +304,10 @@ const items = [
 
   getItem("Экспертиза ▼", "expert", null, [
     getItem(
+      "Независимая судебная экспертиза",
+      "/services/independent_judical_expert"
+    ),
+    getItem(
       "Строительно-техническая экспертиза",
       "construction_and_technical_expert",
       null,
@@ -363,7 +367,7 @@ const items = [
     getItem("Лингвистическая экспертиза", "/services/linguistic_expert"),
     getItem("Фоноскопическая экспертиза", "/services/phonoscopic_expert"),
     getItem(
-      "Компьютерно-ехническая экспертиза",
+      "Компьютерно-етническая экспертиза",
       "/services/computer_and_technical_expert"
     ),
     getItem(
@@ -372,7 +376,10 @@ const items = [
     ),
     getItem("Товароведческая экспертиза", "/services/commodity_expert"),
     getItem("Автотехническая экспертиза", "/services/automotive_expert"),
-    getItem("Землеустроительная экспертиза", "/services/land_management_expert"),
+    getItem(
+      "Землеустроительная экспертиза",
+      "/services/land_management_expert"
+    ),
     getItem("Пожарная экспертиза", "/services/fire_expert"),
     getItem("Оценочная экспертиза", "/services/appraisal_expert"),
   ]),
@@ -503,6 +510,9 @@ const Navbar = () => {
     sessionStorage.setItem("active_nav", key);
   };
 
+  const location = useLocation();
+  console.log("🚀 ~ file: Navbar.jsx:515 ~ Navbar ~ location:", location);
+
   return (
     <>
       <div className="w-full overflow-hidden backdrop-blur-[10px] md:px-3 bg-white  bg-opacity-60  text-[#33a3ed]">
@@ -519,6 +529,7 @@ const Navbar = () => {
             <Menu
               onClick={handleNavigate}
               defaultSelectedKeys={[active_nav]}
+              selectedKeys={[location.pathname]}
               style={{
                 backgroundColor: "transparent",
                 textTransform: "uppercase",

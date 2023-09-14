@@ -10,7 +10,7 @@ const YandexMap = () => {
             ст. м. «ВДНХ».
           </p>
           <Map
-            width="100%"
+            width="95%"
             height={300}
             defaultState={{ center: [55.822443, 37.646329], zoom: 9 }}
           >
