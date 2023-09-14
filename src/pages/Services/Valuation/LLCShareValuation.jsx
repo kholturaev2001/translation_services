@@ -11,8 +11,11 @@ import Ol from "../../../components/Typography/Ol";
 const LLCShareValuation = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -9,8 +9,11 @@ import Ul from "../../../components/Typography/Ul";
 const PhonoscopicExpert = () => {
   return (
     <div>
-        <HeadBreadcrumb
+  <HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

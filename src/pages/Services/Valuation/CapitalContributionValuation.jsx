@@ -10,8 +10,11 @@ import Ol from "../../../components/Typography/Ol";
 const CapitalContributionValuation = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

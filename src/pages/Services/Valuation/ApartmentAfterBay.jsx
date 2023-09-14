@@ -11,8 +11,11 @@ import Ul from "../../../components/Typography/Ul";
 const ApartmentAfterBay = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

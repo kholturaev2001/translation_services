@@ -8,8 +8,11 @@ import Title2 from "../../../components/Typography/Title2";
 const ApartmentContructionExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

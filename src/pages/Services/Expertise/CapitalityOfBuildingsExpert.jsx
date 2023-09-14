@@ -10,8 +10,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const CapitalityOfBuildingsExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

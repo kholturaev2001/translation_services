@@ -8,8 +8,11 @@ import Ul from "../../../components/Typography/Ul";
 const PrivateHouse = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -10,8 +10,11 @@ import Title3 from "../../../components/Typography/Title3";
 const IntellectualActivityObjectsExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

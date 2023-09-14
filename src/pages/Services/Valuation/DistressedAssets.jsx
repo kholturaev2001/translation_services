@@ -11,8 +11,11 @@ import PhoneNumber from "../../../components/Typography/PhoneNumber";
 const DistressedAssets = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

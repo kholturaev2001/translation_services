@@ -12,8 +12,11 @@ import Title2 from "../../../components/Typography/Title2";
 const BuildingTechnicalCondition = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

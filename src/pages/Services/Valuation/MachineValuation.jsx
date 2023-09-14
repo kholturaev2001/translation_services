@@ -10,8 +10,11 @@ import Title from "../../../components/Typography/Title";
 const MachineValuation = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

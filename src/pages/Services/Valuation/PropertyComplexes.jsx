@@ -10,8 +10,11 @@ import Email from "../../../components/Typography/Email";
 const PropertyComplexes = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

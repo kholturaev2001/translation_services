@@ -10,8 +10,11 @@ import Img from "../../../components/Typography/Img";
 const BuildingFacadeExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

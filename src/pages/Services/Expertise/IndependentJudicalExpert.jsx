@@ -19,8 +19,11 @@ const IndependentJudicalExpert = () => {
 
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

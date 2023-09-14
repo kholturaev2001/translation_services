@@ -9,8 +9,11 @@ import Ul from "../../../components/Typography/Ul";
 const AccountingExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

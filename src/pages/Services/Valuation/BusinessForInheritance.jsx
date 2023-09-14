@@ -11,8 +11,11 @@ import Email from "../../../components/Typography/Email";
 const BusinessForInheritance = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -8,8 +8,11 @@ import Title from "../../../components/Typography/Title";
 const RightToLeaseLand = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -9,8 +9,11 @@ import Paragraph from "../../../components/Typography/Paragraph";
 const InvestmentProjectsValuation = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

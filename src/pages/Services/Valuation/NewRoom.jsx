@@ -8,8 +8,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const NewRoom = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

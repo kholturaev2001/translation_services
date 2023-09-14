@@ -12,6 +12,9 @@ const CompanyPropertyValuation = () => {
       <HeadBreadcrumb
         items={[
           {
+            title: "Главная",
+          },
+          {
             title: "Оценка",
           },
           {

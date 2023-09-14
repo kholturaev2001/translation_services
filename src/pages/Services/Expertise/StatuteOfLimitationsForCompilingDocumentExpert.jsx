@@ -10,8 +10,11 @@ import Title2 from "../../../components/Typography/Title2";
 const StatuteOfLimitationsForCompilingDocumentExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

@@ -10,8 +10,11 @@ import DTable from "../../../components/DTable";
 const Office = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

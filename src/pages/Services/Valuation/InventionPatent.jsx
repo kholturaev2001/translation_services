@@ -10,8 +10,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const InventionPatent = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -8,8 +8,11 @@ import Title from "../../../components/Typography/Title";
 const OfficeEquipmentValuation = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

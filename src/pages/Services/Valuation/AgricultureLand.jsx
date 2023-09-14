@@ -9,8 +9,11 @@ import Email from "../../../components/Typography/Email";
 const AgricultureLand = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

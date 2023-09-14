@@ -8,8 +8,11 @@ import Ol from "../../../components/Typography/Ol";
 const VehicleForInheritance = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

@@ -11,8 +11,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const WindowExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

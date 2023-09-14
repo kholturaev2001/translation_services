@@ -10,8 +10,11 @@ import DTable from "../../../components/DTable";
 const HouseBalance = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

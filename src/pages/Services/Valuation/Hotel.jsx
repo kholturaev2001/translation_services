@@ -9,8 +9,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const Hotel = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },

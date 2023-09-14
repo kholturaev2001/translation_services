@@ -9,8 +9,11 @@ import Ol from "../../../components/Typography/Ol";
 const ConstructionAndInstallationWorksExpert = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Экспертиза",
           },

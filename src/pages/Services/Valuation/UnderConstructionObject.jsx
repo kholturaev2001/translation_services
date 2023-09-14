@@ -10,8 +10,11 @@ import LiColored from "../../../components/Typography/LiColored";
 const UnderConstructionObject = () => {
   return (
     <div>
-      <HeadBreadcrumb
+<HeadBreadcrumb
         items={[
+          {
+            title: 'Главная'
+          },
           {
             title: "Оценка",
           },
