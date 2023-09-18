@@ -386,12 +386,12 @@ const items = [
   getItem("Снижение налогов ▼", "taxcuts", null, [
     getItem(
       "Оспаривание кадастровой стоимости недвижимости",
-      "challenging_the_cadastral_value_of_real_estate"
+      "/services/challenging_the_cadastral_value_of_real_estate"
     ),
-    getItem("Применение налоговых льгот", "application_of_tax_incentives"),
+    getItem("Применение налоговых льгот", "/services/application_of_tax_incentives"),
     getItem(
       "Исключение объектов недвижимости из 700-ПП",
-      "exclusion_of_real_estate_objects_from_700_pp"
+      "/services/exclusion_of_real_estate_objects_from_700_pp"
     ),
   ]),
   getItem("Юридические услуги ▼", "legalservice", null, [

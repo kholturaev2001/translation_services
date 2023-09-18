@@ -114,6 +114,9 @@ import FireExpert from "./pages/Services/Expertise/FireExpert";
 import AppraisalExpert from "./pages/Services/Expertise/AppraisalExpert";
 import BuildingFacadeExpert from "./pages/Services/Expertise/BuildingFacadeExpert";
 import IndependentJudicalExpert from "./pages/Services/Expertise/IndependentJudicalExpert";
+import ChallengingCadastralValueOfRealEstate from "./pages/Services/TaxCuts/ChallengingCadastralValueOfRealEstate";
+import ApplicationOfTaxaxIncentives from "./pages/Services/TaxCuts/ApplicationOfTaxaxIncentives";
+import ExclusionOfRealEstateObjectsFrom700PP from "./pages/Services/TaxCuts/ExclusionOfRealEstateObjectsFrom700PP";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -441,6 +444,9 @@ function App() {
           />
           <Route path="fire_expert" element={<FireExpert />} />
           <Route path="appraisal_expert" element={<AppraisalExpert />} />
+          <Route path="challenging_the_cadastral_value_of_real_estate" element={<ChallengingCadastralValueOfRealEstate />} />
+          <Route path="application_of_tax_incentives" element={<ApplicationOfTaxaxIncentives />} />
+          <Route path="exclusion_of_real_estate_objects_from_700_pp" element={<ExclusionOfRealEstateObjectsFrom700PP />} />
         </Route>
       </Routes>
       <Modal
