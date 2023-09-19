@@ -48,7 +48,7 @@ const CommodityExpert = () => {
       <Description>
         Прайс-лист на проведение товароведческой экспертизы различных товаров
       </Description>
-      <div className="md:w-full w-full overflow-auto md:scale-100 scale-[90%]">
+      <div className="w-full overflow-auto md:scale-100 scale-[90%]">
         <DTable
           dataSource={[
             {

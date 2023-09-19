@@ -511,7 +511,6 @@ const Navbar = () => {
   };
 
   const location = useLocation();
-  console.log("🚀 ~ file: Navbar.jsx:515 ~ Navbar ~ location:", location);
 
   return (
     <>

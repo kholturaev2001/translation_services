@@ -9,63 +9,97 @@ import DTable from "../../../components/DTable";
 import Ol from "./../../../components/Typography/Ol";
 import Title2 from "./../../../components/Typography/Title2";
 import LiColored from "../../../components/Typography/LiColored";
-import Email from './../../../components/Typography/Email';
+import Email from "./../../../components/Typography/Email";
 
 const ChallengingCadastralValueOfRealEstate = () => {
-  
-const columns = [
-          {
-            title: 'год',
-            dataIndex: 'year',
-            key: 'year',
-            width: '20%',
-          },
-          {
-            title: 'Block',
-            children: [
-              {
-                title: 'Building',
-                dataIndex: 'building',
-                key: 'building',
-              },
-              {
-                title: 'Door No.',
-                dataIndex: 'number',
-                key: 'number',
-              },
-            ],
-          },
-          {
-            title: 'Block2',
-            children: [
-              {
-                title: 'Building2',
-                dataIndex: 'building2',
-                key: 'building2',
-              },
-              {
-                title: 'Door No.2',
-                dataIndex: 'number2',
-                key: 'number2',
-              },
-            ],
-          },
-        ]
+  const columns = [
+    {
+      title: "год",
+      dataIndex: "year",
+      key: "year",
+      width: "20%",
+    },
+    {
+      title: "Москва",
+      children: [
+        {
+          title: "Налог от КС	",
+          dataIndex: "kc_tax",
+          key: "kc_tax",
+        },
+        {
+          title: "Налог от СГС",
+          dataIndex: "cgc_tax",
+          key: "cgc_tax",
+          onCell: (record) => ({
+            rowSpan: record.key % 5 === 0 ? 5 : 0,
+          }),
+        },
+      ],
+    },
+    {
+      title: "Московская область",
+      children: [
+        {
+          title: "Налог от КС	",
+          dataIndex: "kc_tax",
+          key: "kc_tax",
+        },
+        {
+          title: "Налог от СГС",
+          dataIndex: "cgc_tax",
+          key: "cgc_tax",
+          onCell: (record) => ({
+            rowSpan: record.key % 5 === 0 ? 5 : 0,
+          }),
+        },
+      ],
+    },
+  ];
 
-const data = [];
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    name: 'John Brown',
-    age: i + 1,
-    year: 'Lake Park',
-    building: 'C',
-    number: 2035,
-    companyAddress: 'Lake year 42',
-    companyName: 'SoftLake Co',
-    gender: 'M',
-  });
-}
+  const data = [
+    {
+      key: 0,
+      year: "2019",
+      kc_tax: "1,6",
+      cgc_tax: "2,2*",
+      kc_tax2: "1,5",
+      cgc_tax2: "2,2*",
+    },
+    {
+      key: 1,
+      year: "2020",
+      kc_tax: "1,7",
+      cgc_tax: "2,2*",
+      kc_tax2: "1,7",
+      cgc_tax2: "2,2*",
+    },
+    {
+      key: 2,
+      year: "2021",
+      kc_tax: "1,8",
+      cgc_tax: "2,2*",
+      kc_tax2: "1,8",
+      cgc_tax2: "2,2*",
+    },
+    {
+      key: 3,
+      year: "2022",
+      kc_tax: "1,9",
+      cgc_tax: "2,2*",
+      kc_tax2: "1,9",
+      cgc_tax2: "2,2*",
+    },
+    {
+      key: 4,
+      year: "2023 и далее",
+      kc_tax: "2,0",
+      cgc_tax: "2,2*",
+      kc_tax2: "2,0",
+      cgc_tax2: "2,2*",
+    },
+  ];
+
   return (
     <div>
       <HeadBreadcrumb
@@ -406,8 +440,8 @@ for (let i = 0; i < 100; i++) {
         «АИС ПЕРЕВОДЧИК»?
       </Title>
       <Description>
-        Специалисты компании «АИС ПЕРЕВОДЧИК» знают все тонкости проведения процедуры
-        оспаривания. Они имеют соответствующую аккредитацию и солидный
+        Специалисты компании «АИС ПЕРЕВОДЧИК» знают все тонкости проведения
+        процедуры оспаривания. Они имеют соответствующую аккредитацию и солидный
         практический опыт и готовы взять на себя полное юридическое
         сопровождение процесса. Процедура оспаривания включает следующие этапы:
       </Description>
@@ -495,18 +529,165 @@ for (let i = 0; i < 100; i++) {
       <Title>Фактическая информация</Title>
       <Title2>Ставки налога на имущество организаций</Title2>
 
+      <div className="overflow-auto md:scale-100 scale-[90%]">
+        <DTable columns={columns} dataSource={data} bordered size="middle" />
+      </div>
+      <Description>
+        * В отношении некоторого имущества могут использоваться иные ставки
+        налога. Например, в отношении ж/д путей, линий электропередачи,
+        трубопроводов и т.д.
+      </Description>
+      <Description>
+        Налог оплачивается ежеквартально, равными платежами до 30 числа месяца
+        следующего за отчетным кварталом. Итоговый платеж (за 4 квартал)
+        производится в срок до 30.03 следующего календарного года.
+      </Description>
+      <br />
+      <Title2>Ставки налога на имущество физических лиц</Title2>
 
-  <DTable
-    columns={columns}
-    dataSource={data}
-    bordered
-    size="middle"
-  />
-
-
-
-
-
+      <div className="overflow-auto md:scale-100 scale-[90%]">
+        <DTable
+          dataSource={[
+            {
+              key: "1",
+              row_one:
+                "Объекты налогообложения, включенные в перечень, определяемый в соответствии с пунктом 7 статьи 378.2 Налогового кодекса Российской Федерации, в отношении объектов налогообложения, предусмотренных абзацем вторым пункта 10 статьи 378.2 Налогового кодекса Российской Федерации	",
+              row_two: "1,5",
+              row_three: "2,0",
+            },
+            {
+              key: "2",
+              row_one:
+                "Объекты налогообложения, кадастровая стоимость каждого из которых превышает 300 млн.руб.	",
+              row_two: "2,0",
+              row_three: "2,0",
+            },
+            {
+              key: "3",
+              row_one: "Прочие объекты налогообложения	",
+              row_two: "0,5",
+              row_three: "0,5",
+            },
+          ]}
+          columns={[
+            {
+              dataIndex: "row_one",
+              key: "row_one",
+              title: "Объекты налогообложения	",
+            },
+            {
+              dataIndex: "row_two",
+              key: "row_two",
+              width: "20%",
+              title: "Москва",
+            },
+            {
+              dataIndex: "row_three",
+              key: "row_three",
+              width: "20%",
+              title: "Московская область",
+            },
+          ]}
+          bordered
+        />
+      </div>
+      <Description>
+        Физические лица обязаны оплатить налог на имущество за отчетный период
+        (год) до 01.12 следующего календарного года. Оплата производится одним
+        платежом в полном размере.
+      </Description>
+      <Title2>Ставки земельного налога в Москве</Title2>
+      <div className="overflow-auto md:scale-100 scale-[90%]">
+        <DTable
+          dataSource={[
+            {
+              key: "1",
+              row_one:
+                "земельные участки, отнесенные к землям в составе зон сельскохозяйственного использования в городе Москве и используемые для сельскохозяйственного производства, а также земельные участки, предоставленные и используемые для эксплуатации объектов спорта, в том числе спортивных сооружений	",
+              row_two: "0,3",
+            },
+            {
+              key: "2",
+              row_one: "прочие земельные участки",
+              row_two: "1,5",
+            },
+            {
+              key: "3",
+              row_one:
+                "земельные участки, ограниченные в обороте в соответствии с законодательством Российской Федерации, предоставленные для обеспечения обороны, безопасности и таможенных нужд	",
+              row_two: "0,3",
+            },
+          ]}
+          columns={[
+            {
+              dataIndex: "row_one",
+              key: "row_one",
+              title: "Наименование ЗУ",
+            },
+            {
+              dataIndex: "row_two",
+              key: "row_two",
+              width: "20%",
+              title: "Ставка налога, %",
+            },
+          ]}
+          bordered
+        />
+      </div>
+      <br />
+      <Title2>Ставки земельного налога в Московской области</Title2>
+      <div className="overflow-auto md:scale-100 scale-[90%]">
+        <DTable
+          dataSource={[
+            {
+              key: "1",
+              row_one:
+                "земли сельскохозяйственного назначения или земли в составе зон сельскохозяйственного использования в населенных пунктах и используемых для сельскохозяйственного производства	",
+              row_two: "0,3",
+            },
+            {
+              key: "2",
+              row_one:
+                "ограниченных в обороте в соответствии с законодательством Российской Федерации и предоставленных для обеспечения обороны, безопасности и таможенных нужд	",
+              row_two: "0,3",
+            },
+            {
+              key: "3",
+              row_one: "для размещения объектов гаражного назначения	",
+              row_two: "0,7",
+            },
+            {
+              key: "4",
+              row_one:
+                "емли сельскохозяйственного назначения или земли в составе зон сельскохозяйственного использования в населенных пунктах и не используемых для сельскохозяйственного производства	",
+              row_two: "1,5",
+            },
+            {
+              key: "5",
+              row_one: "прочие	",
+              row_two: "1,5",
+            },
+          ]}
+          columns={[
+            {
+              dataIndex: "row_one",
+              key: "row_one",
+              title: "Наименование ЗУ",
+            },
+            {
+              dataIndex: "row_two",
+              key: "row_two",
+              width: "20%",
+              title: "Ставка налога, %",
+            },
+          ]}
+          bordered
+        />
+      </div>
+      <Description>
+        Сроки оплаты налога и размер платежей аналогичны налогу на имущество
+        юридических и физических лиц.
+      </Description>
     </div>
   );
 };

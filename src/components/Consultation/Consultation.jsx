@@ -33,7 +33,6 @@ const Consultation = () => {
     }
   };
 
-  console.log(values);
 
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
@@ -123,7 +122,6 @@ const Consultation = () => {
                 name="phone"
                 onChange={(e) => {
                   handleInputChange(e);
-                  console.log(e);
                 }}
                 value={maskedPhone}
               />
