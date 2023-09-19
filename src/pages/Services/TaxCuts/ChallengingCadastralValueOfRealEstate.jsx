@@ -108,7 +108,7 @@ const ChallengingCadastralValueOfRealEstate = () => {
             title: "Главная",
           },
           {
-            title: "Экспертиза",
+            title: "Снижение налогов",
           },
           {
             title: "Оспаривание кадастровой стоимости недвижимости",
