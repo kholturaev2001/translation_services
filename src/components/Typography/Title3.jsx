@@ -1,7 +1,7 @@
 const Title3 = ({ children }) => {
     return (
       <div className="mx-3 mt-5">
-        <p className="md:text-base text-sm font-semibold mx-auto md:max-w-[1000px] max-w-[100%]">
+        <p className="md:text-base text-sm font-medium mx-auto md:max-w-[1000px] max-w-[100%]">
           {children}
         </p>
       </div>

@@ -123,6 +123,8 @@ import LandRentDecrease from "./pages/Services/LegalService/LandRentDecrease";
 import UnauthorizedConstructionLegalization from "./pages/Services/LegalService/UnauthorizedConstructionLegalization";
 import CadastralMattersLawyers from "./pages/Services/LegalService/CadastralMattersLawyers";
 import RedevelopmentCoordination from "./pages/Services/LegalService/RedevelopmentCoordination";
+import EnterpriseFinancialAndEconomicActivitiesAnalysis from "./pages/Services/BusinessPlanning/EnterpriseFinancialAndEconomicActivitiesAnalysis";
+import BusinessPlanDevelopment from "./pages/Services/BusinessPlanning/BusinessPlanDevelopment";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -366,8 +368,6 @@ function App() {
           <Route path="cadastral_cost_valuation" element={<CadastralCost />} />
           <Route path="house_balance_valuation" element={<HouseBalance />} />
 
-
-
           {/*  ============   EXPERTISE  ===============  */}
           <Route
             path="cost_of_completed_construction_work_determination"
@@ -383,7 +383,10 @@ function App() {
             element={<EstimateDocumentationExpert />}
           />
 
-          <Route path="building_facade_expert" element={<BuildingFacadeExpert />} />
+          <Route
+            path="building_facade_expert"
+            element={<BuildingFacadeExpert />}
+          />
           <Route path="window_expert" element={<WindowExpert />} />
 
           <Route
@@ -450,15 +453,44 @@ function App() {
           />
           <Route path="fire_expert" element={<FireExpert />} />
           <Route path="appraisal_expert" element={<AppraisalExpert />} />
-          <Route path="challenging_the_cadastral_value_of_real_estate" element={<ChallengingCadastralValueOfRealEstate />} />
-          <Route path="application_of_tax_incentives" element={<ApplicationOfTaxIncentives />} />
-          <Route path="exclusion_of_real_estate_objects_from_700_pp" element={<ExclusionOfRealEstateObjectsFrom700PP />} />
-          <Route path="permitted_land_type_change" element={<PermittedLandTypeChange />} />
+          <Route
+            path="challenging_the_cadastral_value_of_real_estate"
+            element={<ChallengingCadastralValueOfRealEstate />}
+          />
+          <Route
+            path="application_of_tax_incentives"
+            element={<ApplicationOfTaxIncentives />}
+          />
+          <Route
+            path="exclusion_of_real_estate_objects_from_700_pp"
+            element={<ExclusionOfRealEstateObjectsFrom700PP />}
+          />
+          <Route
+            path="permitted_land_type_change"
+            element={<PermittedLandTypeChange />}
+          />
           <Route path="land_category_change" element={<LandCategoryChange />} />
           <Route path="land_rent_decrease" element={<LandRentDecrease />} />
-          <Route path="unauthorized_construction_legalization" element={<UnauthorizedConstructionLegalization />} />
-          <Route path="cadastral_matters_lawyers" element={<CadastralMattersLawyers />} />
-          <Route path="redevelopment_coordination" element={<RedevelopmentCoordination />} />
+          <Route
+            path="unauthorized_construction_legalization"
+            element={<UnauthorizedConstructionLegalization />}
+          />
+          <Route
+            path="cadastral_matters_lawyers"
+            element={<CadastralMattersLawyers />}
+          />
+          <Route
+            path="redevelopment_coordination"
+            element={<RedevelopmentCoordination />}
+          />
+          <Route
+            path="enterprise_financial_and_economic_activities_analysis"
+            element={<EnterpriseFinancialAndEconomicActivitiesAnalysis />}
+          />
+          <Route
+            path="business_plan_development"
+            element={<BusinessPlanDevelopment />}
+          />
         </Route>
       </Routes>
       <Modal

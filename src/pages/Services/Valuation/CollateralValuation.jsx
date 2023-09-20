@@ -5,6 +5,7 @@ import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import LiColored from "../../../components/Typography/LiColored";
 import Ol from "../../../components/Typography/Ol";
+import Email from "../../../components/Typography/Email";
 
 const CollateralValuation = () => {
   return (
@@ -180,7 +181,7 @@ const CollateralValuation = () => {
       <Description>
         Получить консультацию специалиста по оценке залогового имущества и
         заказать услуги вы можете, позвонив по указанному на сайте телефону.
-        Также можно отправить запрос по адресу электронной почты urdis@urdis.ru.
+        Также можно отправить запрос по адресу электронной почты <Email />.
         Наш специалист свяжется с вами для обсуждения деталей сотрудничества.
       </Description>
     </div>

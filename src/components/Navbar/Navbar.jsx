@@ -414,9 +414,9 @@ const items = [
   getItem("Бизнес планирование ▼", "businessplanning", null, [
     getItem(
       "Анализ финансово-хозяйственной деятельности предприятия",
-      "enterprise_financial_and_economic_activities_analysis"
+      "/services/enterprise_financial_and_economic_activities_analysis"
     ),
-    getItem("Разработка бизнес-плана", "business_plan_development"),
+    getItem("Разработка бизнес-плана", "/services/business_plan_development"),
   ]),
   getItem("Переводческая деятельность ▼", "translating", null, [
     getItem("Письменный перевод", "written_translation", null, [
