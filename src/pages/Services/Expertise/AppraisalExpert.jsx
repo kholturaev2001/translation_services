@@ -5,6 +5,7 @@ import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import Ul from "../../../components/Typography/Ul";
 import Title2 from "../../../components/Typography/Title2";
+import Attention from "../../../components/Attention";
 
 const AppraisalExpert = () => {
   return (
@@ -90,15 +91,10 @@ const AppraisalExpert = () => {
         организациями и частными лицами. По этой причине мы можем гарантировать
         Вам качественное оказание услуг.
       </Description>
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          !!! Выше приведен не исчерпывающий список вопросов. В процессе
+     <Attention desc='Выше приведен не исчерпывающий список вопросов. В процессе
           проведения экспертизы, исходя из ситуации, могут возникнуть иные
           вопросы. При необходимости постановки новых вопросов, следует
-          обратиться с ними к эксперту до момента начала проведения экспертизы.
-        </i>
-      </Description>
+          обратиться с ними к эксперту до момента начала проведения экспертизы.' />
     </div>
   );
 };

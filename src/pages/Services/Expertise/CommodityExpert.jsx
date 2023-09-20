@@ -6,14 +6,15 @@ import Title from "../../../components/Typography/Title";
 import DTable from "../../../components/DTable";
 import Ul from "./../../../components/Typography/Ul";
 import Title2 from "./../../../components/Typography/Title2";
+import Attention from "../../../components/Attention";
 
 const CommodityExpert = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Экспертиза",
@@ -165,12 +166,11 @@ const CommodityExpert = () => {
             (гибкости, вязкости, твердости и др.) объектов.
           </li>
         </Ul>
-        <Title2>Важно!</Title2>
-        <Description>
-          Манипуляции, осуществляемые специалистом в ходе проведения экспертизы
+        <Attention
+          desc="Манипуляции, осуществляемые специалистом в ходе проведения экспертизы
           механическим методом, зачастую сопровождаются разрушением объекта
-          экспертизы.
-        </Description>
+          экспертизы."
+        />
         <Description>
           <b>Вопросы, стоящие перед экспертом:</b>
         </Description>
@@ -206,13 +206,10 @@ const CommodityExpert = () => {
             компонентов используемых в производстве изделий?
           </li>
         </Ul>
-        <Title2>Важно!</Title2>
-        <Description>
-          Выше приведен не полный список вопросов. В каждой отдельно
+        <Attention desc='Выше приведен не полный список вопросов. В каждой отдельно
           рассматриваемой ситуации, могут возникнуть дополнительные вопросы. При
           необходимости постановки новых вопросов, следует обратиться с ними к
-          эксперту до момента начала проведения экспертизы.
-        </Description>
+          эксперту до момента начала проведения экспертизы.' />
       </div>
     </div>
   );

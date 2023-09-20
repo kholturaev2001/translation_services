@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import BurgerCross from "../BurgerCross/BurgerCross";
 import { Menu } from "antd";
 
@@ -10,6 +11,8 @@ const Sidebar = ({
   defaultOpenKeys,
   defaultSelectedKeys
 }) => {
+  const location = useLocation();
+
   return (
     <div
       className={` ${
@@ -23,6 +26,7 @@ const Sidebar = ({
       </div>
       <Menu
         onClick={handleNavigate}
+        selectedKeys={[location.pathname]}
         defaultSelectedKeys={defaultSelectedKeys}
         style={{
           backgroundColor: "transparent",

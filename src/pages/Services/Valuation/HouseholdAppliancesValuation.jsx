@@ -5,14 +5,15 @@ import Description from "../../../components/Typography/Description";
 import Title from "../../../components/Typography/Title";
 import LiColored from "../../../components/Typography/LiColored";
 import Title2 from "../../../components/Typography/Title2";
+import Attention from "../../../components/Attention";
 
 const HouseholdAppliancesValuation = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Оценка",
@@ -85,14 +86,11 @@ const HouseholdAppliancesValuation = () => {
       <LiColored>
         справка о балансовой стоимости устройства (для юрлиц).
       </LiColored>
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          !!! В связи с большой конкуренцией между фирмами-изготовителями
+      <Attention
+        desc="В связи с большой конкуренцией между фирмами-изготовителями
           электронные приборы быстро обесцениваются. Каждый день выпускаются
-          более усовершенствованные модели устройств.
-        </i>
-      </Description>
+          более усовершенствованные модели устройств."
+      />
       <Title2>Что входит в независимую оценку</Title2>
       <Description>
         Данное исследование состоит из таких мероприятий, как:

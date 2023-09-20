@@ -5,6 +5,7 @@ import Description from "../../../components/Typography/Description";
 import Title2 from "../../../components/Typography/Title2";
 import Ul from "../../../components/Typography/Ul";
 import Title3 from "../../../components/Typography/Title3";
+import Attention from "../../../components/Attention";
 
 const ComputerAndTechnicalExpert = () => {
   return (
@@ -71,13 +72,10 @@ const ComputerAndTechnicalExpert = () => {
           выявлены ли факты подключения к сети через данный ПК? В какое время?
         </li>
       </Ul>
-      <Title2>Важно!</Title2>
-      <Description>
-        Выше приведен не исчерпывающий список вопросов. В процессе проведения
+      <Attention desc='Выше приведен не исчерпывающий список вопросов. В процессе проведения
         экспертизы, в зависимости от ситуации, могут возникнуть иные вопросы.
         При необходимости постановки новых вопросов, следует обратиться с ними к
-        эксперту до момента начала проведения экспертизы.
-      </Description>
+        эксперту до момента начала проведения экспертизы.' />
       <Title3>В каких случаях назначается экспертиза</Title3>
       <Description>
         Если перед экспертом поставлена задача расшифровать мошеннические схемы

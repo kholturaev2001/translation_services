@@ -7,14 +7,15 @@ import Title from "../../../components/Typography/Title";
 import Ol from "../../../components/Typography/Ol";
 import Title2 from "../../../components/Typography/Title2";
 import Ul from "../../../components/Typography/Ul";
+import Attention from "../../../components/Attention";
 
 const ActionsInactionOfThirdPartiesDamage = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Оценка",
@@ -151,13 +152,10 @@ const ActionsInactionOfThirdPartiesDamage = () => {
           оценочной деятельности».
         </li>
       </Ol>
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          !!! Если быть точными, то объектом сделок становится не сам торговый
-          знак как словесно-графический объект, а исключительное право на него.
-        </i>
-      </Description>
+      <Attention
+        desc="Если быть точными, то объектом сделок становится не сам торговый
+          знак как словесно-графический объект, а исключительное право на него."
+      />
       <Description>
         Убытки в этой ситуации тоже сопряжены с противоправными действиями
         третьих лиц (например, производством контрфактной продукции и его

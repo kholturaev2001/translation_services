@@ -3,8 +3,8 @@ import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
 import s_img from "../../../assets/images/services/expertise/financial_and_economic_expert.jpeg";
 import Description from "../../../components/Typography/Description";
 import Ul from "../../../components/Typography/Ul";
-import Title2 from "../../../components/Typography/Title2";
 import Title from "../../../components/Typography/Title";
+import Attention from "../../../components/Attention";
 
 const FinancialAndEconomicExpert = () => {
   return (
@@ -54,10 +54,7 @@ const FinancialAndEconomicExpert = () => {
           деятельности компании.
         </li>
       </Ul>
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          !!! Документация, представляемая на исследование эксперту, должна быть
+     <Attention desc='Документация, представляемая на исследование эксперту, должна быть
           максимально точной и полной. В случае отсутствия определенных
           документов, заказчиком могут быть предоставлены иные данные,
           отражающие фактические показатели финансовой деятельности компании
@@ -65,9 +62,7 @@ const FinancialAndEconomicExpert = () => {
           пр.). Так, в ходе исследования могут быть обнаружены признаки
           фальсификации документов первичной бухгалтерии. Для подтверждения
           указанного факта требует анализ полного комплекта документа, в котором
-          зафиксированы все имеющиеся финансовые связи компании.
-        </i>
-      </Description>
+          зафиксированы все имеющиеся финансовые связи компании.' />
       <Title>Вопросы, стоящие перед экспертом</Title>
       <Ul>
         <li>
@@ -100,15 +95,10 @@ const FinancialAndEconomicExpert = () => {
         </li>
       </Ul>
 
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          Выше приведен не исчерпывающий список вопросов. В процессе проведения
+      <Attention desc='Выше приведен не исчерпывающий список вопросов. В процессе проведения
           экспертизы, исходя из ситуации, могут возникнуть иные вопросы. При
           необходимости постановки новых вопросов, следует обратиться с ними к
-          эксперту до момента начала проведения экспертизы.
-        </i>
-      </Description>
+          эксперту до момента начала проведения экспертизы.' />
       <Description>
         <i>
           Весомое значение имеет правильный подход к исследованию сложных

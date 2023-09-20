@@ -397,19 +397,19 @@ const items = [
   getItem("Юридические услуги ▼", "legalservice", null, [
     getItem(
       "Изменение вида разрешенного использования земельного участка",
-      "permitted_land_type_change"
+      "/services/permitted_land_type_change"
     ),
-    getItem("Изменение категории земельного участка", "land_category_change"),
+    getItem("Изменение категории земельного участка", "/services/land_category_change"),
     getItem(
       "Снижение арендной ставки земельного участка",
-      "land_rent_decrease"
+      "/services/land_rent_decrease"
     ),
     getItem(
       "Легализация самовольной постройки",
-      "unauthorized_construction_legalization"
+      "/services/unauthorized_construction_legalization"
     ),
-    getItem("Юристы по кадастровым вопросам", "cadastral_matters_lawyers"),
-    getItem("Согласование перепланировок", "redevelopment_coordination"),
+    getItem("Юристы по кадастровым вопросам", "/services/cadastral_matters_lawyers"),
+    getItem("Согласование перепланировок", "/services/redevelopment_coordination"),
   ]),
   getItem("Бизнес планирование ▼", "businessplanning", null, [
     getItem(

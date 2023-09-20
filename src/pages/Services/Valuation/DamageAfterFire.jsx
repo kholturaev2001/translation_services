@@ -7,6 +7,7 @@ import Title2 from "../../../components/Typography/Title2";
 import LiColored from "../../../components/Typography/LiColored";
 import Ul from "../../../components/Typography/Ul";
 import Title3 from "../../../components/Typography/Title3";
+import Attention from "../../../components/Attention";
 
 const DamageAfterFire = () => {
   return (
@@ -166,15 +167,10 @@ const DamageAfterFire = () => {
         устранения ущерба;
       </LiColored>
       <LiColored>фотоотчета объекта оценки.</LiColored>
-      <Title2>Важно!</Title2>
-      <Description>
-        <i>
-          !!! Прежде чем обратиться в экспертную компанию, следует известить
+      <Attention desc='Прежде чем обратиться в экспертную компанию, следует известить
           виновную сторону. Ее нужно обязательно уведомить до приезда эксперта.
           Есть два варианта как это можно сделать – вручить лично в руки или
-          отправить телеграмму с уведомлением.
-        </i>
-      </Description>
+          отправить телеграмму с уведомлением.' />
       <Title2>Подводим итоги</Title2>
       <Description>
         Любые ошибки в оценке ущерба после возгорания недопустимы. Поэтому

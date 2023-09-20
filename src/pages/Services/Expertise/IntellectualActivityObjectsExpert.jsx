@@ -6,6 +6,7 @@ import Ol from "../../../components/Typography/Ol";
 import Title from "../../../components/Typography/Title";
 import Ul from "../../../components/Typography/Ul";
 import Title3 from "../../../components/Typography/Title3";
+import Attention from "../../../components/Attention";
 
 const IntellectualActivityObjectsExpert = () => {
   return (
@@ -322,14 +323,8 @@ const IntellectualActivityObjectsExpert = () => {
           интеллектуальной собственности при их нарушении?
         </li>
       </Ol>
-      <Title3>
-        <b>Важно!</b>
-        <i>
-          {" "}
-          Обратитесь к эксперту с вопросами, на которые вам необходим ответ, до
-          начала ее производства.
-        </i>
-      </Title3>
+      <Attention desc='Обратитесь к эксперту с вопросами, на которые вам необходим ответ, до
+          начала ее производства.' />
       <Description>Возможно проведение исследований:</Description>
       <Ul>
         <li>
