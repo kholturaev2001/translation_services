@@ -420,72 +420,72 @@ const items = [
   ]),
   getItem("Переводческая деятельность ▼", "translating", null, [
     getItem("Письменный перевод", "written_translation", null, [
-      getItem("Технический перевод", "technical_translation"),
-      getItem("Перевод экономических текстов", "economic_texts_translation"),
-      getItem("Финансовый перевод", "financial_translation"),
-      getItem("ИТ перевод", "it_translation"),
-      getItem("Юридический перевод", "legal_translation"),
-      getItem("Медицинский перевод", "medical_translation"),
-      getItem("Художественный перевод", "literary_translation"),
-      getItem("Публицистический перевод", "publicistic_translation"),
-      getItem("Перевод рекламных текстов", "advertising_texts_translation"),
-      getItem("Фармацевтический перевод", "pharmaceutical_translation"),
+      getItem("Технический перевод", "/services/technical_translation"),
+      getItem("Перевод экономических текстов", "/services/economic_texts_translation"),
+      getItem("Финансовый перевод", "/services/financial_translation"),
+      getItem("ИТ перевод", "/services/it_translation"),
+      getItem("Юридический перевод", "/services/legal_translation"),
+      getItem("Медицинский перевод", "/services/medical_translation"),
+      getItem("Художественный перевод", "/services/literary_translation"),
+      getItem("Публицистический перевод", "/services/publicistic_translation"),
+      getItem("Перевод рекламных текстов", "/services/advertising_texts_translation"),
+      getItem("Фармацевтический перевод", "/services/pharmaceutical_translation"),
     ]),
     getItem("Устный перевод", "oral_translation", null, [
-      getItem("Перевод на переговорах", "for_negotiations_translation"),
-      getItem("Переводчик на выставку", "for_exhibition_translation"),
+      getItem("Перевод на переговорах", "/services/for_negotiations_translation"),
+      getItem("Переводчик на выставку", "/services/for_exhibition_translation"),
       getItem(
         "Перевод на собраниях, конференциях",
-        "for_meetings_and_conference_translation"
+        "/services/for_meetings_and_conference_translation"
       ),
-      getItem("Сопровождение делегации", "delegation_accompanying"),
+      getItem("Сопровождение делегации", "/services/delegation_accompanying"),
       getItem(
         "Перевод при нотариальных действиях",
-        "notarial_actions_translation"
+        "/services/notarial_actions_translation"
       ),
-      getItem("Перевод на производстве", "in_production_translation"),
-      getItem("Гид-переводчик", "guide_interpreter"),
-      getItem("Синхронный перевод", "synchronic_translation"),
-      getItem("Специфический перевод", "specific_translation"),
+      getItem("Перевод на производстве", "/services/in_production_translation"),
+      getItem("Гид-переводчик", "/services/guide_interpreter"),
+      getItem("Синхронный перевод", "/services/synchronic_translation"),
+      getItem("Специфический перевод", "/services/specific_translation"),
     ]),
     getItem("Личные документы", "private_documents", null, [
-      getItem("Перевод паспорта", "passport_translation"),
+      getItem("Перевод паспорта", "/services/passport_translation"),
       getItem(
         "Перевод водительских удостоверений, ПТС",
-        "drivers_licenses_and_pts_translation"
+        "/services/drivers_licenses_and_pts_translation"
       ),
-      getItem("Перевод печатей, апостилей", "seals_and_apostilles_translation"),
+      getItem("Перевод печатей, апостилей", "/services/seals_and_apostilles_translation"),
       getItem(
         "Перевод справок, свидетельств",
-        "references_certificates_translation"
+        "/services/references_certificates_translation"
       ),
       getItem(
         "Перевод и нотариальное заверение согласий на выезд ребенка",
-        "departure_of_child_consents_translation_and_notarization"
+        "/services/departure_of_child_consents_translation_and_notarization"
       ),
       getItem(
         "Перевод аттестатов и приложений",
-        "certificates_and_applications_translation"
+        "/services/certificates_and_applications_translation"
       ),
       getItem(
         "Перевод дипломов и приложений",
-        "diplomas_and_applications_translation"
+        "/services/diplomas_and_applications_translation"
       ),
-      getItem("Перевод зачетных книжек", "transcripts_translation"),
+      getItem("Перевод зачетных книжек", "/services/transcripts_translation"),
       getItem(
         "Перевод корпоративных документов",
-        "corporate_documents_translation"
+        "/services/corporate_documents_translation"
       ),
       getItem(
         "Перевод и апостилирование свидетельства о рождении",
-        "birth_certificate_apostille_translation"
+        "/services/birth_certificate_apostille_translation"
       ),
       getItem(
         "Перевод договоров, приложений",
-        "contracts_and_applications_translation"
+        "/services/contracts_and_applications_translation"
       ),
-      getItem("Услуги по переводу документов", "document_translation_services"),
-      getItem("Нотариальные услуги", "notary_services"),
+      getItem("Услуги по переводу документов", "/services/document_translation_services"),
+      getItem("Нотариальные услуги", "/services/notary_services"),
     ]),
   ]),
 ];

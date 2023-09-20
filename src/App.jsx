@@ -125,6 +125,38 @@ import CadastralMattersLawyers from "./pages/Services/LegalService/CadastralMatt
 import RedevelopmentCoordination from "./pages/Services/LegalService/RedevelopmentCoordination";
 import EnterpriseFinancialAndEconomicActivitiesAnalysis from "./pages/Services/BusinessPlanning/EnterpriseFinancialAndEconomicActivitiesAnalysis";
 import BusinessPlanDevelopment from "./pages/Services/BusinessPlanning/BusinessPlanDevelopment";
+import TechnicalTranslation from "./pages/Services/Translating/TechnicalTranslation";
+import EconomicTextsTranslation from "./pages/Services/Translating/EconomicTextsTranslation";
+import FinancialTranslation from "./pages/Services/Translating/FinancialTranslation";
+import ITTranslation from "./pages/Services/Translating/ITTranslation";
+import LegalTranslation from "./pages/Services/Translating/LegalTranslation";
+import MedicalTranslation from "./pages/Services/Translating/MedicalTranslation";
+import LiteraryTranslation from "./pages/Services/Translating/LiteraryTranslation";
+import PublicisticTranslation from "./pages/Services/Translating/PublicisticTranslation";
+import AdvertisingTextsTranslation from "./pages/Services/Translating/AdvertisingTextsTranslation";
+import PharmaceuticalTranslation from "./pages/Services/Translating/PharmaceuticalTranslation";
+import ForNegotiationsTranslation from "./pages/Services/Translating/ForNegotiationsTranslation";
+import ForExhibitionTranslation from "./pages/Services/Translating/ForExhibitionTranslation";
+import ForMeetingsAndConferenceTranslation from "./pages/Services/Translating/ForMeetingsAndConferenceTranslation";
+import DelegationAccompanying from "./pages/Services/Translating/DelegationAccompanying";
+import NotarialActionsTranslation from "./pages/Services/Translating/NotarialActionsTranslation";
+import InProductionTranslation from "./pages/Services/Translating/InProductionTranslation";
+import GuideInterpreter from "./pages/Services/Translating/GuideInterpreter";
+import SynchronicTranslation from "./pages/Services/Translating/SynchronicTranslation";
+import SpecificTranslation from "./pages/Services/Translating/SpecificTranslation";
+import PassportTranslation from "./pages/Services/Translating/PassportTranslation";
+import DriversLicensesAndPtsTranslation from "./pages/Services/Translating/DriversLicensesAndPtsTranslation";
+import SealsAndApostillesTranslation from "./pages/Services/Translating/SealsAndApostillesTranslation";
+import ReferencesCertificatesTranslation from "./pages/Services/Translating/ReferencesCertificatesTranslation";
+import DepartureOfChildConsentsTranslationAndNotarization from "./pages/Services/Translating/DepartureOfChildConsentsTranslationAndNotarization";
+import CertificatesAndApplicationsTranslation from "./pages/Services/Translating/CertificatesAndApplicationsTranslation";
+import DiplomasAndApplicationsTranslation from "./pages/Services/Translating/DiplomasAndApplicationsTranslation";
+import TranscriptsTranslation from "./pages/Services/Translating/TranscriptsTranslation";
+import CorporateDocumentsTranslation from "./pages/Services/Translating/CorporateDocumentsTranslation";
+import BirthCertificateApostilleTranslation from "./pages/Services/Translating/BirthCertificateApostilleTranslation";
+import ContractsAndApplicationsTranslation from "./pages/Services/Translating/ContractsAndApplicationsTranslation";
+import DocumentTranslationServices from "./pages/Services/Translating/DocumentTranslationServices";
+import NotaryServices from "./pages/Services/Translating/NotaryServices";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -465,6 +497,9 @@ function App() {
             path="exclusion_of_real_estate_objects_from_700_pp"
             element={<ExclusionOfRealEstateObjectsFrom700PP />}
           />
+
+
+          {/*  ============   LEGAL SERVICES  ===============  */}
           <Route
             path="permitted_land_type_change"
             element={<PermittedLandTypeChange />}
@@ -483,6 +518,8 @@ function App() {
             path="redevelopment_coordination"
             element={<RedevelopmentCoordination />}
           />
+
+          {/*  ============   BUSINESS PLANNING  ===============  */}
           <Route
             path="enterprise_financial_and_economic_activities_analysis"
             element={<EnterpriseFinancialAndEconomicActivitiesAnalysis />}
@@ -491,6 +528,42 @@ function App() {
             path="business_plan_development"
             element={<BusinessPlanDevelopment />}
           />
+
+
+
+          {/*  ============   TRANSLATING  ===============  */}
+          <Route path="technical_translation" element={<TechnicalTranslation />} />
+          <Route path="economic_texts_translation" element={<EconomicTextsTranslation />} />
+          <Route path="financial_translation" element={<FinancialTranslation />} />
+          <Route path="it_translation" element={<ITTranslation />} />
+          <Route path="legal_translation" element={<LegalTranslation />} />
+          <Route path="medical_translation" element={<MedicalTranslation />} />
+          <Route path="literary_translation" element={<LiteraryTranslation />} />
+          <Route path="publicistic_translation" element={<PublicisticTranslation />} />
+          <Route path="advertising_texts_translation" element={<AdvertisingTextsTranslation />} />
+          <Route path="pharmaceutical_translation" element={<PharmaceuticalTranslation />} />
+          <Route path="for_negotiations_translation" element={<ForNegotiationsTranslation />} />
+          <Route path="for_exhibition_translation" element={<ForExhibitionTranslation />} />
+          <Route path="for_meetings_and_conference_translation" element={<ForMeetingsAndConferenceTranslation />} />
+          <Route path="delegation_accompanying" element={<DelegationAccompanying />} />
+          <Route path="notarial_actions_translation" element={<NotarialActionsTranslation />} />
+          <Route path="in_production_translation" element={<InProductionTranslation />} />
+          <Route path="guide_interpreter" element={<GuideInterpreter />} />
+          <Route path="synchronic_translation" element={<SynchronicTranslation />} />
+          <Route path="specific_translation" element={<SpecificTranslation />} />
+          <Route path="passport_translation" element={<PassportTranslation />} />
+          <Route path="drivers_licenses_and_pts_translation" element={<DriversLicensesAndPtsTranslation />} />
+          <Route path="seals_and_apostilles_translation" element={<SealsAndApostillesTranslation />} />
+          <Route path="references_certificates_translation" element={<ReferencesCertificatesTranslation />} />
+          <Route path="departure_of_child_consents_translation_and_notarization" element={<DepartureOfChildConsentsTranslationAndNotarization />} />
+          <Route path="certificates_and_applications_translation" element={<CertificatesAndApplicationsTranslation />} />
+          <Route path="diplomas_and_applications_translation" element={<DiplomasAndApplicationsTranslation />} />
+          <Route path="transcripts_translation" element={<TranscriptsTranslation />} />
+          <Route path="corporate_documents_translation" element={<CorporateDocumentsTranslation />} />
+          <Route path="birth_certificate_apostille_translation" element={<BirthCertificateApostilleTranslation />} />
+          <Route path="contracts_and_applications_translation" element={<ContractsAndApplicationsTranslation />} />
+          <Route path="document_translation_services" element={<DocumentTranslationServices />} />
+          <Route path="notary_services" element={<NotaryServices />} />
         </Route>
       </Routes>
       <Modal
