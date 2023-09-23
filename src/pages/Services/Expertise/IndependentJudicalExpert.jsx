@@ -161,6 +161,8 @@ const IndependentJudicalExpert = () => {
         интеллектуальной собственности. Комиссионные и комплексные экспертизы.
       </Description>
       <Title>Стоимость проведения судебных экспертиз</Title>
+      <div className="w-full overflow-auto md:scale-100 scale-[90%]">
+
       <DTable
         onRow={(record) => {
           return {
@@ -289,6 +291,7 @@ const IndependentJudicalExpert = () => {
         ]}
         bordered
       />
+    </div>
     </div>
   );
 };

@@ -247,6 +247,8 @@ const Office = () => {
         комплектность сведений об объекте, предоставленных заказчиком;
       </LiColored>
       <LiColored>срочность выполнения работ.</LiColored>
+      <div className="w-full overflow-auto md:scale-100 scale-[90%]">
+
       <DTable
         className="my-10"
         dataSource={[
@@ -323,6 +325,7 @@ const Office = () => {
           },
         ]}
       />
+    </div>
     </div>
   );
 };
