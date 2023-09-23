@@ -1,5 +1,5 @@
-import ServiceCard from "../../../components/Card/ServiceCard"
-import HeadBreadcrumb from "../../../components/HeadBreadcrumb"
+import ServiceCard from "../../../components/Card/ServiceCard";
+import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
 import s_img from "../../../assets/images/services/business_planning/business_plan_development.jpeg";
 import Email from "../../../components/Typography/Email";
 import Description from "../../../components/Typography/Description";
@@ -11,7 +11,7 @@ import Ol from "../../../components/Typography/Ol";
 const BusinessPlanDevelopment = () => {
   return (
     <div>
-             <HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
             title: "Главная",
@@ -265,40 +265,11 @@ const BusinessPlanDevelopment = () => {
       <Description>
         Заказать услугу разработки бизнес-плана можно, позвонив по указанному на
         сайте телефону. Также вы можете отправить запрос по адресу электронной
-        почты <Email />. Наш специалист свяжется с вами для обсуждения
-        деталей сотрудничества.
+        почты <Email />. Наш специалист свяжется с вами для обсуждения деталей
+        сотрудничества.
       </Description>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-  )
-}
+  );
+};
 
-export default BusinessPlanDevelopment
+export default BusinessPlanDevelopment;

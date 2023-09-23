@@ -9,7 +9,6 @@ const DTable = ({ columns, dataSource, ...rest }) => {
           dataSource={dataSource}
           columns={columns}
           pagination={false}
-          
         />
       </div>
     </div>
