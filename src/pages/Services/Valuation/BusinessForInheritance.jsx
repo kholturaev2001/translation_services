@@ -176,8 +176,6 @@ const BusinessForInheritance = () => {
         </li>
       </Ol>
       <Title>Стоимость услуг</Title>
-      <div className="w-full overflow-auto md:scale-100 scale-[90%]">
-
       <DTable
         className="my-10"
         dataSource={[
@@ -221,7 +219,6 @@ const BusinessForInheritance = () => {
           },
         ]}
       />
-      </div>
       <Description>
         Стоимость услуг рассчитывается на основании утвержденных расценок с
         учетом корректирующих коэффициентов. Их сумма зависит от различных

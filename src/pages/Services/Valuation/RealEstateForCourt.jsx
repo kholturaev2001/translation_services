@@ -10,10 +10,10 @@ import Ol from "../../../components/Typography/Ol";
 const RealEstateForCourt = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Оценка",
