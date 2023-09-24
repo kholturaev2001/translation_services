@@ -8,6 +8,7 @@ import Title from "../../../components/Typography/Title";
 import DTable from "../../../components/DTable";
 import LiColored from "../../../components/Typography/LiColored";
 import TrDeadline from "../../../components/Translation/TrDeadline";
+import Discounts from "../../../components/TranslationTables/Discounts";
 
 const TechnicalTranslation = () => {
   return (
@@ -125,7 +126,6 @@ const TechnicalTranslation = () => {
       </Ul>
       <TrDeadline />
       <Title>Стоимость перевода технического текста</Title>
-      <div className="w-full overflow-auto md:scale-100 scale-[90%]">
         <DTable
           dataSource={[
             {
@@ -203,50 +203,10 @@ const TechnicalTranslation = () => {
           ]}
           bordered
         />
-        <br />
-        <DTable
-          dataSource={[
-            {
-              key: "0",
-              discount_name: "Верстка",
-              percent: "10-15%",
-            },
-            {
-              key: "1",
-              discount_name: "Наценка за срочность",
-              percent: "30-55%",
-            },
-            {
-              key: "2",
-              discount_name: "от 100 страниц",
-              percent: "20%",
-            },
-            {
-              key: "3",
-              discount_name: "от 50 страниц",
-              percent: "15%",
-            },
-            {
-              key: "4",
-              discount_name: "от 20 страниц",
-              percent: "10%",
-            },
-          ]}
-          columns={[
-            {
-              dataIndex: "discount_name",
-              key: "discount_name",
-              title: "Скидки",
-            },
-            {
-              dataIndex: "percent",
-              key: "percent",
-              width: "25%",
-              title: "Процент",
-            },
-          ]}
-        />
-      </div>
+        
+        <Discounts />
+        
+        
 
       <Title2>Дополнительная информация:</Title2>
       <LiColored>
