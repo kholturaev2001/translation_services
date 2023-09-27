@@ -5,10 +5,12 @@ import Description from "../../../components/Typography/Description";
 import Ul from "../../../components/Typography/Ul";
 import Title2 from "../../../components/Typography/Title2";
 import Title from "../../../components/Typography/Title";
-import DTable from "../../../components/DTable";
 import LiColored from "../../../components/Typography/LiColored";
 import TrDeadline from "../../../components/Translation/TrDeadline";
 import Discounts from "../../../components/TranslationTables/Discounts";
+import OtherTypes from "../../../components/TranslationTables/OtherTypes";
+import TranslationToLang from "../../../components/TranslationTables/TranslationToLang";
+import TranslationFromLang from "../../../components/TranslationTables/TranslationFromLang";
 
 const TechnicalTranslation = () => {
   return (
@@ -126,87 +128,11 @@ const TechnicalTranslation = () => {
       </Ul>
       <TrDeadline />
       <Title>Стоимость перевода технического текста</Title>
-        <DTable
-          dataSource={[
-            {
-              key: "1",
-              language_name: "Европейские языки",
-              price: "от 450",
-            },
-            {
-              key: "2",
-              language_name: "Языки СНГ",
-              price: "от 450",
-            },
-            {
-              key: "3",
-              language_name: "Балтийские языки",
-              price: "от 500",
-            },
-            {
-              key: "4",
-              language_name: "Восточные языки",
-              price: "от 600",
-            },
-          ]}
-          columns={[
-            {
-              dataIndex: "language_name",
-              key: "language_name",
-              title: "Перевод с языка",
-            },
-            {
-              dataIndex: "price",
-              key: "price",
-              width: "25%",
-              title: "Цена",
-            },
-          ]}
-          bordered
-        />
-        <br />
-        <DTable
-          dataSource={[
-            {
-              key: "1",
-              language_name: "Европейские языки",
-              price: "от 450",
-            },
-            {
-              key: "2",
-              language_name: "Языки СНГ",
-              price: "от 450",
-            },
-            {
-              key: "3",
-              language_name: "Балтийские языки",
-              price: "от 500",
-            },
-            {
-              key: "4",
-              language_name: "Восточные языки",
-              price: "от 700",
-            },
-          ]}
-          columns={[
-            {
-              dataIndex: "language_name",
-              key: "language_name",
-              title: "Перевод на язык",
-            },
-            {
-              dataIndex: "price",
-              key: "price",
-              width: "25%",
-              title: "Цена",
-            },
-          ]}
-          bordered
-        />
-        
-        <Discounts />
-        
-        
+     <TranslationFromLang />
+      <TranslationToLang />
+
+      <OtherTypes translationEdit={false} nativeTranslationEdit={false} />
+      <Discounts />
 
       <Title2>Дополнительная информация:</Title2>
       <LiColored>

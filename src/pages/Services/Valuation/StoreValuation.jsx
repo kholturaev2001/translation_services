@@ -9,10 +9,10 @@ import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
 const StoreValuation = () => {
   return (
     <div>
-<HeadBreadcrumb
+      <HeadBreadcrumb
         items={[
           {
-            title: 'Главная'
+            title: "Главная",
           },
           {
             title: "Оценка",

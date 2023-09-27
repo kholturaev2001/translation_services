@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+
+import { consultModalAC } from "./app/slices/app";
 import Main from "./pages/Main";
-import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
 import Vacancies from "./pages/Vacancies";
 import Contacts from "./pages/Contacts";
-import { useState } from "react";
 import { Modal } from "antd";
 import Consultation from "./components/Consultation/Consultation";
 import BackBtn from "./components/BackBtn";
@@ -125,60 +126,64 @@ import CadastralMattersLawyers from "./pages/Services/LegalService/CadastralMatt
 import RedevelopmentCoordination from "./pages/Services/LegalService/RedevelopmentCoordination";
 import EnterpriseFinancialAndEconomicActivitiesAnalysis from "./pages/Services/BusinessPlanning/EnterpriseFinancialAndEconomicActivitiesAnalysis";
 import BusinessPlanDevelopment from "./pages/Services/BusinessPlanning/BusinessPlanDevelopment";
-import TechnicalTranslation from "./pages/Services/Translating/TechnicalTranslation";
-import EconomicTextsTranslation from "./pages/Services/Translating/EconomicTextsTranslation";
-import FinancialTranslation from "./pages/Services/Translating/FinancialTranslation";
-import ITTranslation from "./pages/Services/Translating/ITTranslation";
-import LegalTranslation from "./pages/Services/Translating/LegalTranslation";
-import MedicalTranslation from "./pages/Services/Translating/MedicalTranslation";
-import LiteraryTranslation from "./pages/Services/Translating/LiteraryTranslation";
-import PublicisticTranslation from "./pages/Services/Translating/PublicisticTranslation";
-import AdvertisingTextsTranslation from "./pages/Services/Translating/AdvertisingTextsTranslation";
-import PharmaceuticalTranslation from "./pages/Services/Translating/PharmaceuticalTranslation";
-import ForNegotiationsTranslation from "./pages/Services/Translating/ForNegotiationsTranslation";
-import ForExhibitionTranslation from "./pages/Services/Translating/ForExhibitionTranslation";
-import ForMeetingsAndConferenceTranslation from "./pages/Services/Translating/ForMeetingsAndConferenceTranslation";
-import DelegationAccompanying from "./pages/Services/Translating/DelegationAccompanying";
-import NotarialActionsTranslation from "./pages/Services/Translating/NotarialActionsTranslation";
-import InProductionTranslation from "./pages/Services/Translating/InProductionTranslation";
-import GuideInterpreter from "./pages/Services/Translating/GuideInterpreter";
-import SynchronicTranslation from "./pages/Services/Translating/SynchronicTranslation";
-import SpecificTranslation from "./pages/Services/Translating/SpecificTranslation";
-import PassportTranslation from "./pages/Services/Translating/PassportTranslation";
-import DriversLicensesAndPtsTranslation from "./pages/Services/Translating/DriversLicensesAndPtsTranslation";
-import SealsAndApostillesTranslation from "./pages/Services/Translating/SealsAndApostillesTranslation";
-import ReferencesCertificatesTranslation from "./pages/Services/Translating/ReferencesCertificatesTranslation";
-import DepartureOfChildConsentsTranslationAndNotarization from "./pages/Services/Translating/DepartureOfChildConsentsTranslationAndNotarization";
-import CertificatesAndApplicationsTranslation from "./pages/Services/Translating/CertificatesAndApplicationsTranslation";
-import DiplomasAndApplicationsTranslation from "./pages/Services/Translating/DiplomasAndApplicationsTranslation";
-import TranscriptsTranslation from "./pages/Services/Translating/TranscriptsTranslation";
-import CorporateDocumentsTranslation from "./pages/Services/Translating/CorporateDocumentsTranslation";
-import BirthCertificateApostilleTranslation from "./pages/Services/Translating/BirthCertificateApostilleTranslation";
-import ContractsAndApplicationsTranslation from "./pages/Services/Translating/ContractsAndApplicationsTranslation";
-import DocumentTranslationServices from "./pages/Services/Translating/DocumentTranslationServices";
-import NotaryServices from "./pages/Services/Translating/NotaryServices";
+import Prices from "./pages/Prices";
+// import TechnicalTranslation from "./pages/Services/Translating/TechnicalTranslation";
+// import EconomicTextsTranslation from "./pages/Services/Translating/EconomicTextsTranslation";
+// import FinancialTranslation from "./pages/Services/Translating/FinancialTranslation";
+// import ITTranslation from "./pages/Services/Translating/ITTranslation";
+// import LegalTranslation from "./pages/Services/Translating/LegalTranslation";
+// import MedicalTranslation from "./pages/Services/Translating/MedicalTranslation";
+// import LiteraryTranslation from "./pages/Services/Translating/LiteraryTranslation";
+// import PublicisticTranslation from "./pages/Services/Translating/PublicisticTranslation";
+// import AdvertisingTextsTranslation from "./pages/Services/Translating/AdvertisingTextsTranslation";
+// import PharmaceuticalTranslation from "./pages/Services/Translating/PharmaceuticalTranslation";
+// import ForNegotiationsTranslation from "./pages/Services/Translating/ForNegotiationsTranslation";
+// import ForExhibitionTranslation from "./pages/Services/Translating/ForExhibitionTranslation";
+// import ForMeetingsAndConferenceTranslation from "./pages/Services/Translating/ForMeetingsAndConferenceTranslation";
+// import DelegationAccompanying from "./pages/Services/Translating/DelegationAccompanying";
+// import NotarialActionsTranslation from "./pages/Services/Translating/NotarialActionsTranslation";
+// import InProductionTranslation from "./pages/Services/Translating/InProductionTranslation";
+// import GuideInterpreter from "./pages/Services/Translating/GuideInterpreter";
+// import SynchronicTranslation from "./pages/Services/Translating/SynchronicTranslation";
+// import SpecificTranslation from "./pages/Services/Translating/SpecificTranslation";
+// import PassportTranslation from "./pages/Services/Translating/PassportTranslation";
+// import DriversLicensesAndPtsTranslation from "./pages/Services/Translating/DriversLicensesAndPtsTranslation";
+// import SealsAndApostillesTranslation from "./pages/Services/Translating/SealsAndApostillesTranslation";
+// import ReferencesCertificatesTranslation from "./pages/Services/Translating/ReferencesCertificatesTranslation";
+// import DepartureOfChildConsentsTranslationAndNotarization from "./pages/Services/Translating/DepartureOfChildConsentsTranslationAndNotarization";
+// import CertificatesAndApplicationsTranslation from "./pages/Services/Translating/CertificatesAndApplicationsTranslation";
+// import DiplomasAndApplicationsTranslation from "./pages/Services/Translating/DiplomasAndApplicationsTranslation";
+// import TranscriptsTranslation from "./pages/Services/Translating/TranscriptsTranslation";
+// import CorporateDocumentsTranslation from "./pages/Services/Translating/CorporateDocumentsTranslation";
+// import BirthCertificateApostilleTranslation from "./pages/Services/Translating/BirthCertificateApostilleTranslation";
+// import ContractsAndApplicationsTranslation from "./pages/Services/Translating/ContractsAndApplicationsTranslation";
+// import DocumentTranslationServices from "./pages/Services/Translating/DocumentTranslationServices";
+// import NotaryServices from "./pages/Services/Translating/NotaryServices";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const {consultModal} = useSelector(state => state.app)
+  const dispatch = useDispatch()
 
+
+  
   const showModal = () => {
-    setIsModalOpen(true);
+    dispatch(consultModalAC(true));
   };
 
   const handleOk = () => {
-    setIsModalOpen(false);
+    dispatch(consultModalAC(false));
   };
-
+  
   const handleCancel = () => {
-    setIsModalOpen(false);
+    dispatch(consultModalAC(false));
   };
-
+  
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/prices" element={<Prices />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/services/" element={<Services />}>
@@ -532,7 +537,7 @@ function App() {
 
 
           {/*  ============   TRANSLATING  ===============  */}
-          <Route path="technical_translation" element={<TechnicalTranslation />} />
+          {/* <Route path="technical_translation" element={<TechnicalTranslation />} />
           <Route path="economic_texts_translation" element={<EconomicTextsTranslation />} />
           <Route path="financial_translation" element={<FinancialTranslation />} />
           <Route path="it_translation" element={<ITTranslation />} />
@@ -563,11 +568,11 @@ function App() {
           <Route path="birth_certificate_apostille_translation" element={<BirthCertificateApostilleTranslation />} />
           <Route path="contracts_and_applications_translation" element={<ContractsAndApplicationsTranslation />} />
           <Route path="document_translation_services" element={<DocumentTranslationServices />} />
-          <Route path="notary_services" element={<NotaryServices />} />
+          <Route path="notary_services" element={<NotaryServices />} /> */}
         </Route>
       </Routes>
       <Modal
-        open={isModalOpen}
+        open={consultModal}
         onOk={handleOk}
         onCancel={handleCancel}
         className="w-[80vw] max-w-[1440px]"

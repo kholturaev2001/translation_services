@@ -1,7 +1,7 @@
 const Email = () => {
   return (
-    <a href="mailto:example@example.ru" className="text-[#33a3ed]">
-      {' '}example@example.ru
+    <a href="mailto:9168081166f@gmail.com" className="text-[#33a3ed]">
+      {' '}9168081166f@gmail.com
     </a>
   );
 };

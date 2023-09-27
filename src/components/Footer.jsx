@@ -11,12 +11,12 @@ const Footer = () => {
       url: "/",
     },
     {
-      title: "O Компании",
-      url: "/about",
+      title: "Цены",
+      url: "/prices",
     },
     {
-      title: "Наши Проекты",
-      url: "/projects",
+      title: "Карьера",
+      url: "/vacancies",
     },
     {
       title: "Контакты",

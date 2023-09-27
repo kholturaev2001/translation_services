@@ -42,13 +42,13 @@
 
 .ant-input-affix-wrapper,
 .ant-picker,
-.ant-input {
-  border: 1px solid #33a3ed;
+.ant-input, .ant-select-selector {
+  border: 1px solid #33a3ed !important;
   background-color: transparent !important;
 }
 
 .ant-picker-input > input,
-.ant-input {
+.ant-input, .ant-select-selector, .ant-select-selection-item {
   color: white !important;
   font-size: 16px;
   background-color: transparent !important;
@@ -73,6 +73,10 @@
   padding: 0px 18px;
 }
 
+.ant-select-arrow {
+  color: white !important;
+}
+
 .ant-picker-now > a {
   border-radius: 5px;
   height: 28px;
@@ -88,10 +92,6 @@
   border: 2px solid #33a3ed;
   transition: all 0.4s ease-in-out;
   background-color: transparent;
-}
-
-.ant-input::placeholder {
-  /* color: rgb(209 213 219) !important; */
 }
 
 .ant-picker-ranges {
@@ -155,6 +155,7 @@
 .ant-menu-title-content {
   font-size: 12px;
 }
+
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .ant-picker-dropdown {

@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { consultModalAC } from "../../app/slices/app";
 import s_img from "../../assets/images/services/house-valuation.png";
 
 const ServiceCard = ({
@@ -7,6 +9,12 @@ const ServiceCard = ({
   title,
   description = "Закажите обратный звонок, и мы с радостью ответим на интересующие вас вопросы по услугам!",
 }) => {
+  const dispatch = useDispatch();
+
+  const showModal = () => {
+    dispatch(consultModalAC(true));
+  };
+
   function formattedNumber(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
@@ -38,12 +46,17 @@ const ServiceCard = ({
               {price && (
                 <p>
                   Цена{" "}
-                  <span className="text-gray-400">..........................</span>{" "}
+                  <span className="text-gray-400">
+                    ..........................
+                  </span>{" "}
                   от <b>{formattedNumber(price)}</b> ₽
                 </p>
               )}
             </div>
-            <button className="my-2 border-2 rounded-3xl border-[#33a3ed] duration-500 ease-in-out  text-center py-3 px-6  hover:bg-[#33a3ed] bg-gray-100 hover:text-white font-semibold text-[#33a3ed]">
+            <button
+              onClick={showModal}
+              className="my-2 border-2 rounded-3xl border-[#33a3ed] duration-500 ease-in-out  text-center py-3 px-6  hover:bg-[#33a3ed] bg-gray-100 hover:text-white font-semibold text-[#33a3ed]"
+            >
               Заказать услугу
             </button>
           </div>

@@ -1,24 +1,23 @@
-import { Input, message } from "antd";
-import "./Consultation.css";
+import { MaskedInput } from "antd-mask-input";
+import { Input, Select, message } from "antd";
 import { useState } from "react";
 import moment from "moment/moment";
-import "moment/locale/ru"; // without this line it didn't work
-moment.locale("ru");
 import emailjs from "@emailjs/browser";
 import "dayjs/locale/ru";
-const { TextArea } = Input;
-import { MaskedInput } from "antd-mask-input";
+import "moment/locale/ru"; // without this line it didn't work
+moment.locale("ru");
+
+import "./Consultation.css";
 
 const Consultation = () => {
-  const [maskedPhone, setMaskedPhone] = useState("");
-
   const initialValues = {
     fullName: "",
-    message: "",
     emailjs: "",
   };
 
+  const [maskedPhone, setMaskedPhone] = useState("");
   const [values, setValues] = useState(initialValues);
+  const [serviceNameValue, setServiceNameValue] = useState("Оценка");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,69 +32,57 @@ const Consultation = () => {
     }
   };
 
+  const handleChangeSelect = (value) => {
+    setServiceNameValue(value);
+  };
 
   const [messageApi, contextHolder] = message.useMessage();
   const key = "updatable";
 
   const handleSubmit = async () => {
-    if (
-      values.fullName.trim() &&
-      maskedPhone.trim() &&
-      values.emailjs.trim() &&
-      values.message.trim()
-    ) {
-      messageApi.open({
-        key,
-        type: "loading",
-        content: "Отправляется...",
-      });
-      emailjs
-        .send(
-          "service_ii58z1v",
-          "template_d3bm84l",
-          {
-            fullName: values.fullName,
-            to_name: "Muhammadrasul",
-            to_email: "holturaevm@gmail.com",
-            message: values.message,
-            phone: maskedPhone,
-            emailjs: values.emailjs,
-          },
-          "_rkzuLmsOwLYHbQq2"
-        )
-        .then(
-          () => {
-            messageApi.open({
-              key,
-              type: "success",
-              content: "Отправлено!",
-              duration: 2,
-            });
+    messageApi.open({
+      key,
+      type: "loading",
+      content: "Отправляется...",
+    });
+    emailjs
+      .send(
+        "service_b6mg5bo",
+        "template_yvid0i7",
+        {
+          fullName: values.fullName,
+          to_name: "Damir",
+          to_email: "9168081166f@gmail.com",
+          serviceName: serviceNameValue,
+          phone: maskedPhone,
+          emailjs: values.emailjs,
+        },
+        "4T749zp8I-lwm7wNc"
+      )
+      .then(
+        () => {
+          messageApi.open({
+            key,
+            type: "success",
+            content: "Отправлено!",
+            duration: 2,
+          });
 
-            setValues({
-              emailjs: "",
-              message: "",
-              fullName: "",
-            });
-            setMaskedPhone("");
-          },
-          (error) => {
-            messageApi.open({
-              key,
-              type: "error",
-              content: "Ошибка!",
-              duration: 2,
-            });
-          }
-        );
-    } else {
-      messageApi.open({
-        key,
-        type: "warning",
-        content: "Все поля необходимы для заполнения!",
-        duration: 2,
-      });
-    }
+          setValues({
+            emailjs: "",
+            fullName: "",
+          });
+          setMaskedPhone("");
+        },
+        () => {
+          messageApi.open({
+            key,
+            type: "error",
+            content: "Ошибка!",
+            duration: 2,
+          });
+        }
+      );
   };
 
   return (
@@ -116,7 +103,7 @@ const Consultation = () => {
                 value={values.fullName}
               />
             </div>
-            <div className="grid-cols-2 grid gap-3">
+            <div className="md:grid-cols-2 grid-cols-1 grid gap-3">
               <MaskedInput
                 mask="+7 (000) 000-00-00"
                 name="phone"
@@ -135,15 +122,35 @@ const Consultation = () => {
               />
             </div>
             <div className="grid-rows-1">
-              <TextArea
-                showCount
-                maxLength={1000}
-                placeholder="Ваше сообщение"
-                className=" text-white md:text-base"
-                style={{ padding: "10px 0" }}
-                name="message"
-                onChange={handleInputChange}
-                value={values.message}
+              <Select
+                allowClear={false}
+                className="w-full text-white md:text-base md:min-h-[50px] min-h-[40px]"
+                defaultValue="Оценка"
+                name="service_name"
+                value={serviceNameValue}
+                onChange={handleChangeSelect}
+                options={[
+                  {
+                    value: "Оценка",
+                    label: "Оценка",
+                  },
+                  {
+                    value: "Экспертиза",
+                    label: "Экспертиза",
+                  },
+                  {
+                    value: "Снижение налогов",
+                    label: "Снижение налогов",
+                  },
+                  {
+                    value: "Юридические услуги",
+                    label: "Юридические услуги",
+                  },
+                  {
+                    value: "Бизнес планирование",
+                    label: "Бизнес планирование",
+                  },
+                ]}
               />
             </div>
             <button
