@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import TelegramIcon from "./../assets/icons/TelegramIcon";
 import WhatsAppIcon from "./../assets/icons/WhatsAppIcon";
 import InstagramIcon from "./../assets/icons/InstagramIcon";
-import logo from '../assets/images/ais_perevodchik.jpg'
+import logo from "../assets/images/ais_perevodchik.jpg";
+import Logo from "../assets/icons/Logo";
 
 const Footer = () => {
   const navs = [
@@ -29,9 +30,7 @@ const Footer = () => {
       <div className="md:max-w-[1280px] mx-auto w-full flex flex-col">
         <div className="md:max-w-[1280px] mx-auto w-full md:min-h-[240px] flex md:flex-row flex-col items-center justify-between px-4 ">
           <div className="flex md:flex-row flex-col md:gap-14 gap-2 md:items-center items-start w-full">
-          <div className="w-[140px]">
-              <img src={logo} alt="" />
-            </div>
+            <Logo color='white' />
             <nav className="stroke flex md:flex-nowrap w-full flex-wrap md md:gap-7 font-medium text-white md:justify-start justify-between">
               {navs.map((nav, id) => (
                 <NavLink

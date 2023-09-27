@@ -117,8 +117,8 @@ const Vacancies = () => {
     );
 
   return (
-    <div className="flex flex-col md:text-start text-center">
-      <div className="flex flex-col gap-2 mt-[20px] md:max-w-[1280px] md:mx-auto mx-3">
+    <div className="flex flex-col text-start">
+      <div className="flex flex-col gap-2  md:max-w-[1280px] md:mx-auto mx-3">
         <HeadBreadcrumb
           items={[
             {

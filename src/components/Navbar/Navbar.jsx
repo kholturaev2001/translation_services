@@ -522,7 +522,6 @@ const Navbar = () => {
                 <img src={logo} alt="" />
               </div>
             </div>
-            <nav className="stroke md:flex gap-4 font-medium hidden"></nav>
           </div>
           <div className=" w-full hidden md:block">
             <Menu
