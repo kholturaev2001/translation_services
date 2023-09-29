@@ -98,6 +98,10 @@
   align-items: center;
 }
 
+.ant-empty-normal {
+  display: none !important;
+}
+
 .ant-menu-vertical > .ant-menu-item,
 .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
 .ant-menu-item,
