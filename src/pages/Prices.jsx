@@ -1230,6 +1230,7 @@ const Prices = () => {
             ]}
             showHeader={false}
           />
+          <br />
           <TitleColored>Исключение недвижимости из перечня 700-ПП</TitleColored>
           <DTable
             bordered
@@ -1312,6 +1313,7 @@ const Prices = () => {
             ]}
             showHeader={false}
           />
+          <br />
           <TitleColored>Судебные экспертизы</TitleColored>
           <DTable
             bordered
