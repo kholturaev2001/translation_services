@@ -1,11 +1,11 @@
 import { MaskedInput } from "antd-mask-input";
 import { Input, Select, message } from "antd";
 import { useState } from "react";
-import moment from "moment/moment";
 import emailjs from "@emailjs/browser";
-import "dayjs/locale/ru";
-import "moment/locale/ru"; // without this line it didn't work
-moment.locale("ru");
+// import moment from "moment/moment";
+// import "dayjs/locale/ru";
+// import "moment/locale/ru"; // without this line it didn't work
+// moment.locale("ru");
 
 import "./Consultation.css";
 
@@ -130,25 +130,20 @@ const Consultation = () => {
                 value={serviceNameValue}
                 onChange={handleChangeSelect}
                 options={[
+
+
+
                   {
-                    value: "Оценка",
-                    label: "Оценка",
+                    value: "Письменный перевод",
+                    label: "Письменный перевод",
                   },
                   {
-                    value: "Экспертиза",
-                    label: "Экспертиза",
+                    value: "Устный перевод",
+                    label: "Устный перевод",
                   },
                   {
-                    value: "Снижение налогов",
-                    label: "Снижение налогов",
-                  },
-                  {
-                    value: "Юридические услуги",
-                    label: "Юридические услуги",
-                  },
-                  {
-                    value: "Бизнес планирование",
-                    label: "Бизнес планирование",
+                    value: "Личные документы",
+                    label: "Личные документы",
                   },
                 ]}
               />
@@ -159,7 +154,7 @@ const Consultation = () => {
               className="md:max-w-[280px] md:min-h-[60px] min-h-[50px] text-white hover:text-[#33a3ed]  bg-[#33a3ed] hover:bg-white border-2 hover:border-[#33a3ed] rounded-lg font-semibold mt-[18px] duration-500 ease-in-out "
             >
               Заказать
-            </button>
+            </button> 
           </div>
         </div>
       </div>
