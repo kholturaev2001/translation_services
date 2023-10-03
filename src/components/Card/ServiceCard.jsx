@@ -20,7 +20,7 @@ const ServiceCard = ({
   }
   return (
     <div className="flex justify-center">
-      <div className="md:max-w-[1000px] max-w-[100%] flex flex-col m-auto md:min-h-[400px] mx-3 mb-4">
+      <div className="md:max-w-[1000px] max-w-[100%] flex flex-col m-auto mx-3 mb-4">
         <p className="text-xl font-semibold py-3">{title}</p>
         <div className="flex md:flex-row flex-col gap-[30px] items-center justify-center bg-gray-100 rounded-lg overflow-hidden h-full md:pb-0 pb-4 shadow-xl">
           <img
@@ -55,7 +55,7 @@ const ServiceCard = ({
             </div>
             <button
               onClick={showModal}
-              className="my-2 border-2 rounded-3xl border-[#33a3ed] duration-500 ease-in-out  text-center py-3 px-6  hover:bg-[#33a3ed] bg-gray-100 hover:text-white font-semibold text-[#33a3ed]"
+              className="my-2  border-2 rounded-3xl border-[#33a3ed] duration-500 ease-in-out  text-center md:py-3 py-2 px-6  hover:bg-[#33a3ed] bg-gray-100 hover:text-white font-semibold text-[#33a3ed] md:text-base text-sm"
             >
               Заказать услугу
             </button>

@@ -9,7 +9,6 @@ const Discounts = ({
 }) => {
   const content = threeRows ? (
     <TableContainer>
-      <br />
       <DTable
         dataSource={[
           {
@@ -45,7 +44,6 @@ const Discounts = ({
     </TableContainer>
   ) : (
     <TableContainer>
-      <br />
       <DTable
         dataSource={[
           {
@@ -75,7 +73,13 @@ const Discounts = ({
       />
     </TableContainer>
   );
-  return content;
+  return (
+    <div>
+      <br />
+      {content}
+      <br />
+    </div>
+  );
 };
 
 export default Discounts;

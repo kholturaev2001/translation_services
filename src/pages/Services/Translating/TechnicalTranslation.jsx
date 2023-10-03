@@ -130,6 +130,7 @@ const TechnicalTranslation = () => {
 
       <OtherTypes translationEdit={false} nativeTranslationEdit={false} />
       <Discounts />
+      <br />
 
       <Title2>Дополнительная информация:</Title2>
       <LiColored>

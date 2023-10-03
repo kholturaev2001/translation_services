@@ -2,10 +2,6 @@ import { MaskedInput } from "antd-mask-input";
 import { Input, Select, message } from "antd";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-// import moment from "moment/moment";
-// import "dayjs/locale/ru";
-// import "moment/locale/ru"; // without this line it didn't work
-// moment.locale("ru");
 
 import "./Consultation.css";
 
@@ -17,7 +13,7 @@ const Consultation = () => {
 
   const [maskedPhone, setMaskedPhone] = useState("");
   const [values, setValues] = useState(initialValues);
-  const [serviceNameValue, setServiceNameValue] = useState("Оценка");
+  const [serviceNameValue, setServiceNameValue] = useState("Письменный перевод");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -125,7 +121,7 @@ const Consultation = () => {
               <Select
                 allowClear={false}
                 className="w-full text-white md:text-base md:min-h-[50px] min-h-[40px]"
-                defaultValue="Оценка"
+                defaultValue="Письменный перевод"
                 name="service_name"
                 value={serviceNameValue}
                 onChange={handleChangeSelect}

@@ -1,7 +1,12 @@
 import DTable from "../DTable";
 import TableContainer from "../TableContainer";
 
-const TranslationToLang = () => {
+const TranslationToLang = ({
+  eu_langs = "от 450",
+  sng_langs = "от 450",
+  baltic_langs = "от 500",
+  easy_langs = "от 600",
+}) => {
   return (
     <TableContainer>
       <br />
@@ -10,22 +15,22 @@ const TranslationToLang = () => {
           {
             key: "1",
             language_name: "Европейские языки",
-            price: "от 450",
+            price: eu_langs,
           },
           {
             key: "2",
             language_name: "Языки СНГ",
-            price: "от 450",
+            price: sng_langs,
           },
           {
             key: "3",
             language_name: "Балтийские языки",
-            price: "от 500",
+            price: baltic_langs,
           },
           {
             key: "4",
             language_name: "Восточные языки",
-            price: "от 700",
+            price: easy_langs,
           },
         ]}
         columns={[

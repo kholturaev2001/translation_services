@@ -4,6 +4,7 @@ import Ul from "../Typography/Ul";
 const TrDeadline = () => {
   return (
     <div>
+      <br />
       <Title2>Сроки</Title2>
       <Ul>
         <li>
@@ -19,6 +20,7 @@ const TrDeadline = () => {
           выполнен в самый короткий срок.
         </li>
       </Ul>
+      <br />
     </div>
   );
 };
