@@ -94,7 +94,7 @@ const LegalTranslation = () => {
       <TrDeadline />
       <Title>Стоимость перевода юридических документов и бумаг</Title>
       <TranslationFromLang />
-      <TranslationToLang easy_langs="от 700" />
+      <TranslationToLang east_langs="от 700" />
       <OtherTypes />
       <Discounts />
       <AdditionInfo />

@@ -74,7 +74,7 @@ const FinancialTranslation = () => {
       <TranslationToLang
         sng_langs="от 400"
         baltic_langs="от 550"
-        easy_langs="от 700"
+        east_langs="от 700"
       />
       <OtherTypes />
       <Discounts />

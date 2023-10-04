@@ -5,7 +5,7 @@ const TranslationToLang = ({
   eu_langs = "от 450",
   sng_langs = "от 450",
   baltic_langs = "от 500",
-  easy_langs = "от 600",
+  east_langs = "от 600",
 }) => {
   return (
     <TableContainer>
@@ -30,7 +30,7 @@ const TranslationToLang = ({
           {
             key: "4",
             language_name: "Восточные языки",
-            price: easy_langs,
+            price: east_langs,
           },
         ]}
         columns={[

@@ -30,7 +30,7 @@ const ServiceCard = ({
           />
           <div className="flex flex-col items-center justify-center text-sm mx-3">
             <p className="text-xl font-semibold text-center">
-              Появились вопросы по услуге?
+              Появились вопросы по услуге перевода?
             </p>
             <p className="leading-6 text-center my-2">{description}</p>
             <div className="my-2">

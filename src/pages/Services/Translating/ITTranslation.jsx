@@ -59,7 +59,7 @@ const ITTranslation = () => {
       <TrDeadline />
       <Title>Стоимость перевода программного обеспечения</Title>
       <TranslationFromLang />
-      <TranslationToLang easy_langs="от 700" />
+      <TranslationToLang east_langs="от 700" />
       <OtherTypes />
       <Discounts />
       <AdditionInfo />
