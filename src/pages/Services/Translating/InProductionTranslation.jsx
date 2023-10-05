@@ -1,7 +1,80 @@
+import ServiceCard from "../../../components/Card/ServiceCard";
+import HeadBreadcrumb from "../../../components/HeadBreadcrumb";
+import s_img from "../../../assets/images/services/translating/written_translation/in_production_translation.jpg";
+import Description from "../../../components/Typography/Description";
+import Title2 from "../../../components/Typography/Title2";
+import Ul from "../../../components/Typography/Ul";
+import Title from "../../../components/Typography/Title";
+import OralTranslation from "../../../components/TranslationTables/OralTranslation";
+
 const InProductionTranslation = () => {
   return (
-    <div>InProductionTranslation</div>
-  )
-}
+    <div>
+      <HeadBreadcrumb
+        items={[
+          {
+            title: "Главная",
+          },
+          {
+            title: "Устный перевод",
+          },
+          {
+            title: "Перевод на производстве",
+          },
+        ]}
+      />
+      <ServiceCard
+        img={s_img}
+        title="Перевод на производстве, устный технический перевод"
+      />
+      <Description>
+        Устный технический перевод относится к специальным видам перевода и
+        требует от переводчика наличия дополнительной квалификации, а также
+        идеального владения лексикой (знания специальных терминов, аббревиатур и
+        т.д.).
+      </Description>
+      <Description>
+        Устный последовательный перевод предусматривает, что докладчик или
+        собеседники будут делать паузы, во время которых переводчик сможет
+        озвучить перевод части произнесенного текста. Для того чтобы услуга была
+        оказана действительно качественно, и в процессе совещания, переговоров
+        или делового общения не возникло недопонимания, необходимо предоставить
+        специалисту материалы по теме для предварительного ознакомления.
+      </Description>
+      <Description>
+        Синхронный технический перевод требует не только отличного знания языка
+        оригинала и умения доходчиво донести информацию на другом языке, но и
+        свободного ориентирования в узкоспециальной теме. Кроме того, необходимо
+        наличие специализированного оборудования для работы
+        переводчиков-синхронистов. Поскольку во время синхронного устного
+        перевода они должны сменять друг друга, для выполнения такой услуги
+        требуется как минимум два переводчика, специализирующихся в технической
+        тематике.
+      </Description>
+      <Description>
+        На стоимость устного технического перевода влияет время работы, тематика
+        общения, рабочие языки перевода, отдельные специальные требования и
+        пожелания заказчика.
+      </Description>
+      <Title2>Особенность:</Title2>
+      <Ul>
+        <li>последовательный перевод;</li>
+        <li>техническая тематика;</li>
+        <li>работа на производстве, строительстве;</li>
+        <li>длительный срок работы;</li>
+        <li>возможны переработки.</li>
+      </Ul>
+      <Title2>Требования к переводчику:</Title2>
+      <Ul>
+        <li>знание технических терминов;</li>
+        <li>опыт работы на производстве;</li>
+        <li>умение находить общий язык.</li>
+      </Ul>
 
-export default InProductionTranslation
+      <Title>Стоимость</Title>
+      <OralTranslation />
+    </div>
+  );
+};
+
+export default InProductionTranslation;

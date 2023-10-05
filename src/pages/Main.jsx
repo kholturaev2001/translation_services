@@ -20,7 +20,7 @@ import Ul from "./../components/Typography/Ul";
 const data = [
   {
     image: img6,
-    title: "Переводим мир для вас.!",
+    title: "Переводим мир для вас!",
   },
   {
     image: img2,
