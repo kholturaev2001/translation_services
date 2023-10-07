@@ -1,9 +1,10 @@
-import LiColored from "./Typography/LiColored";
-import Title2 from "./Typography/Title2";
+import LiColored from "../Typography/LiColored";
+import Title2 from "../Typography/Title2";
 
 const PrivateDocsDeadline = () => {
   return (
     <div>
+      <br />
       <Title2>Сроки:</Title2>
       <LiColored>
         Стандартный срок перевода документа - 1 рабочий день.
@@ -17,6 +18,8 @@ const PrivateDocsDeadline = () => {
         примем Вас без очереди, а Ваш заказ будет выполнен в самый короткий
         срок.
       </LiColored>
+      <br />
+
     </div>
   );
 };
