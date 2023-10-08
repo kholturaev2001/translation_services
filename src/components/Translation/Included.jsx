@@ -8,8 +8,7 @@ const Included = ({ one = true, two = true, three = true }) => {
 
       {one && (
         <LiColored>
-          ксерокопия документа (в случае, если перевод подшивается не к
-          оригиналу документа);
+          ксерокопия документа;
         </LiColored>
       )}
       {two && <LiColored>перевод документа;</LiColored>}

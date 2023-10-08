@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import TelegramIcon from "./../assets/icons/TelegramIcon";
 import WhatsAppIcon from "./../assets/icons/WhatsAppIcon";
 import InstagramIcon from "./../assets/icons/InstagramIcon";
-import logo from "../assets/images/ais_perevodchik.jpg";
 import Logo from "../assets/icons/Logo";
+import moment from "moment/moment";
+
 
 const Footer = () => {
   const navs = [
@@ -74,7 +75,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-[100px] flex items-center text-[#CBD5E1] border-t border-[#FFFFFF33] md:text-base text-sm">
-          © Copyright 2022, All Rights Reserved by Pro.Build
+        © Все права защищены ООО АИС «ПЕРЕВОДЧИК»  {moment().year()}
         </div>
       </div>
     </div>

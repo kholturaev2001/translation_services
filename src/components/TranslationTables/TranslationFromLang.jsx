@@ -6,6 +6,7 @@ const TranslationFromLang = ({
   sng_langs = "от 450",
   baltic_langs = "от 500",
   east_langs = "от 600",
+  title = "Перевод с языка"
 }) => {
   return (
     <TableContainer>
@@ -37,7 +38,7 @@ const TranslationFromLang = ({
           {
             dataIndex: "language_name",
             key: "language_name",
-            title: "Перевод с языка",
+            title: title,
           },
           {
             dataIndex: "price",
