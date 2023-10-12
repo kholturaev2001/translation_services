@@ -6,11 +6,13 @@ const TranslationFromLang = ({
   sng_langs = "от 450",
   baltic_langs = "от 500",
   east_langs = "от 600",
-  title = "Перевод с языка"
+  title = "Перевод с языка",
+  br = true,
+  ...rest
 }) => {
   return (
     <TableContainer>
-      <br />
+      {br && <br />}
       <DTable
         dataSource={[
           {
@@ -48,6 +50,7 @@ const TranslationFromLang = ({
           },
         ]}
         bordered
+        {...rest}
       />
     </TableContainer>
   );

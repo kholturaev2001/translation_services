@@ -65,7 +65,8 @@ const Contacts = () => {
 
                     Режим работы:
                     </span>
-                    <p className="text-[#33a3ed]">Пн-Пт с 9:00 до 18:00</p>
+                    <p className="text-[#33a3ed]">24/7 (круглосуточно)</p>
+
                   </div>
                 </div>
               </div>

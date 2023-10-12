@@ -6,7 +6,7 @@ import Title from "../../../components/Typography/Title";
 import Ul from "../../../components/Typography/Ul";
 import TranslationFromLang from "../../../components/TranslationTables/TranslationFromLang";
 import TranslationToLang from "../../../components/TranslationTables/TranslationToLang";
-import OtherTypes from './../../../components/TranslationTables/OtherTypes';
+import OtherTypes from "./../../../components/TranslationTables/OtherTypes";
 import Discounts from "../../../components/TranslationTables/Discounts";
 
 const PharmaceuticalTranslation = () => {
@@ -122,22 +122,15 @@ const PharmaceuticalTranslation = () => {
         постоянно повышают квалификацию и используют только современные
         обновленные терминологические базы.
       </Description>
-      <Title>Стоимость перевода медицинских документов
-</Title>
-<TranslationFromLang eu_langs="от 500" sng_langs="от 500" />
+      <Title>Стоимость перевода медицинских документов</Title>
+      <TranslationFromLang eu_langs="от 500" sng_langs="от 500" />
       <TranslationToLang
         east_langs="от 700"
         eu_langs="от 500"
         sng_langs="от 500"
       />
-      <OtherTypes nativeTranslationEdit={false} translationEditVal = "100%" />
-      <Discounts/>
-  
-
-
-
-
-
+      <OtherTypes nativeTranslationEdit={false} translationEditVal="100%" />
+      <Discounts />
     </div>
   );
 };

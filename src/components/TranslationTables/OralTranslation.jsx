@@ -6,10 +6,12 @@ const OralTranslation = ({
   eight_hours = "от 19000",
   extra_hours = "от 2500",
   discountVal = "10%",
+  if_discount = true,
+  br = true,
 }) => {
   return (
     <TableContainer>
-      <br />
+      {br && <br />}
       <DTable
         dataSource={[
           {
@@ -43,28 +45,30 @@ const OralTranslation = ({
         ]}
         bordered
       />
-      <DTable
-        dataSource={[
-          {
-            key: "1",
-            discount_name: "Пять дней",
-            percent: discountVal,
-          },
-        ]}
-        columns={[
-          {
-            dataIndex: "discount_name",
-            key: "discount_name",
-            title: "Скидки",
-          },
-          {
-            dataIndex: "percent",
-            key: "percent",
-            width: "25%",
-            title: "Процент",
-          },
-        ]}
-      />
+      {if_discount && (
+        <DTable
+          dataSource={[
+            {
+              key: "1",
+              discount_name: "Пять дней",
+              percent: discountVal,
+            },
+          ]}
+          columns={[
+            {
+              dataIndex: "discount_name",
+              key: "discount_name",
+              title: "Скидки",
+            },
+            {
+              dataIndex: "percent",
+              key: "percent",
+              width: "25%",
+              title: "Процент",
+            },
+          ]}
+        />
+      )}
     </TableContainer>
   );
 };

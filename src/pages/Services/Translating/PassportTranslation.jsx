@@ -8,7 +8,7 @@ import PrivateDocsDeadline from "../../../components/Translation/PrivateDocsDead
 import DTable from "../../../components/DTable";
 import Title2 from "../../../components/Typography/Title2";
 
-const PassportTranslation = () => {
+const   PassportTranslation = () => {
   return (
     <div>
       <HeadBreadcrumb
@@ -197,7 +197,7 @@ const PassportTranslation = () => {
           {
             dataIndex: "type",
             key: "type",
-            title: "Устный перевод на переговорах",
+            title: "Перевод паспорта",
           },
           {
             dataIndex: "price",

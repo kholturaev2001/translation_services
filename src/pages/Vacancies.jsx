@@ -1,82 +1,442 @@
-import house1 from "../assets/images/house1.jpg";
-import house2 from "../assets/images/house2.jpg";
-import house3 from "../assets/images/house3.jpg";
-import house4 from "../assets/images/house4.jpg";
-import house5 from "../assets/images/house5.jpg";
-import house6 from "../assets/images/bg_2.png";
-import house7 from "../assets/images/bg_3.png";
-import house8 from "../assets/images/house6.png";
-import house9 from "../assets/images/house7.png";
-import house10 from "../assets/images/house8.png";
 import { useState } from "react";
 import Card from "../components/Card/Card";
 import BackBtn from "../components/BackBtn";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
 import Title2 from "../components/Typography/Title2";
 import Title from "../components/Typography/Title";
 import Description from "../components/Typography/Description";
 import Ul from "../components/Typography/Ul";
 import Email from "../components/Typography/Email";
 import HeadBreadcrumb from "../components/HeadBreadcrumb";
+import Title3 from "./../components/Typography/Title3";
+import YandexMap from "./../components/YandexMap";
+import Ol from "./../components/Typography/Ol";
+import guide_translator from "../assets/images/services/translating/written_translation/guide_interpreter.jpg";
+import sync_translator from "../assets/images/services/translating/written_translation/synchronic_translation.jpg";
+import pharmaceutical_translator from "../assets/images/services/translating/written_translation/pharmaceutical_translation.jpg";
+import judical_translator from "../assets/images/services/translating/written_translation/legal_translation.jpg";
+import it_translator from "../assets/images/services/translating/written_translation/it_translation.jpg";
+import economic_translator from "../assets/images/services/translating/written_translation/economic_texts_translation.jpg";
 
 const data = [
   {
-    swiperImages: [house1, house2, house3, house5, house6, house7], // ADD AT LEAST 3 IMAGES
-    title: "Название вакансии 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: guide_translator,
+    title: "Гид-переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Ведение экскурсий и гидовых туров для иностранных туристов,
+          предоставление информации о достопримечательностях, культуре и истории
+          региона.
+        </li>
+        <li>
+          Перевод на устный и письменный язык (если необходимо) для
+          удовлетворения потребностей иностранных клиентов.
+        </li>
+        <li>
+          Обеспечение информационной поддержки иностранным туристам во время
+          экскурсий, включая ответы на вопросы и помощь с ориентацией.
+        </li>
+        <li>
+          Предоставление культурного контекста и исторических сведений о местных
+          достопримечательностях.
+        </li>
+        <li>
+          Организация и проведение персонализированных туров в соответствии с
+          интересами клиентов.
+        </li>
+        <li>
+          Обеспечение безопасности и комфорта группы туристов во время
+          экскурсии.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Знание и владение как минимум двумя языками, включая исходный и
+          целевой для перевода и общения с иностранными туристами.
+        </li>
+        <li>
+          Продвинутые коммуникативные навыки и умение ясно и доступно излагать
+          информацию.
+        </li>
+        <li>
+          Отличное знание истории, культуры и географии региона, в котором
+          предоставляются экскурсии.
+        </li>
+        <li>
+          Гостеприимство, дружелюбность и способность создавать позитивное
+          впечатление у туристов.
+        </li>
+        <li>Опыт работы в туризме или гидской деятельности - преимущество.</li>
+        <li>
+          Знание туристических достопримечательностей и особенностей региона.
+        </li>
+        <li>
+          Готовность к гибкому графику работы, включая выходные дни и праздники.
+        </li>
+        <li>
+          Способность работать с разнообразными группами туристов, включая
+          индивидуальных и групповых клиентов.
+        </li>
+        <li>Знание основных навыков первой помощи и безопасности туристов.</li>
+      </Ul>
+    ),
+    moreInfo:
+      "Гид-переводчик должен обладать отличными коммуникативными навыками, богатыми знаниями о местных достопримечательностях и культуре, а также быть готовым предоставить высококачественный сервис для иностранных туристов.",
   },
   {
-    swiperImages: [house3, house4, house5, house6, house7, house1, house2],
-    title: "Название вакансии 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: sync_translator,
+    title: "Синхронный переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Предоставление синхронного перевода на мероприятиях, таких как
+          конференции, семинары, симпозиумы и другие события, где требуется
+          одновременный перевод.
+        </li>
+        <li>
+          Перевод устного выступления ораторов с исходного языка на целевой язык
+          и наоборот с минимальной задержкой.
+        </li>
+        <li>
+          Использование специальной технической аппаратуры, такой как кабинеты
+          для синхронного перевода и наушники, для улучшения процесса перевода.
+        </li>
+        <li>
+          Гарантировать точность и качество устного перевода, включая правильное
+          произношение и акцент.
+        </li>
+        <li>
+          Соблюдение сроков и выполнение перевода в соответствии с
+          установленными стандартами и требованиями заказчика.
+        </li>
+        <li>
+          Работа в тандеме с другими синхронными переводчиками, если мероприятие
+          требует перевода на несколько языков.
+        </li>
+        <li>
+          Мониторинг и обновление словарей и глоссариев для обеспечения
+          согласованности терминологии.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области перевода, лингвистики или смежной
+          специальности.
+        </li>
+        <li>
+          Продвинутые навыки устного перевода и работа с аудио- и звуковой
+          техникой.
+        </li>
+        <li>Отличное знание и владение исходным и целевым языками.</li>
+        <li>
+          Отличные коммуникативные навыки и способность работать в
+          быстротемповой среде.
+        </li>
+        <li>
+          Точность, внимательность к деталям и способность к аналитическому
+          мышлению.
+        </li>
+        <li>Умение работать в сжатых сроках и под давлением.</li>
+        <li>
+          Опыт работы на мероприятиях, где требуется синхронный перевод, будет
+          значительным преимуществом.
+        </li>
+        <li>
+          Ответственность и способность сохранять профессиональную
+          нейтральность.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Знание специфики и терминологии в области мероприятия, на котором требуется синхронный перевод (например, медицина, техника, право, бизнес), также будет дополнительным преимуществом для кандидата.",
   },
   {
-    swiperImages: [house10, house6, house7, house1, house2, house3, house4],
-    title: "Название вакансии 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: pharmaceutical_translator,
+    title: "Фармацевтический переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Перевод фармацевтических документов, включая медицинские статьи,
+          клинические исследования, лекарственные препараты, инструкции по
+          применению и другие фармацевтические материалы с исходного языка на
+          целевой язык.
+        </li>
+        <li>
+          Гарантировать точность и качество перевода, особенно в отношении
+          специализированной медицинской и фармацевтической терминологии.
+        </li>
+        <li>
+          Глубокое понимание фармацевтических и медицинских концепций, процессов
+          и технологий для верного перевода текстов.
+        </li>
+        <li>
+          Соблюдение сроков и выполнение переводов в соответствии с
+          установленными стандартами и требованиями заказчика.
+        </li>
+        <li>
+          Редактирование и коррекция переводов для обеспечения структурной
+          целостности и лингвистической правильности.
+        </li>
+        <li>
+          Сотрудничество с медицинскими специалистами и фармацевтами для
+          разрешения возможных неясностей и уточнения терминов.
+        </li>
+        <li>
+          Ведение базы данных терминов и глоссария в области фармацевтики и
+          медицины.
+        </li>
+        <li>
+          Участие в фармацевтических конференциях и обучение для поддержания
+          актуальных знаний и навыков.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области перевода, медицины, фармацевтики или
+          смежной специальности.
+        </li>
+        <li>Продвинутые знания и опыт в сфере фармацевтического перевода.</li>
+        <li>Отличное владение исходным и целевым языками.</li>
+        <li>
+          Глубокое понимание медицинских и фармацевтических процессов,
+          фармацевтических продуктов и терминологии.
+        </li>
+        <li>
+          Опыт работы с переводческими инструментами и программами
+          (CAT-системами) - преимущество.
+        </li>
+        <li>
+          Точность, внимательность к деталям и способность к аналитическому
+          мышлению.
+        </li>
+        <li>Умение работать в сжатых сроках и под давлением.</li>
+        <li>Коммуникабельность и способность работать в команде.</li>
+        <li>
+          Ответственность и стремление к профессиональному развитию в области
+          фармацевтического перевода.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Знание фармацевтических стандартов и законодательства, а также опыт работы с клиническими испытаниями и регистрацией лекарственных препаратов, будут дополнительными плюсами для кандидата.",
   },
   {
-    swiperImages: [
-      house5,
-      house6,
-      house7,
-      house1,
-      house2,
-      house3,
-      house4,
-      house8,
-    ],
-    title: "Название вакансии 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: judical_translator,
+    title: "Юридический переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Перевод юридических документов, включая судебные решения, договоры,
+          доверенности, нотариальные акты, законы и другие юридические материалы
+          с исходного языка на целевой язык.
+        </li>
+        <li>
+          Гарантировать точность и качество перевода, особенно в отношении
+          специализированной юридической терминологии и фразеологии.
+        </li>
+        <li>
+          Глубокое понимание юридических концепций, системы права и процессов
+          для верного перевода юридических текстов.
+        </li>
+        <li>
+          Соблюдение сроков и выполнение переводов в соответствии с
+          установленными стандартами и требованиями заказчика.
+        </li>
+        <li>
+          Редактирование и коррекция переводов для обеспечения структурной
+          целостности и лингвистической правильности.
+        </li>
+        <li>
+          Сотрудничество с юристами и юридическими экспертами для разрешения
+          возможных неясностей и уточнения терминов.
+        </li>
+        <li>
+          Ведение базы данных терминов и глоссария в области юриспруденции.
+        </li>
+        <li>
+          Участие в юридических консультациях и обучение для поддержания
+          актуальных знаний и навыков.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области перевода, юриспруденции, правовой
+          лингвистики или смежной специальности.
+        </li>
+        <li>Продвинутые знания и опыт в сфере юридического перевода.</li>
+        <li>Отличное владение исходным и целевым языками.</li>
+        <li>
+          Глубокое понимание системы права, юридических процедур и терминологии.
+        </li>
+        <li>
+          Опыт работы с переводческими инструментами и программами
+          (CAT-системами) - преимущество.
+        </li>
+        <li>
+          Точность, внимательность к деталям и способность к аналитическому
+          мышлению.
+        </li>
+        <li>Умение работать в сжатых сроках и под давлением.</li>
+        <li>Коммуникабельность и способность работать в команде.</li>
+        <li>
+          Ответственность и стремление к профессиональному развитию в области
+          юридического перевода.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Знание конкретных юридических систем (например, системы континентального права, англо-американского права и т.д.) и опыт работы с различными видами юридических документов (гражданские, уголовные, корпоративные и другие) также могут быть дополнительными плюсами для кандидата.",
   },
   {
-    swiperImages: [house9, house8, house5, house6, house7, house1, house2],
-    title: "Название вакансии 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: it_translator,
+    title: "ИТ переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Перевод технических и информационных документов, включая спецификации,
+          инструкции по программному обеспечению, технические руководства и
+          другие ИТ-материалы с исходного языка на целевой язык.
+        </li>
+        <li>
+          Гарантировать точность и качество перевода, особенно в отношении
+          специализированной ИТ-терминологии и технических выражений.
+        </li>
+        <li>
+          Исследование и углубленное понимание тематики и предметной области в
+          сфере информационных технологий.
+        </li>
+        <li>
+          Соблюдение сроков и выполнение переводов в соответствии с
+          установленными стандартами и требованиями заказчика.
+        </li>
+        <li>
+          Редактирование и коррекция переводов для обеспечения структурной
+          целостности и лингвистической правильности.
+        </li>
+        <li>
+          Сотрудничество с ИТ-специалистами и разработчиками для разрешения
+          возможных неясностей и уточнения терминов.
+        </li>
+        <li>
+          Ведение базы данных терминов и глоссария в области информационных
+          технологий.
+        </li>
+        <li>
+          Участие в ИТ-совещаниях и обучение для обновления и расширения знаний
+          и навыков.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области перевода, информационных технологий или
+          смежной специальности.
+        </li>
+        <li>Продвинутые знания и опыт в сфере ИТ-перевода.</li>
+        <li>Отличное знание и владение исходным и целевым языками.</li>
+        <li>
+          Глубокое понимание ИТ-процессов, языков программирования, аппаратных
+          средств и специфической терминологии.
+        </li>
+        <li>
+          Опыт работы с переводческими инструментами и программами
+          (CAT-системами) - преимущество.
+        </li>
+        <li>
+          Точность, внимательность к деталям и способность к аналитическому
+          мышлению.
+        </li>
+        <li>Умение работать в сжатых сроках и под давлением.</li>
+        <li>Коммуникабельность и способность работать в команде.</li>
+        <li>
+          Ответственность и стремление к профессиональному развитию в области
+          ИТ-перевода.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Знание специфических языков программирования, опыт работы с разработчиками и тестировщиками программного обеспечения, а также сертификации в области информационных технологий, могут быть дополнительными преимуществами для кандидата.",
   },
   {
-    swiperImages: [house1, house8, house5, house6, house7, house2],
-    title: "Название вакансии 6",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
-  },
-  {
-    swiperImages: [house2, house8, house5, house6, house7],
-    title: "Название вакансии 7",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
-  },
-  {
-    swiperImages: [house7, house1, house2, house3, house4, house8],
-    title: "Название вакансии 8",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum. \n Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa illum amet asperiores, voluptate quam omnis, delectus consequatur cupiditate optio deserunt vitae tempore? Autem laudantium delectus facilis consequatur nulla voluptatum.",
+    image: economic_translator,
+    title: "Экономический переводчик",
+    responsibilities: (
+      <Ol>
+        <li>
+          Перевод экономических документов, включая финансовые отчеты,
+          бизнес-планы, договоры, документы о налогообложении и другие материалы
+          с исходного языка на целевой язык.
+        </li>
+        <li>
+          Гарантирование точности и качества перевода, особенно в отношении
+          специализированной экономической лексики и терминологии.
+        </li>
+        <li>
+          Понимание экономических и финансовых концепций и процессов для верного
+          перевода текстов.
+        </li>
+        <li>
+          Соблюдение сроков и выполнение переводов в соответствии с
+          установленными стандартами и требованиями заказчика.
+        </li>
+        <li>
+          Редактирование и коррекция переводов с учетом структурной целостности
+          и лингвистической правильности.
+        </li>
+        <li>
+          Сотрудничество с экономистами, финансовыми аналитиками и другими
+          специалистами для уточнения контекста и терминов.
+        </li>
+        <li>
+          Ведение базы данных терминов и глоссария в области экономики и
+          финансов.
+        </li>
+        <li>
+          Участие в экономических консультациях и обучение для поддержания
+          актуальных знаний и навыков.
+        </li>
+      </Ol>
+    ),
+    demands: (
+      <Ul>
+        <li>
+          Высшее образование в области перевода, экономики, финансов или смежной
+          специальности.
+        </li>
+        <li>Продвинутые знания и опыт в сфере экономического перевода.</li>
+        <li>Отличное владение исходным и целевым языками.</li>
+        <li>
+          Глубокое понимание экономических процессов, финансовых инструментов и
+          терминологии.
+        </li>
+        <li>
+          Опыт работы с переводческими инструментами и программами
+          (CAT-системами) - преимущество.
+        </li>
+        <li>
+          Точность, внимательность к деталям и способность к аналитическому
+          мышлению.
+        </li>
+        <li>Умение работать в сжатых сроках и под давлением.</li>
+        <li>Коммуникабельность и способность работать в команде.</li>
+        <li>
+          Ответственность и стремление к профессиональному развитию в области
+          экономического перевода.
+        </li>
+      </Ul>
+    ),
+    moreInfo:
+      "Знание международных экономических стандартов и опыт работы с документами, связанными с биржевой и финансовой деятельностью, также будут преимуществом.",
   },
 ];
 
@@ -91,7 +451,7 @@ const Vacancies = () => {
       <div className="flex flex-wrap md:gap-7 gap-4 justify-center">
         {data.map((elem, id) => (
           <Card
-            img={elem.swiperImages[0]}
+            img={elem.image}
             key={id}
             title={elem.title}
             elem={elem}
@@ -100,25 +460,51 @@ const Vacancies = () => {
         ))}
       </div>
     ) : (
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-6 md:mx-3">
         <BackBtn onClick={() => setCurrentProject("all")}>
           Назад ко всем вакансиям
         </BackBtn>
         <div className="flex flex-col">
-          <Carousel data={currentProject.swiperImages} />
-          <p className="md:text-[35px] text-[24px] font-semibold my-4">
-            {currentProject.title}
-          </p>
-          <p className="md:text-base text-sm md:text-start text-justify">
-            {currentProject.description}
-          </p>
+          <Title>
+            Вакансия: <i>{currentProject.title}</i>
+          </Title>
+          <div className="p-3 rounded-md md:max-w-[1000px] flex flex-col gap-3 max-w-[100%] border border-[#33a3ed] bg-gray-100">
+            <Title3>Обязанности:</Title3>
+            {currentProject.responsibilities}
+            <Title3>Требования:</Title3>
+            {currentProject.demands}
+            <Title3>Условия:</Title3>
+            <Ul>
+              <li>Оформление по ТК РФ (полное соблюдение);</li>
+              <li>
+                Конкурентоспособная зарплата: оклад + % от количества часов
+                работы;
+              </li>
+              <li>Своевременные выплаты 2 раза в месяц;</li>
+              <li>Перспектива роста до руководителя группы менеджеров;</li>
+              <li>График работы: 24/7 (круглосуточно);</li>
+            </Ul>
+            {currentProject.moreInfo && (
+              <Description>
+                <i className="font-medium">{currentProject.moreInfo}</i>
+              </Description>
+            )}
+            <Description>
+              <i className="font-medium">
+                Если вы хотите предложить свою кандидатуру - напишите нам о себе
+                на <Email />
+              </i>
+            </Description>
+          </div>
+          <br />
+          <YandexMap />
         </div>
       </div>
     );
 
   return (
     <div className="flex flex-col text-start">
-      <div className="flex flex-col gap-2  md:max-w-[1280px] md:mx-auto mx-3">
+      <div className="flex flex-col gap-2  md:max-w-[1000px] md:mx-auto mx-3">
         <HeadBreadcrumb
           items={[
             {
@@ -132,15 +518,14 @@ const Vacancies = () => {
 
         <Title>Карьера</Title>
         <Title2>
-          Присоединяйтесь к команде профессионалов в сфере оценки!
+          Присоединяйтесь к команде профессиональных переводчиков!
         </Title2>
         <Description>
           Мы в оценочной компании ООО АИС «ПЕРЕВОДЧИК» всегда рады
           единомышленникам. Если для вас важны ответственность и постоянство, вы
           активны и умеете делать свою работу лучше других – нам будет интересно
           работать вместе. Для начала диалога расскажите о себе и своих
-          достижениях в письме на
-          <Email />
+          достижениях в письме на <Email />
         </Description>
         <Title>Что мы предлагаем сотрудникам?</Title>
         <Ul>

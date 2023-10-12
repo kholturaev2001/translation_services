@@ -1,22 +1,67 @@
-import AdvantageCard from "./AdvantageCard";
-import deep_expertise from '../../assets/images/advantages/deep_expertise.png'
-import individual_consultation from '../../assets/images/advantages/individual_consultation.png'
-import responsibility from '../../assets/images/advantages/responsibility.png'
-import damage_estimate from '../../assets/images/advantages/damage_estimate.png'
-import assets_and_business from '../../assets/images/advantages/assets_and_business.png'
-import high_quality from '../../assets/images/advantages/high_quality.png'
-
-
-
-
+// import AdvantageCard from "./AdvantageCard";
+// import deep_expertise from "../../assets/images/advantages/deep_expertise.png";
+// import individual_consultation from "../../assets/images/advantages/individual_consultation.png";
+// import responsibility from "../../assets/images/advantages/responsibility.png";
+// import damage_estimate from "../../assets/images/advantages/damage_estimate.png";
+// import assets_and_business from "../../assets/images/advantages/assets_and_business.png";
+// import high_quality from "../../assets/images/advantages/high_quality.png";
+import LiColored from "../Typography/LiColored";
 
 const Advantages = () => {
   return (
-    <div className="flex flex-col gap-[35px] mb-4 mt-8 mx-auto">
+    <div className="flex flex-col gap-[5px] mb-4 mt-8 mx-auto">
       <p className="text-center md:text-2xl text-[24px] font-medium">
         Наши Преимущества
       </p>
-      <div className="flex md:flex-row md:flex-wrap flex-col justify-center gap-6">
+      <LiColored>
+        <b>Опыт и экспертиза:</b> Мы обладаем более чем десятилетним опытом в
+        сфере перевода и оценки, что позволяет нам предоставлять услуги на самом
+        высоком уровне.
+      </LiColored>
+      <LiColored>
+        <b>Квалифицированные специалисты:</b> Наша команда состоит из
+        профессионалов с глубокими знаниями в соответствующих областях,
+        обеспечивая точность и надежность в каждом задании.
+      </LiColored>
+      <LiColored>
+        <b>Судебные переводчики:</b> Мы специализируемся на судебных переводах и
+        сотрудничаем с госорганами, что делает нас экспертами в данной области.
+      </LiColored>
+      <LiColored>
+        <b>Широкий спектр услуг:</b> Мы предоставляем разнообразные услуги,
+        включая технический перевод, медицинский перевод, оценку имущества и
+        многое другое, что удовлетворяет потребности различных клиентов.
+      </LiColored>
+      <LiColored>
+        <b>Соблюдение законодательства:</b> Мы работаем в строгом соответствии с
+        законодательством России, обеспечивая легитимность и надежность наших
+        услуг.
+      </LiColored>
+      <LiColored>
+        <b>Соблюдение сроков:</b> Мы строго придерживаемся сроков выполнения
+        работ, что позволяет нашим клиентам планировать свои действия
+        эффективно.
+      </LiColored>
+      <LiColored>
+        <b>Прозрачность и предсказуемость:</b> Мы предоставляем четкие
+        предварительные расчеты стоимости и сроков на начальном этапе
+        сотрудничества.
+      </LiColored>
+      <LiColored>
+        <b>Гарантия качества:</b> Мы контролируем качество на каждом этапе
+        работы, что обеспечивает точность и надежность результатов.
+      </LiColored>
+      <LiColored>
+        <b> Эффективные решения:</b> Наши услуги приносят клиентам экономический
+        эффект, который превышает стоимость наших услуг.
+      </LiColored>
+      <LiColored>
+        <b> Партнерство и долгосрочные отношения:</b> Мы стремимся к
+        установлению долгосрочных и взаимовыгодных партнерских отношений с
+        нашими клиентами, гарантируя надежную поддержку на каждом этапе
+        сотрудничества.
+      </LiColored>
+      {/* <div className="flex md:flex-row md:flex-wrap flex-col justify-center gap-6">
         <AdvantageCard
         icon={deep_expertise}
           title="Глубокая экспертиза в разнообразных областях"
@@ -47,7 +92,7 @@ const Advantages = () => {
           title="Высококачественное обслуживание и внимание к деталям"
           txt="Мы стремимся предоставить не только высококлассные оценочные услуги, но и превосходное обслуживание клиентов. Наша команда всегда готова ответить на ваши вопросы и обеспечить понимание каждого этапа оценки или консультации. Мы уделяем особое внимание деталям, чтобы обеспечить точные и надежные результаты."
         />
-      </div>
+      </div> */}
     </div>
   );
 };

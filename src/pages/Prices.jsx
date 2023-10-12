@@ -1,8 +1,10 @@
 import DTable from "../components/DTable";
 import Footer from "../components/Footer";
 import HeadBreadcrumb from "../components/HeadBreadcrumb";
+import OralTranslation from "../components/TranslationTables/OralTranslation";
+import TranslationFromLang from "../components/TranslationTables/TranslationFromLang";
+import TranslationToLang from "../components/TranslationTables/TranslationToLang";
 import Title from "../components/Typography/Title";
-import Title2Colored from "../components/Typography/Title2Colored";
 import TitleColored from "../components/Typography/TitleColored";
 
 const Prices = () => {
@@ -19,1410 +21,602 @@ const Prices = () => {
             },
           ]}
         />
-        <Title>
-          Стоимость услуг - прайс на независимую оценку, экспертизу, снижение
-          налогов и юридические услуги
-        </Title>
+        <Title>Стоимость услуг перевода</Title>
         <div className="overflow-auto">
+          <TitleColored>Стоимость перевода технического текста</TitleColored>
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang bordered={false} />
+          <br />
           <TitleColored>
-            Независимая оценка стоимости имущества, активов
+            Стоимость перевода текста экономической тематики
           </TitleColored>
-          <DTable
-            bordered
-            showHeader={false}
-            dataSource={[
-              {
-                key: "1",
-                object: (
-                  <b className="md:text-base text-[12px] ">Объект оценки</b>
-                ),
-                price_rub: (
-                  <b className="md:text-base text-[12px]">Цена, руб.</b>
-                ),
-                deadline: (
-                  <b className="md:text-base text-[12px] ">Срок, дней</b>
-                ),
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-          />
-          <Title2Colored>Нежилое здание</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 50 кв.м.",
-                price_rub: "от 18000",
-                deadline: "от 5",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м.",
-                price_rub: "от 20000",
-                deadline: "от 5",
-              },
-              {
-                key: "3",
-                object: "до 500 кв.м.",
-                price_rub: "от 25000",
-                deadline: "от 5",
-              },
-              {
-                key: "4",
-                object: "до 1000 кв.м.",
-                price_rub: "от 40000",
-                deadline: "от 5",
-              },
-              {
-                key: "5",
-                object: "до 3000 кв.м.",
-                price_rub: "от 50000",
-                deadline: "от 5",
-              },
-              {
-                key: "6",
-                object: "до 5000 кв.м.",
-                price_rub: "от 70000",
-                deadline: "от 5",
-              },
-              {
-                key: "7",
-                object: "до 10000 кв.м.",
-                price_rub: "от 80000",
-                deadline: "от 7",
-              },
-              {
-                key: "8",
-                object: "до 20000 кв.м.",
-                price_rub: "от 100000",
-                deadline: "от 7",
-              },
-              {
-                key: "9",
-                object: "до 40000 кв.м.",
-                price_rub: "от 130000",
-                deadline: "от 7",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Нежилое помещение</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 50 кв.м.",
-                price_rub: "от 15000",
-                deadline: "от 3",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м.",
-                price_rub: "от 18000",
-                deadline: "от 3",
-              },
-              {
-                key: "3",
-                object: "до 500 кв.м.",
-                price_rub: "от 25000",
-                deadline: "от 3",
-              },
-              {
-                key: "4",
-                object: "до 1000 кв.м.",
-                price_rub: "от 30000",
-                deadline: "от 5",
-              },
-              {
-                key: "5",
-                object: "до 3000 кв.м.",
-                price_rub: "от 40000",
-                deadline: "от 5",
-              },
-              {
-                key: "6",
-                object: "до 5000 кв.м.",
-                price_rub: "от 60000",
-                deadline: "от 7",
-              },
-              {
-                key: "7",
-                object: "до 7000 кв.м.",
-                price_rub: "от 90000",
-                deadline: "от 7",
-              },
-              {
-                key: "8",
-                object: "от 7000 кв.м.",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Земельный участок ИЖС, СНТ</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 10 соток",
-                price_rub: "от 12000",
-                deadline: "от 3",
-              },
-              {
-                key: "2",
-                object: "до 25 соток",
-                price_rub: "от 15000",
-                deadline: "от 3",
-              },
-              {
-                key: "3",
-                object: "до 40 соток",
-                price_rub: "от 20000",
-                deadline: "от 5",
-              },
-              {
-                key: "4",
-                object: "от 40 соток",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>
-            Земельный участок промышленного назначения
-          </Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 0,5 га",
-                price_rub: "от 25000",
-                deadline: "от 5",
-              },
-              {
-                key: "2",
-                object: "до 1 га",
-                price_rub: "от 60000",
-                deadline: "от 5",
-              },
-              {
-                key: "3",
-                object: "до 5 га",
-                price_rub: "от 85000",
-                deadline: "от 7",
-              },
-              {
-                key: "4",
-                object: "до 10 га",
-                price_rub: "от 120000",
-                deadline: "от 10",
-              },
-              {
-                key: "5",
-                object: "от 10 га",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>
-            Земельный участок сельскохозяйственного назначения
-          </Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "2",
-                object: "до 1 га",
-                price_rub: "от 20000",
-                deadline: "от 7",
-              },
-              {
-                key: "3",
-                object: "до 10 га",
-                price_rub: "от 35000",
-                deadline: "от 10",
-              },
-              {
-                key: "4",
-                object: "до 50 га",
-                price_rub: "от 65000",
-                deadline: "от 14",
-              },
-              {
-                key: "5",
-                object: "от 50 га",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Квартира</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 100 кв.м.",
-                price_rub: "от 5500",
-                deadline: "от 2",
-              },
-              {
-                key: "2",
-                object: "от 100 кв.м.",
-                price_rub: "от 10000",
-                deadline: "от 3",
-              },
-              {
-                key: "3",
-                object: "доля квартиры, комната",
-                price_rub: "от 5500",
-                deadline: "от 2",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Жилой дом с земельным участком</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 100 кв.м. (ЗУ до 10 соток)",
-                price_rub: "от 15000",
-                deadline: "от 5",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м. (ЗУ до 25 соток)",
-                price_rub: "от 18000",
-                deadline: "от 5",
-              },
-              {
-                key: "3",
-                object: "от 300 кв.м. (ЗУ до 40 соток)",
-                price_rub: "от 25000",
-                deadline: "от 5",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Гараж</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "гараж некапитальный, бокс, машиноместо",
-                price_rub: "от 6000",
-                deadline: "от 3",
-              },
-              {
-                key: "2",
-                object: "гараж капитальный",
-                price_rub: "от 6500",
-                deadline: "от 5",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Серийное оборудование</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 10 единиц",
-                price_rub: "от 15000",
-                deadline: "от 5",
-              },
-              {
-                key: "2",
-                object: "10-100 единиц",
-                price_rub: "от 28000",
-                deadline: "от 10",
-              },
-              {
-                key: "3",
-                object: "100-500 единиц",
-                price_rub: "от 30000",
-                deadline: "от 14",
-              },
-              {
-                key: "4",
-                object: "более 500 единиц	",
-                price_rub: "от 200 за 1 ед.",
-                deadline: "от 14",
-              },
-              {
-                key: "5",
-                object: "технологическая линия",
-                price_rub: "от 25000",
-                deadline: "от 7",
-              },
-              {
-                key: "6",
-                object: "технологический комплекс",
-                price_rub: "от 45000",
-                deadline: "от 7",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Транспорт</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "автотранспортные средства	",
-                price_rub: "от 6000",
-                deadline: "от 2",
-              },
-              {
-                key: "2",
-                object: "автотранспортные средства элитные	",
-                price_rub: "от 10000",
-                deadline: "от 3",
-              },
-              {
-                key: "3",
-                object: "специализированная техника	",
-                price_rub: "от 10000",
-                deadline: "от 5",
-              },
-              {
-                key: "4",
-                object: "железнодорожный транспорт	",
-                price_rub: "от 10000",
-                deadline: "от 7",
-              },
-              {
-                key: "5",
-                object: "плавательные суда	",
-                price_rub: "от 30000",
-                deadline: "от 7",
-              },
-              {
-                key: "6",
-                object: "воздушный транспорт",
-                price_rub: "от 40000",
-                deadline: "от 14",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Ущерб</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "от залива, пожара квартиры (отделка)	",
-                price_rub: "от 40000",
-                deadline: "от 14",
-              },
-              {
-                key: "2",
-                object: "от залива, пожара нежилого помещения (отделка)",
-                price_rub: "от 40000",
-                deadline: "от 14",
-              },
-              {
-                key: "3",
-                object: "от залива, пожара за каждую единицу имущества	",
-                price_rub: "по запросу",
-                deadline: "от 14",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Бизнес и нематериальные активы</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object:
-                  "малые организации (балансовая стоимость активов до 5 млн. рублей)	",
-                price_rub: "от 40000",
-                deadline: "от 10",
-              },
-              {
-                key: "2",
-                object:
-                  "средние организации (балансовая стоимость активов до 50 млн. рублей)",
-                price_rub: "от 60000",
-                deadline: "от 14",
-              },
-              {
-                key: "3",
-                object:
-                  "крупные организации (балансовая стоимость активов от 50 млн. рублей)",
-                price_rub: "по запросу",
-                deadline: "от 20",
-              },
-              {
-                key: "4",
-                object: "долговые обязательства	",
-                price_rub: "от 20000",
-                deadline: "по запросу",
-              },
-              {
-                key: "5",
-                object: "интеллектуальная собственность	",
-                price_rub: "от 35000",
-                deadline: "по запросу",
-              },
-              {
-                key: "6",
-                object: "ценные бумаги	",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-              {
-                key: "7",
-                object: "акции котируемые	",
-                price_rub: "от 5000	",
-                deadline: "от 2",
-              },
-              {
-                key: "8",
-                object: "акции некотируемые	",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang />
+          <TitleColored>Стоимость перевода финансовых документов</TitleColored>
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang
+            sng_langs="от 400"
+            baltic_langs="от 550"
+            east_langs="от 700"
           />
           <br />
           <TitleColored>
-            Оценка рыночной стоимости недвижимости для оспаривания кадастровой
-            стоимости
+            Стоимость перевода программного обеспечения
           </TitleColored>
-          <DTable
-            bordered
-            showHeader={false}
-            dataSource={[
-              {
-                key: "1",
-                object: (
-                  <b className="md:text-base text-[12px] ">Объект оценки</b>
-                ),
-                price_rub: (
-                  <b className="md:text-base text-[12px]">Цена, руб.</b>
-                ),
-                deadline: (
-                  <b className="md:text-base text-[12px] ">Срок, дней</b>
-                ),
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang east_langs="от 700" />
+          <br />
+          <TitleColored>
+            Стоимость перевода юридических документов и бумаг
+          </TitleColored>
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang east_langs="от 700" />
+          <br />
+          <TitleColored>Стоимость перевода медицинских документов</TitleColored>
+          <TranslationFromLang
+            br={false}
+            bordered={false}
+            eu_langs="от 500"
+            sng_langs="от 500"
+            baltic_langs="от 500"
+            east_langs="от 600"
           />
-          <Title2Colored>Нежилое здание</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 50 кв.м.",
-                price_rub: "от 25000",
-                deadline: "от 7",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м.",
-                price_rub: "от 30000",
-                deadline: "от 7",
-              },
-              {
-                key: "3",
-                object: "до 500 кв.м.",
-                price_rub: "от 45000",
-                deadline: "от 7",
-              },
-              {
-                key: "4",
-                object: "до 1000 кв.м.",
-                price_rub: "от 60000",
-                deadline: "от 7",
-              },
-              {
-                key: "5",
-                object: "до 3000 кв.м.",
-                price_rub: "от 80000",
-                deadline: "от 14",
-              },
-              {
-                key: "6",
-                object: "до 5000 кв.м.",
-                price_rub: "от 100000",
-                deadline: "от 14",
-              },
-              {
-                key: "7",
-                object: "до 10000 кв.м.",
-                price_rub: "от 150000",
-                deadline: "от 14",
-              },
-              {
-                key: "8",
-                object: "до 20000 кв.м.",
-                price_rub: "от 160000",
-                deadline: "от 14",
-              },
-              {
-                key: "9",
-                object: "до 40000 кв.м.",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <TranslationToLang
+            eu_langs="от 500"
+            sng_langs="от 500"
+            baltic_langs="от 500"
+            east_langs="от 700"
           />
-          <Title2Colored>Нежилое помещение</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 50 кв.м.",
-                price_rub: "от 15000",
-                deadline: "от 7",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м.",
-                price_rub: "от 25000",
-                deadline: "от 7",
-              },
-              {
-                key: "3",
-                object: "до 500 кв.м.",
-                price_rub: "от 40000",
-                deadline: "от 7",
-              },
-              {
-                key: "4",
-                object: "до 1000 кв.м.",
-                price_rub: "от 50000",
-                deadline: "от 10",
-              },
-              {
-                key: "5",
-                object: "до 3000 кв.м.",
-                price_rub: "от 70000",
-                deadline: "от 14",
-              },
-              {
-                key: "6",
-                object: "до 5000 кв.м.",
-                price_rub: "от 95000",
-                deadline: "от 14",
-              },
-              {
-                key: "7",
-                object: "до 7000 кв.м.",
-                price_rub: "от 120000",
-                deadline: "от 14",
-              },
-              {
-                key: "8",
-                object: "от 7000 кв.м.",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <br />
+          <TitleColored>Стоимость перевода художественного текста</TitleColored>
+          <TranslationFromLang
+            br={false}
+            bordered={false}
+            eu_langs="от 500"
+            sng_langs="от 500"
           />
-          <Title2Colored>
-            Земельный участок промышленного назначения
-          </Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 0,5 га",
-                price_rub: "от 30000",
-                deadline: "от 7",
-              },
-              {
-                key: "2",
-                object: "до 1 га",
-                price_rub: "от 60000",
-                deadline: "от 7",
-              },
-              {
-                key: "3",
-                object: "до 5 га",
-                price_rub: "от 10000",
-                deadline: "от 10",
-              },
-              {
-                key: "4",
-                object: "до 10 га",
-                price_rub: "от 130000",
-                deadline: "от 14",
-              },
-              {
-                key: "5",
-                object: "от 10 га",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>
-            Земельный участок сельскохозяйственного назначения
-          </Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "2",
-                object: "до 1 га",
-                price_rub: "от 20000",
-                deadline: "от 7",
-              },
-              {
-                key: "3",
-                object: "до 10 га",
-                price_rub: "от 35000",
-                deadline: "от 10",
-              },
-              {
-                key: "4",
-                object: "до 50 га",
-                price_rub: "от 65000",
-                deadline: "от 14",
-              },
-              {
-                key: "5",
-                object: "от 50 га",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Земельный участок ИЖС, СНТ</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 10 соток",
-                price_rub: "от 20000",
-                deadline: "по запросу",
-              },
-              {
-                key: "2",
-                object: "до 25 соток",
-                price_rub: "от 30000",
-                deadline: "по запросу",
-              },
-              {
-                key: "3",
-                object: "до 40 соток",
-                price_rub: "от 50000",
-                deadline: "по запросу",
-              },
-              {
-                key: "4",
-                object: "от 40 соток",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Квартира</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 100 кв.м.",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-              {
-                key: "2",
-                object: "от 100 кв.м.",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-              {
-                key: "3",
-                object: "доля квартиры, комната",
-                price_rub: "по запросу",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Жилой дом с земельным участком</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "до 100 кв.м. (ЗУ до 10 соток)",
-                price_rub: "от 17000",
-                deadline: "от 10",
-              },
-              {
-                key: "2",
-                object: "до 300 кв.м. (ЗУ до 25 соток)",
-                price_rub: "от 20000",
-                deadline: "от 10",
-              },
-              {
-                key: "3",
-                object: "от 300 кв.м. (ЗУ до 40 соток)",
-                price_rub: "от 25000",
-                deadline: "от 10",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
-          />
-          <Title2Colored>Гараж</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object: "гараж некапитальный, бокс, машиноместо",
-                price_rub: "от 15000",
-                deadline: "от 7",
-              },
-              {
-                key: "2",
-                object: "гараж капитальный",
-                price_rub: "от 1500",
-                deadline: "от 7",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <TranslationToLang
+            east_langs="от 700"
+            eu_langs="от 500"
+            sng_langs="от 500"
           />
           <br />
           <TitleColored>
-            Оспаривание кадастровой стоимости недвижимости
+            Стоимость перевода публицистических текстов
           </TitleColored>
-          <DTable
-            bordered
-            showHeader={false}
-            dataSource={[
-              {
-                key: "1",
-                object: "",
-                price_rub: (
-                  <b className="md:text-base text-[12px]">Цена, руб.</b>
-                ),
-                deadline: (
-                  <b className="md:text-base text-[12px] ">Срок, дней</b>
-                ),
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
+          <TranslationFromLang
+            br={false}
+            bordered={false}
+            eu_langs="от 400"
+            sng_langs="от 400"
           />
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "1",
-                object:
-                  "Юридическое сопровождение процедуры оспаривания кадастровой стоимости	",
-                price_rub: "от 70000",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <TranslationToLang
+            east_langs="от 700"
+            eu_langs="от 400"
+            sng_langs="от 400"
           />
           <br />
-          <TitleColored>Исключение недвижимости из перечня 700-ПП</TitleColored>
-          <DTable
-            bordered
-            showHeader={false}
-            dataSource={[
-              {
-                key: "1",
-                object: (
-                  <b className="md:text-base text-[12px] ">Объект оценки</b>
-                ),
-                price_rub: (
-                  <b className="md:text-base text-[12px]">Цена, руб.</b>
-                ),
-                deadline: (
-                  <b className="md:text-base text-[12px] ">Срок, дней</b>
-                ),
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
+
+          <TitleColored>Стоимость перевода рекламных текстов</TitleColored>
+          <TranslationFromLang br={false} bordered={false} />
+          <TranslationToLang east_langs="от 700" />
+          <br />
+          <TitleColored>Стоимость перевода медицинских документов</TitleColored>
+          <TranslationFromLang
+            br={false}
+            bordered={false}
+            eu_langs="от 500"
+            sng_langs="от 500"
           />
-          <Title2Colored>Здание</Title2Colored>
-          <DTable
-            bordered
-            dataSource={[
-              {
-                key: "4",
-                object: "до 1000 кв.м.",
-                price_rub: "от 75000",
-                deadline: "по запросу",
-              },
-              {
-                key: "5",
-                object: "до 5000 кв.м.",
-                price_rub: "от 90000",
-                deadline: "по запросу",
-              },
-              {
-                key: "6",
-                object: "до 10000 кв.м.",
-                price_rub: "от 105000",
-                deadline: "по запросу",
-              },
-              {
-                key: "7",
-                object: "от 10000 кв.м.",
-                price_rub: "от 125000",
-                deadline: "по запросу",
-              },
-            ]}
-            columns={[
-              {
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
-              },
-            ]}
-            showHeader={false}
+          <TranslationToLang
+            east_langs="от 700"
+            eu_langs="от 500"
+            sng_langs="от 500"
           />
           <br />
-          <TitleColored>Судебные экспертизы</TitleColored>
+          <TitleColored>Стоимость устного перевода</TitleColored>
+          <OralTranslation
+            br={false}
+            if_discount={false}
+            four_hours="от 10000"
+            eight_hours="от 18000"
+            extra_hours="от 1800"
+          />
+          <br />
+          <TitleColored>Личные документы</TitleColored>
           <DTable
-            bordered
             dataSource={[
               {
                 key: "1",
-                object: "Строительно-техническая экспертиза",
-                price_rub: "от 35000",
-                deadline: "от 10",
+                type: "Перевод европейских паспортов",
+                price: "от 1000",
               },
               {
                 key: "2",
-                object: "Техническая экспертиза документов",
-                price_rub: "от 25000",
-                deadline: "от 25",
+                type: "Перевод восточных паспортов (Турция, арабские страны)",
+                price: "от 1300",
               },
               {
                 key: "3",
-                object: "Почерковедческая экспертиза",
-                price_rub: "от 15000",
-                deadline: "от 7",
+                type: "Перевод остальных паспортов, с данными на английском языке",
+                price: "от 1000",
               },
               {
                 key: "4",
-                object: "Финансово-экономическая экспертиза",
-                price_rub: "от 50000",
-                deadline: "от 10",
-              },
-              {
-                key: "5",
-                object: "Бухгалтерская экспертиза",
-                price_rub: "от 50000",
-                deadline: "от 10",
-              },
-              {
-                key: "6",
-                object: "Лингвистическая экспертиза",
-                price_rub: "от 40000",
-                deadline: "от 15",
-              },
-              {
-                key: "7",
-                object: "Фоноскопическая экспертиза",
-                price_rub: "от 40000",
-                deadline: "от 10",
-              },
-              {
-                key: "8",
-                object: "Компьютерно-техническая экспертиза",
-                price_rub: "от 35000",
-                deadline: "от 10",
-              },
-              {
-                key: "9",
-                object: "Экспертиза интеллектуальной деятельности",
-                price_rub: "от 50000",
-                deadline: "от 10",
-              },
-              {
-                key: "10",
-                object: "Товароведческая экспертиза",
-                price_rub: "от 35000",
-                deadline: "от 5",
-              },
-              {
-                key: "11",
-                object: "Автотехническая экспертиза",
-                price_rub: "от 25000",
-                deadline: "от 10",
-              },
-              {
-                key: "12",
-                object: "Землеустроительная экспертиза",
-                price_rub: "от 30000",
-                deadline: "от 15",
-              },
-              {
-                key: "13",
-                object: "Пожарная экспертиза",
-                price_rub: "от 45000",
-                deadline: "от 5",
-              },
-              {
-                key: "14",
-                object: "Оценочная экспертиза",
-                price_rub: "от 15000",
-                deadline: "от 10",
+                type: "Дополнительный экземпляр перевода",
+                price: "от 800",
               },
             ]}
             columns={[
               {
+                dataIndex: "type",
+                key: "type",
+                title: "Перевод паспорта",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <TitleColored>
+            Стоимость перевода водительских прав и ПТС
+          </TitleColored>
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                type: "Европейское водительское удостоверение",
+                price: "от 800",
+              },
+              {
+                key: "2",
+                type: "Водительские удостоверения стран СНГ",
+                price: "от 800",
+              },
+              {
+                key: "3",
+                type: "Восточные водительские удостоверения (персидский, китайский)",
+                price: "от 1100",
+              },
+              {
+                key: "4",
+                type: "Перевод остальных водительские удостоверений, с данными на английском языке",
+                price: "от 800",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "type",
+                key: "type",
+                title: "Водительское удостоверение",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                type: "Перевод на английский, немецкий, испанский",
+                price: "от 1400",
+              },
+              {
+                key: "2",
+                type: "Перевод на итальянский, французский",
+                price: "от 2100",
+              },
+              {
+                key: "3",
+                type: "Другие языки",
+                price: "от 2400",
+              },
+              {
+                key: "4",
+                type: "Нотариальная копия ПТС (если возможно)	",
+                price: "от 300",
+              },
+              {
+                key: "5",
+                type: "Дополнительный экземпляр перевода	",
+                price: "от 600",
+              },
+              {
+                key: "6",
+                type: "Наценка за срочность	",
+                price: "25-50%",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "type",
+                key: "type",
+                title: "ПТС",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <TitleColored>Стоимость перевода печати, апостиля</TitleColored>
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                type: "Европейские печати	",
+                price: "от 600",
+              },
+              {
+                key: "2",
+                type: "Печати стран СНГ",
+                price: "от 600",
+              },
+              {
+                key: "3",
+                type: "Восточные печати (персидский, турецкий, иврит)",
+                price: "от 900",
+              },
+              {
+                key: "4",
+                type: "Перевод остальных печатей, с данными на английском языке",
+                price: "от 600",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "type",
+                key: "type",
+                title: "Печать",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <br />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                type: "Английский",
+                price: "от 800",
+              },
+              {
+                key: "2",
+                type: "Итальянский, испанский, французский, немецкий	",
+                price: "от 800",
+              },
+              {
+                key: "3",
+                type: "Другие языки	",
+                price: "от 900",
+              },
+              {
+                key: "4",
+                type: "Дополнительный экземпляр перевода",
+                price: "от 600",
+              },
+              {
+                key: "5",
+                type: "Наценка за срочность",
+                price: "25-50%",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "type",
+                key: "type",
+                title: "Апостиль",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <br />
+
+          <TitleColored>Стоимость перевода справок и свидетельств</TitleColored>
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Европейские языки",
+                price: "от 1000",
+              },
+              {
+                key: "2",
+                language_name: "Языки стран СНГ",
+                price: "от 1000",
+              },
+              {
+                key: "3",
+                language_name: "Балтийские языки",
+                price: "от 1400",
+              },
+              {
+                key: "4",
+                language_name: "Восточные языки",
+                price: "от 1400",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с нотариальным заверением",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Европейские языки",
+                price: "от 800",
+              },
+              {
+                key: "2",
+                language_name: "Языки стран СНГ",
+                price: "от 800",
+              },
+              {
+                key: "3",
+                language_name: "Балтийские языки",
+                price: "от 1000",
+              },
+              {
+                key: "4",
+                language_name: "Восточные языки",
+                price: "от 1000",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с нотариальным заверением",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <br />
+          <TitleColored>
+            Стоимость перевода согласий на выезд ребенка
+          </TitleColored>
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Английский",
+                price: "от 1100",
+              },
+              {
+                key: "2",
+                language_name: "Языки стран Шенгенского соглашения",
+                price: "от 1200",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с нотариальнам заверением",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Английский",
+                price: "от 600",
+              },
+              {
+                key: "2",
+                language_name: "Языки стран Шенгенского соглашения",
+                price: "от 700",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с заверением печатью бюро переводов",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+            bordered
+          />
+          <br />
+          <TitleColored>
+            Стоимость перевода аттестата и/или приложения
+          </TitleColored>
+          <TranslationFromLang
+            br={false}
+            baltic_langs="от 1000"
+            sng_langs="от 900"
+            east_langs="от 1200"
+            eu_langs="от 1000"
+            title="Перевод атестата с нотариальнам заверением"
+          />
+          <TranslationFromLang
+            eu_langs="от 1100"
+            sng_langs="от 1000"
+            baltic_langs="от 1100"
+            east_langs="от 1200"
+            title="Перевод приложения к аттестату с нотариальнам заверением"
+          />
+          <br />
+          <TitleColored>Стоимость перевода диплома</TitleColored>
+          <TranslationFromLang
+            br={false}
+            baltic_langs="от 1200"
+            sng_langs="от 1300"
+            east_langs="от 1400"
+            eu_langs="от 1500"
+            title="Перевод диплома с нотариальнам заверением"
+          />
+          <TranslationFromLang
+            eu_langs="от 2400"
+            sng_langs="от 2100"
+            baltic_langs="от 2200"
+            east_langs="от 2300"
+            title="Перевод приложения к диплому с нотариальнам заверением"
+          />
+          <br />
+          <TitleColored>Стоимость перевода зачетной книжки</TitleColored>
+
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Европейские языки",
+                price: "от 900",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с нотариальнам заверением",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Европейские языки",
+                price: "от 700",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Перевод с заверением печатью бюро переводов",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
                 title: "",
-                dataIndex: "object",
-                key: "object",
-              },
-              {
-                title: "Цена, руб.",
-                dataIndex: "price_rub",
-                key: "price_rub",
-                width: "20%",
-              },
-              {
-                title: "Срок, дней",
-                dataIndex: "deadline",
-                key: "deadline",
-                width: "20%",
               },
             ]}
           />
+          <br />
+          <TitleColored>
+            Стоимость перевода корпоративных документов
+          </TitleColored>
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Английский язык	",
+                price: "от 800",
+              },
+              {
+                key: "2",
+                language_name: "Европейские языки	",
+                price: "от 800",
+              },
+              {
+                key: "3",
+                language_name: "Греческий язык",
+                price: "от 900",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Оффшорные свидетельства",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <DTable
+            dataSource={[
+              {
+                key: "1",
+                language_name: "Любые языки",
+                price: "по договоренности",
+              },
+            ]}
+            columns={[
+              {
+                dataIndex: "language_name",
+                key: "language_name",
+                title: "Устав, учредительный договор",
+              },
+              {
+                dataIndex: "price",
+                key: "price",
+                width: "25%",
+                title: "Цена",
+              },
+            ]}
+          />
+          <br />
         </div>
       </div>
       <Footer />
